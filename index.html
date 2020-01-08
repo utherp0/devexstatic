@@ -585,18 +585,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#optional-labs">Optional labs</a></li>
 </ul>
 </li>
-<li><a href="#camel-k-and-openshift-serverless">Camel K and Openshift Serverless</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-11">Introduction</a></li>
-<li><a href="#create-a-new-project-2">Create a new project</a></li>
-<li><a href="#openshift-serverless-and-the-operator-lifecycle-manager">Openshift Serverless and the Operator Lifecycle Manager</a></li>
-<li><a href="#install-openshift-serverless">Install Openshift Serverless</a></li>
-<li><a href="#download-and-configure-your-environment-2">Download and configure your environment</a></li>
-<li><a href="#create-knative-messaging-channel">Create Knative Messaging Channel</a></li>
-<li><a href="#deploy-the-integrations">Deploy the Integrations</a></li>
-<li><a href="#knative-in-action">Knative in action</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
@@ -635,9 +623,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Red Hat® OpenShift® is a hybrid cloud, enterprise, secure Kubernetes application platform.</p>
 </div>
 <div class="paragraph">
-<p>OpenShift is a family of containerization software developed by Red Hat.
-Its flagship product is the OpenShift Container Platform—an on-premises platform as a service built around OCI standard containers orchestrated and
-managed by Kubernetes on a foundation of Red Hat Enterprise Linux.</p>
+<p>OpenShift is an Enterprise strength, secure implementation of the Kubernetes container orchestration project with additional tooling designed to make the lives of Developer and Administrators as easy as possible.</p>
 </div>
 </div>
 <div class="sect3">
@@ -654,7 +640,7 @@ managed by Kubernetes on a foundation of Red Hat Enterprise Linux.</p>
 <p><a href="https://www.openshift.com/products/container-platform">https://www.openshift.com/products/container-platform</a></p>
 </li>
 <li>
-<p><a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com</a> (the Web Console URL for the Workshop)</p>
+<p><a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> (the Web Console URL for the Workshop)</p>
 </li>
 <li>
 <p><a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> (The Web Terminal URL for the workshop)</p>
@@ -711,10 +697,10 @@ The attendee will be using a browser for interacting with both the OpenShift Con
 <div class="sect2">
 <h3 id="starting-up-logging-on-and-creating-a-project"><a class="anchor" href="#starting-up-logging-on-and-creating-a-project"></a>Starting up - logging on and creating a project</h3>
 <div class="paragraph">
-<p>Log on to cluster at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
+<p>Log on to cluster at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
 </div>
 <div class="paragraph">
-<p>Ensure you are on the Administrator View (top level, select Administrator)</p>
+<p>Ensure you are on the Administrator View - at the top left of the UI is a selection box which describes the current view selected.</p>
 </div>
 <div class="paragraph">
 <p><strong>The Administrator view provides you with an extended functionality interface that allows you to deep dive into the objects available to your user. The Developer view is an opinionated interface designed to ease the use of the system for developers. This workshop will have you swapping between the contexts for different tasks.</strong></p>
@@ -821,7 +807,7 @@ of application images using a base image and a source repository.</strong></p>
 versions.</strong></p>
 </div>
 <div class="paragraph">
-<p>Git repo - <a href="https://github.com/utherp0/nodenews">https://github.com/utherp0/nodenews</a></p>
+<p>Enter the following for the Git repo for the application - <a href="https://github.com/utherp0/nodenews">https://github.com/utherp0/nodenews</a></p>
 </div>
 <div class="paragraph">
 <p>In a separate browser tab go to <a href="https://github.com/utherp0/nodenews">https://github.com/utherp0/nodenews</a></p>
@@ -900,7 +886,7 @@ integrated registry.</strong></p>
 <p>Search for ‘httpd’</p>
 </div>
 <div class="paragraph">
-<p>Select the (httpd) template</p>
+<p>Select the (httpd) template - if there is more than one you want to select the one that is a <strong>builder</strong> and not the example application one</p>
 </div>
 <div class="paragraph">
 <p>Click on 'Create Application'</p>
@@ -912,13 +898,13 @@ integrated registry.</strong></p>
 <p>Set the git repo to ‘https://github.com/utherp0/forumstaticassets’</p>
 </div>
 <div class="paragraph">
-<p>Ensure the Application is ‘nodenews-app’</p>
+<p>Make sure the Application is ‘nodenews-app’</p>
 </div>
 <div class="paragraph">
-<p>Ensure the name is forumstaticassets</p>
+<p>Make sure the Name is forumstaticassets</p>
 </div>
 <div class="paragraph">
-<p>Ensure the ‘Create a Route’ checkbox is clicked</p>
+<p>Make sure the ‘Create a Route’ checkbox is clicked</p>
 </div>
 <div class="paragraph">
 <p>Click 'Create'</p>
@@ -970,7 +956,7 @@ the group as a single action.</strong></p>
 <p>Click 'Create'</p>
 </div>
 <div class="paragraph">
-<p>Click on the ‘ocpnode’ Application in the topology - click on the ‘cross’ icon to centralise the topology</p>
+<p>Click on the ‘ocpnode’ Application in the topology - click on the ‘cross’ icon situated at the bottom left of the Topology panel to centralise the topology</p>
 </div>
 <div class="paragraph">
 <p><strong>Now we have created a new Application grouping you will see two ''cloud'' groupings, labelled with the appropriate Application name you entered.</strong></p>
@@ -1007,12 +993,15 @@ The CLI is ideal in situations where you are:</p>
 <p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a></p>
 </div>
 <div class="paragraph">
-<p>If you want to install the oc client or use the terminal applications plus additional command line tools, such as ODO and tkn, you have two options; either install <code>oc</code> on your localhost or use a docker image in OpenShift. The image option is pre-built and running already and is easier if you have a locked-down laptop and are unable to download and install additional applications.</p>
+<p>The first time you visit the terminal application you will be prompted for a logon - use the same credentials as your OpenShift logon, userx and openshift</p>
+</div>
+<div class="paragraph">
+<p>If you want to optionally install the oc client or use the terminal applications plus additional command line tools, such as ODO and tkn, you have two options; either install <code>oc</code> on your localhost or use a docker image in OpenShift. The image option is pre-built and running already and is easier if you have a locked-down laptop and are unable to download and install additional applications.</p>
 </div>
 <div class="sect3">
 <h4 id="option-1-installing-the-cli-on-localhost"><a class="anchor" href="#option-1-installing-the-cli-on-localhost"></a>Option 1: Installing the CLI on localhost</h4>
 <div class="paragraph">
-<p>The easiest way to download the CLI is by accessing the Command Line Tools page on the web console from the question mark on teh top right corner [ (?)&#8594; Command Line Tools ]</p>
+<p>The easiest way to download the CLI is by accessing the Command Line Tools page on the web console from the question mark on the top right corner [ (?)&#8594; Command Line Tools ]</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1139,6 +1128,9 @@ Also see the <strong>Command-Line Reference</strong>: <a href="https://docs.open
 <div class="paragraph">
 <p>User should now be using the sandboxX project created and configured earlier</p>
 </div>
+<div class="paragraph">
+<p>Next we will try a command that will fail because of OpenShift&#8217;s security controls</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-shell" data-lang="shell">oc get users</code></pre>
@@ -1176,6 +1168,9 @@ these Pods they will be marked as Completed. Everything in OpenShift is executed
 <p><strong>DC is an abbreviation for Deployment Config. These are Objects that directly define how an Application is deployed within OpenShift. This is the ''ops''
 side of the OpenShift system. Deployment Configs are different to Kubernetes Deployments in that they are an extension and contain things such as Config Maps, Secrets,
 Volume Mounts, labelled targetting of Nodes and the like.</strong></p>
+</div>
+<div class="paragraph">
+<p>Enter the command below to tell OpenShift to scale the number of instances of the Deployment Config 'nodenews' to two rather than the default one.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1327,13 +1322,13 @@ Select 'Workloads/Deployment Configs'</p>
 <p>In the editor change the name: from example to ‘nodenewsconfig’</p>
 </div>
 <div class="paragraph">
-<p>Delete all of the lines below data:</p>
+<p>Delete all of the lines below <strong>data:</strong></p>
 </div>
 <div class="paragraph">
 <p>Add “  env1: test”</p>
 </div>
 <div class="paragraph">
-<p>Add “  env2:test2”</p>
+<p>Add “  env2: test”</p>
 </div>
 <div class="paragraph">
 <p>The YAML should look similar to the screenshot below, with your project name instead of sandbox99 and the name you have entered rather than CHANGETHIS.</p>
@@ -1430,8 +1425,8 @@ oc get configmaps</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-shell" data-lang="shell">        volumeMounts:
-           - name: workshop-testfile
-             mountPath: /workshop/config</code></pre>
+          - name: workshop-testfile
+            mountPath: /workshop/config</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1507,7 +1502,7 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="sect2">
 <h3 id="dependency-injection-of-sensitive-information-using-secrets"><a class="anchor" href="#dependency-injection-of-sensitive-information-using-secrets"></a>Dependency Injection of sensitive information using Secrets</h3>
 <div class="paragraph">
-<p><strong>The config map to be written as a gile is actually written to the Container Hosts as a file, and then expressed into the running Container as a symbolic link. This is good but can be seen as somewhat insecure because the file is stored 'as-is' on the Container Hosts, where the Containers are executed</strong></p>
+<p><strong>The config map to be written as a file is actually written to the Container Hosts as a file, and then expressed into the running Container as a symbolic link. This is good but can be seen as somewhat insecure because the file is stored 'as-is' on the Container Hosts, where the Containers are executed</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>For secure information, such as passwords, connection strings and the like, OpenShift has the concept of 'Secrets'. These act like config maps 'but' importantly the contents of the secrets are encrypted at creation, encrypted at storage when written to the Container Hosts and then unencrypted only when expressed into the Container, meaning only the running Container can see the value of the secret.</strong></p>
@@ -1588,7 +1583,7 @@ any information provided via the config map is controlled and immutable.</strong
 <p>Watch the colours of the Pods</p>
 </div>
 <div class="paragraph">
-<p><strong>Deployments can have one of two strategies. This example uses the 'Rolling' strategy which is designed for zero downtime deployments. It works but spinning up a single copy of the new Pod, and when that Pod reports as being healthy only then is one of the old Pods removed. This insures that at all times the required number of replicas are running healthy with no downtime for the Application itself.</strong></p>
+<p><strong>Deployments can have one of two strategies. This example uses the 'Rolling' strategy which is designed for zero downtime deployments. It works but spinning up a single copy of the new Pod, and when that Pod reports as being healthy only then is one of the old Pods removed. This ensures that at all times the required number of replicas are running healthy with no downtime for the Application itself.</strong></p>
 </div>
 <div class="paragraph">
 <p>Click on 'Workloads/Deployment Configs', click on the nodenews DC again</p>
@@ -1633,7 +1628,7 @@ any information provided via the config map is controlled and immutable.</strong
 <p>Watch the colour of the Pod ring</p>
 </div>
 <div class="paragraph">
-<p><strong>In the case of a Recreate strategy the system insures that NO copies of the old deployment are running simultaneously with the new ones. It deletes all the running Pods, irregardless of the required number of replicas, and when all Pods report as being fully deleted it will start spinning up the new copies. This is for a scenario when you must NOT have any users interacting with the old Application once the new one is deployed, such as a security flaw in the old Application</strong></p>
+<p><strong>In the case of a Recreate strategy the system ensures that NO copies of the old deployment are running simultaneously with the new ones. It deletes all the running Pods, irregardless of the required number of replicas, and when all Pods report as being fully deleted it will start spinning up the new copies. This is for a scenario when you must NOT have any users interacting with the old Application once the new one is deployed, such as a security flaw in the old Application</strong></p>
 </div>
 </div>
 </div>
@@ -1722,8 +1717,10 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="paragraph">
 <p><strong>To identify the URL of the route execute the command shown below:</strong></p>
 </div>
-<div class="paragraph">
-<p>oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"\n"}'</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>This will display a formatted URL with the 'http://' part at the beginning which will be similar to :</strong></p>
@@ -1735,7 +1732,7 @@ any information provided via the config map is controlled and immutable.</strong
 <p>*To test the application use the command line window to issue a curl command to:</p>
 </div>
 <div class="paragraph">
-<p>curl -k &lt;url from the above command&gt;/ip</p>
+<p>curl -k &lt;url from the above command&gt;</p>
 </div>
 <div class="paragraph">
 <p><strong>The response should be as shown below (example ip address) :</strong></p>
@@ -1806,8 +1803,10 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="paragraph">
 <p><strong>Get the URI of the route using the command :</strong></p>
 </div>
-<div class="paragraph">
-<p>oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Copy the result of the above command and past it into the shell script below:</strong></p>
@@ -1823,8 +1822,10 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="paragraph">
 <p><strong>Switch back to the original command window and execute the command below to patch the route to version 2 of the application.</strong></p>
 </div>
-<div class="paragraph">
-<p>oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v2-0"}}}'</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v2-0"}}}'</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Switch back to the command window with the shell script running and you should see the responses have a new ip address and now report v2 of the application. This has completed a migration from the old version of the application to the new.</strong></p>
@@ -1878,8 +1879,10 @@ status:
 <div class="paragraph">
 <p><strong>Before moving to the A/B deployment strategy switch back to version v1 with the command:</strong></p>
 </div>
-<div class="paragraph">
-<p>oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v1-0"}}}'</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v1-0"}}}'</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Confirm this has worked in the command window executing the shell script.</strong></p>
@@ -1973,7 +1976,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.</p>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2318,7 +2321,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 </table>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
 <p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and again logon as userx with password openshift</p>
@@ -2593,7 +2596,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="introduction-6"><a class="anchor" href="#introduction-6"></a>Introduction</h3>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com</a> and logon as userx (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as userx (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
 <p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and again logon as userx with password openshift</p>
@@ -2978,7 +2981,7 @@ cat /pvtest/files/webfile1.txt
 <p><strong>By default when you create a Project within OpenShift your user is given administration rights. This allows the user to create any objects that they have rights to create and to change the security and access settings for the project itself, i.e. add users as Administrators, Edit Access, Read access or disable other user&#8217;s abilities to even see the project and the objects within.</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>In the top left of the UI, where the label indicates the view mode, change the mode from Administrator to Developer and select the Topology view.</strong></p>
+<p>In the top left of the UI, where the label indicates the view mode, change the mode from Administrator to Developer and select the Topology view.</p>
 </div>
 <div class="paragraph">
 <p>Select ‘From Catalog’</p>
@@ -3128,7 +3131,7 @@ a source code repository, containing the code of the application that matches th
 <p>Click on the arrow on the top right corner of the Pod, or click on the route URL shown in the right hand side resource details window. The application window will launch in a new browser window and should display text as shown below:</p>
 </div>
 <div class="paragraph">
-<p><strong>Hello - this is the simple slave REST interface</strong></p>
+<p><strong>Hello - this is the simple slave REST interface v1.0</strong></p>
 </div>
 </div>
 <div class="sect2">
@@ -3137,12 +3140,19 @@ a source code repository, containing the code of the application that matches th
 <p><strong>A number of probes will be created to show the different behaviours. The first probe will be a liveness probe that will result in the restart of the pod.</strong></p>
 </div>
 <div class="paragraph">
+<p><strong>Since this work will be done using the oc command line you need to switch the current oc command line to work with the new project using the command:</strong></p>
+</div>
+<div class="paragraph">
+<p>oc project probesX</p>
+</div>
+<div class="paragraph">
+<p>(Where X is the number that you used when you created the project)</p>
+</div>
+<div class="paragraph">
 <p><strong>To create the probe use the OC command line interface to execute the following command.</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc set probe dc/node-app-slave --liveness --initial-delay-seconds=30 --failure-threshold=1 --period-seconds=10 --get-url=http://:8080/health</code></pre>
-</div>
+<div class="paragraph">
+<p>oc set probe dc/node-app-slave --liveness --initial-delay-seconds=30 --failure-threshold=1 --period-seconds=10 --get-url=http://:8080/health</p>
 </div>
 <div class="paragraph">
 <p><strong>The above probe will create a new liveness probe with the characteristics:</strong></p>
@@ -3174,10 +3184,8 @@ a source code repository, containing the code of the application that matches th
 <div class="paragraph">
 <p><strong>Review the liveness probe information by executing the command:</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc describe dc/node-app-slave</code></pre>
-</div>
+<div class="paragraph">
+<p>oc describe dc/node-app-slave</p>
 </div>
 <div class="paragraph">
 <p><strong>The output of this command will include the following section that highlights the new liveness probe</strong></p>
@@ -3201,10 +3209,8 @@ a source code repository, containing the code of the application that matches th
 <div class="paragraph">
 <p><strong>Alternatively to view the probe in a different format use the command below:</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get dc/node-app-slave -o yaml</code></pre>
-</div>
+<div class="paragraph">
+<p>oc get dc/node-app-slave -o yaml</p>
 </div>
 <div class="paragraph">
 <p><strong>Part of the output will show:</strong></p>
@@ -3284,10 +3290,8 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 <div class="paragraph">
 <p><strong>In order to experiment with the readiness probe it is necessary to switch off the liveness probe. This can either be done by changing the deployment configuration YAML definition using the web interface or by executing the following command line:</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc set probe dc/node-app-slave --liveness --remove</code></pre>
-</div>
+<div class="paragraph">
+<p>oc set probe dc/node-app-slave --liveness --remove</p>
 </div>
 </div>
 </div>
@@ -3296,10 +3300,8 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 <div class="paragraph">
 <p><strong>To create the probe use the OC command line interface to execute the following command.</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc set probe dc/node-app-slave --readiness --initial-delay-seconds=30 --failure-threshold=3 --success-threshold=1  --period-seconds=5 --get-url=http://:8080/health</code></pre>
-</div>
+<div class="paragraph">
+<p>oc set probe dc/node-app-slave --readiness --initial-delay-seconds=30 --failure-threshold=3 --success-threshold=1  --period-seconds=5 --get-url=http://:8080/health</p>
 </div>
 <div class="paragraph">
 <p><strong>The above command will create a new readiness probe with the characteristics:</strong></p>
@@ -3334,26 +3336,20 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 <div class="paragraph">
 <p><strong>Review the probe created using the commands above:</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc describe dc/node-app-slave</code></pre>
-</div>
+<div class="paragraph">
+<p>oc describe dc/node-app-slave</p>
 </div>
 <div class="paragraph">
 <p>and</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get dc/node-app-slave -o yaml</code></pre>
-</div>
+<div class="paragraph">
+<p>oc get dc/node-app-slave -o yaml</p>
 </div>
 <div class="paragraph">
 <p><strong>View the state of the pod within the endpoints using the command below:</strong></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get ep/node-app-slave -o yaml</code></pre>
-</div>
+<div class="paragraph">
+<p>oc get ep/node-app-slave -o yaml</p>
 </div>
 <div class="paragraph">
 <p><strong>The output of the above command will list the details of the service endpoint which will include information on the pod to which the health probe is attached as shown below.</strong></p>
@@ -3445,10 +3441,8 @@ subsets:
 <div class="paragraph">
 <p>View the state of the pod within the endpoints using the command below:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get ep/node-app-slave -o yaml</code></pre>
-</div>
+<div class="paragraph">
+<p>oc get ep/node-app-slave -o yaml</p>
 </div>
 <div class="paragraph">
 <p><strong>The output of the above command will list the details of the service endpoint which will include information on the pod to which the health probe is attached as shown below.</strong></p>
@@ -3478,10 +3472,8 @@ subsets:
 <div class="paragraph">
 <p>Select the terminal window tab and enter the command :</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl -k localhost:8080/restore</code></pre>
-</div>
+<div class="paragraph">
+<p>curl -k localhost:8080/restore</p>
 </div>
 <div class="paragraph">
 <p><strong>You should see a response similar to that shown below (with a different IP address):</strong></p>
@@ -3494,10 +3486,8 @@ subsets:
 <div class="paragraph">
 <p>View the state of the pod within the endpoints using the command below:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get ep/node-app-slave -o yaml</code></pre>
-</div>
+<div class="paragraph">
+<p>oc get ep/node-app-slave -o yaml</p>
 </div>
 <div class="paragraph">
 <p><strong>You should see that the line of interest, previously shown above, has changed back to that shown below:</strong></p>
@@ -4762,448 +4752,11 @@ Now you should see a response</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="camel-k-and-openshift-serverless"><a class="anchor" href="#camel-k-and-openshift-serverless"></a>Camel K and Openshift Serverless</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="introduction-11"><a class="anchor" href="#introduction-11"></a>Introduction</h3>
-<div class="paragraph">
-<p>Openshift Serverless, based on Knative is the serverless technology that was introduced in Openshift 4.2. Openshift Serverless enables Pods running on Openshift to be scaled to 0 therefore taking zero processing power. Only when called, Openshift Serverless will scale the Pod up on demand before processing the request. Openshift Serverless also has the ability to autoscale based on load before eventually scaling back to zero when no requests are being received.</p>
-</div>
-<div class="paragraph">
-<p>Openshift Serverless supports "Serving" and "Eventing"</p>
-</div>
-<div class="paragraph">
-<p>"Serving" enables request/response workloads, and Eventing enables asynchronous event based workloads using cloudevents. In this lab, we are going to look at eventing, and how easy it is to integration with Camel K.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-a-new-project-2"><a class="anchor" href="#create-a-new-project-2"></a>Create a new project</h3>
-<div class="paragraph">
-<p>In the browser based terminal window, create a new project called 'knative-userx' where 'x' is your allocated user number</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-project knative-userx</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="openshift-serverless-and-the-operator-lifecycle-manager"><a class="anchor" href="#openshift-serverless-and-the-operator-lifecycle-manager"></a>Openshift Serverless and the Operator Lifecycle Manager</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Openshift Serverless and the Operator Lifecycle Manager</div>
-<div class="paragraph">
-<p>Openshift Serverless uses the Operator Lifecycle manager, this means that its operator and Custom Resource Definitions (CRDs) will be added to Openshift via "OLM". Once created, the new CRDs will extend the Openshift data model allowing Openshift Serverless to be managed using the standard ‘oc’ command. Installing operators requires a higher cluster privilage so the presenter will demonstrate the installation of the operator shortly.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="install-openshift-serverless"><a class="anchor" href="#install-openshift-serverless"></a>Install Openshift Serverless</h3>
-<div class="paragraph">
-<p>The Openshift Serverless operator has to be installed by a higher level privilage. The presenter with demonstrate this to you shortly.</p>
-</div>
-<div class="paragraph">
-<p><strong>'ADMIN only - Presenter demonstrates'</strong></p>
-</div>
-<div class="paragraph">
-<p>Ensure that the Camel K operator is installed. Instructions can be found in the Camel K on Openshift lab guide.</p>
-</div>
-<div class="paragraph">
-<p>Install Openshift Serverless:</p>
-</div>
-<div class="paragraph">
-<p>If you are not already logged on go to the UI URL and login as 'opentlc-mgr' (Don’t forget to explain that this is a cluster admin function) and the admin password</p>
-</div>
-<div class="paragraph">
-<p>Make sure you are on the 'Administration View' in the console</p>
-</div>
-<div class="paragraph">
-<p>Go to 'Operators/Operator Hub'</p>
-</div>
-<div class="paragraph">
-<p>Search for 'openshift serverless'</p>
-</div>
-<div class="paragraph">
-<p>Install for all 'namespaces' in the cluster</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-1.png" alt="Serverless Operator Installation">
-</div>
-</div>
-<div class="paragraph">
-<p>Wait until 'Openshift Serverless' is shown as installed on the Operators/Installed Operators window</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-When complete, Status will say 'InstallSucceeded'
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Create a new project called knative-serving</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Make sure you create the knative-serving project as cluster admin (opentlc-mgr)
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-project knative-serving</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>add Knative Serving custom resource definition</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc apply -f https://raw.githubusercontent.com/pprosser-redhat/devex-camelk/master/knative/serving.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Wait for Knative serving to be ready, you can check this by typing the following (This will take a few minutes)</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get KnativeServing</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Once Knative Serving is ready, it will look like the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-2.png" alt="Knative Serving Ready">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Now install Knative eventing</strong></p>
-</div>
-<div class="paragraph">
-<p>Go to 'Operators/Operator Hub'</p>
-</div>
-<div class="paragraph">
-<p>Search for 'knative eventing'</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Knative Eventing Operator'</p>
-</div>
-<div class="paragraph">
-<p>Install for all 'namespaces' in the cluster as per the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-3.png" alt="Knative Eventing">
-</div>
-</div>
-<div class="paragraph">
-<p>Wait for the Operator to complete its installation</p>
-</div>
-<div class="paragraph">
-<p><strong>'ADMIN only - finished'</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="download-and-configure-your-environment-2"><a class="anchor" href="#download-and-configure-your-environment-2"></a>Download and configure your environment</h3>
-<div class="paragraph">
-<p><strong>If you completed the 'Camel K' on Openshift lab then you do not need to follow this set of instructions. Move on to 'Create Knative Messaging Channel'</strong></p>
-</div>
-<div class="paragraph">
-<p>Create a directory to download the examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">mkdir camel
-cd camel</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Download the Camel K examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">wget https://github.com/pprosser-redhat/devex-camelk/raw/master/camelexamples/camel-k-examples-1.0.0-M4.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create a new directory for the examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">mkdir examples</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Uncompress the file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">tar -xf camel-k-examples-1.0.0-M4.tar.gz -C examples</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To allow a developer to easily interact with an Openshift cluster, Camel K has it&#8217;s own command line interface. Download the 'Camel K cli' :-</p>
-</div>
-<div class="paragraph">
-<p>In the same directory, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">wget https://github.com/pprosser-redhat/devex-camelk/raw/master/camelkcli/camel-k-client-1.0.0-M4-linux-64bit.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Uncompress the file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">tar -xf camel-k-client-1.0.0-M4-linux-64bit.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Before we can create an integration, we need to add a Camel K 'IntegrationPlatform'.</p>
-</div>
-<div class="paragraph">
-<p>In the terminal window, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc apply -f   https://raw.githubusercontent.com/pprosser-redhat/devex-camelk/master/camelkconfig/integrationplatform.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>You should now have all the pieces you need to start creating and deploying lightweight Camel Integrations to Openshift.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-knative-messaging-channel"><a class="anchor" href="#create-knative-messaging-channel"></a>Create Knative Messaging Channel</h3>
-<div class="paragraph">
-<p>By default, Knative uses an in memory messaging channel. In this lab we will configure 2 of these channels to use with Camel K</p>
-</div>
-<div class="paragraph">
-<p>In the browser terminal window</p>
-</div>
-<div class="paragraph">
-<p>Type:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc apply -f examples/knative/messages-channel.yaml
-oc apply -f examples/knative/words-channel.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Make sure the channels have been created correctly</p>
-</div>
-<div class="paragraph">
-<p>Type:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get InMemoryChannel</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should see a screenshot like the one below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-4.png" alt="InMemory Channels Ready">
-</div>
-</div>
-<div class="paragraph">
-<p>You are looking for 'Ready' to be 'True'</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deploy-the-integrations"><a class="anchor" href="#deploy-the-integrations"></a>Deploy the Integrations</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Introduction to the integrations that we will use</div>
-<div class="paragraph">
-<p>Now that we have deployed 2 message channels, we will deploy 3 Camel K Integrations. 'feed.groovy' will generate a simple sentence every 3 seconds, and send this to the 'message channel', 'splitter.groovy' will subscribe to the 'message channel', take the message, split the message into individual words before sending the individual words to 'words channel'. Finally, 'printer.groovy' will subscribe to the 'words.channel', read the words from the channel and print them to the output log.</p>
-</div>
-<div class="paragraph">
-<p>The flow looks like :-</p>
-</div>
-<div class="paragraph">
-<p>feed &#8594; message channel &#8594; spilter &#8594; words channel &#8594; printer</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>In the terminal window, deploy the 3 integrations</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel run examples/knative/feed.groovy
-./kamel run examples/knative/splitter.groovy
-./kamel run examples/knative/printer.groovy</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Go to the developer view in the Openshift Console</p>
-</div>
-<div class="paragraph">
-<p>Make sure you have chosen the project 'knative-user1'</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If this is the first time you&#8217;ve deployed a Camel K integration, it will take a few minutes to download the dependancies
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Until the 'splitter.grovy' integration deploys, expect to see errors from the 'feed.groovy' integration.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Once, all 3 of the Integrations are deployed, the topology view should look like the screnshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-5.png" alt="Integrations running">
-</div>
-</div>
-<div class="paragraph">
-<p>Each of the integrations is producing log information. To view the log for a running pod in the console</p>
-</div>
-<div class="paragraph">
-<p>In the topology view,</p>
-</div>
-<div class="paragraph">
-<p>Click inside the circle of an Integration to see the pop window, make sure the overview tab is selected. If should look like the screenshot below:-</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-6.png" alt="Viewing overview of running Integration">
-</div>
-</div>
-<div class="paragraph">
-<p>On the overview page, you will see a 'pod selector'.</p>
-</div>
-<div class="paragraph">
-<p>'Click' on the pod selector</p>
-</div>
-<div class="paragraph">
-<p>This will show you a screen like the one below:-</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-7.png" alt="Running Pod">
-</div>
-</div>
-<div class="paragraph">
-<p>'Click' on row entry under name e.g. splitter-zpsqt-deployment-77f946649-tfg5q in the screenshot above</p>
-</div>
-<div class="paragraph">
-<p>This will show you the pod details screen like the one below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-8.png" alt="Pod Details">
-</div>
-</div>
-<div class="paragraph">
-<p>'Click' on 'Logs' to view the log for the pod. It should look something like the one below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-9.png" alt="Pod Details">
-</div>
-</div>
-<div class="paragraph">
-<p>Repeat the steps above for the other 3 Integrations.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="knative-in-action"><a class="anchor" href="#knative-in-action"></a>Knative in action</h3>
-<div class="paragraph">
-<p>Make sure you are in the developer portal, looking at the Topology view before continuing</p>
-</div>
-<div class="paragraph">
-<p>The 2 Integrations "hooked" into Knative Eventing are the 'spilter' and 'printer' integrations.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s see if the promise of scale to zero works.</p>
-</div>
-<div class="paragraph">
-<p>To stop the integrations, we need to stop messages arriving at the "messages.channel". To do this, we need to stop the feed integration.</p>
-</div>
-<div class="paragraph">
-<p>Lets delete the 'feed.groovy' integration</p>
-</div>
-<div class="paragraph">
-<p>In the terminal browser window, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel delete feed</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Go back to the topology view, you will notice that the feed integration has gone.</p>
-</div>
-<div class="paragraph">
-<p>Show some patience now, keep lookng at the topology view, we are waiting (and hoping!) that the integrations scale down to zero.</p>
-</div>
-<div class="paragraph">
-<p>You will know when this starts as the rings around the circles will change from the normal blue to a very dark blue, before going white. Once they are white, the integrations are scaled to zero just like the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camekknative-10.png" alt="Scaled to zero">
-</div>
-</div>
-<div class="paragraph">
-<p>To wake the Integrations up again, redeploy the 'feed' integration.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel run examples/knative/feed.groovy</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Go back to the topology view and you should see the 'feed' integration redeploy, and the 'spillter' and 'printer' integrations awake from their slumber!</p>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2020-01-03 18:30:42 UTC
+Last updated 2020-01-08 12:55:15 UTC
 </div>
 </div>
 </body>
