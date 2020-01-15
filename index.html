@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<meta name="author" content="DSA Team &lt;ilawson@redhat.com&gt;">
-<title>OpenShift 4.x DevEx Workshop</title>
+<meta name="author" content="Ian Lawson &lt;ilawson@redhat.com&gt;">
+<title>OpenShift 4.x DevEx Basics Workshop</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -434,12 +434,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>OpenShift 4.x DevEx Workshop</h1>
+<h1>OpenShift 4.x DevEx Basics Workshop</h1>
 <div class="details">
-<span id="author" class="author">DSA Team</span><br>
+<span id="author" class="author">Ian Lawson</span><br>
 <span id="email" class="email"><a href="mailto:ilawson@redhat.com">ilawson@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">January 08, 2020</span>
+<span id="revdate">January 15, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -540,51 +540,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#openshift-do">OpenShift DO</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-8">Introduction</a></li>
-<li><a href="#installing">Installing</a></li>
-<li><a href="#odo-command-set">odo command set</a></li>
-<li><a href="#logging-in">Logging in</a>
-<ul class="sectlevel3">
-<li><a href="#download-source-assets">Download source assets</a></li>
-</ul>
-</li>
-<li><a href="#create-push-source-run-cycle">Create, push source &amp; run cycle</a></li>
-<li><a href="#odo-watch">odo watch</a></li>
-</ul>
-</li>
-<li><a href="#openshift-pipelines-tekton">OpenShift Pipelines - Tekton</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-9">Introduction</a></li>
-<li><a href="#create-a-project">Create a project</a></li>
-<li><a href="#tasks">Tasks</a>
-<ul class="sectlevel3">
-<li><a href="#download-pipeline-assets">Download pipeline assets</a></li>
-<li><a href="#simple-task-creation-and-execution">Simple task creation and execution</a></li>
-</ul>
-</li>
-<li><a href="#pipelines">Pipelines</a></li>
-<li><a href="#viewing-pipelines-through-the-web-ui">Viewing pipelines through the Web UI</a></li>
-<li><a href="#task-inputs">Task inputs</a>
-<ul class="sectlevel3">
-<li><a href="#task-input-example">Task input example</a></li>
-</ul>
-</li>
-<li><a href="#workspaces-and-volumes">Workspaces and Volumes</a></li>
-</ul>
-</li>
-<li><a href="#camel-k-on-openshift">Camel K on Openshift</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-10">Introduction</a></li>
-<li><a href="#create-a-new-project">Create a new project</a></li>
-<li><a href="#camel-k-and-the-operator-lifecycle-manager">Camel K and the Operator Lifecycle Manager</a></li>
-<li><a href="#download-and-configure-your-environment">Download and configure your environment</a></li>
-<li><a href="#deploy-a-camel-k-interation">Deploy a Camel K Interation</a></li>
-<li><a href="#deploy-camel-k-in-developer-mode">Deploy Camel K in Developer mode</a></li>
-<li><a href="#optional-labs">Optional labs</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
@@ -640,10 +595,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="https://www.openshift.com/products/container-platform">https://www.openshift.com/products/container-platform</a></p>
 </li>
 <li>
-<p><a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> (the Web Console URL for the Workshop)</p>
+<p><a href="https://red.ht/35V5zps" class="bare">https://red.ht/35V5zps</a> (the Web Console URL for the Workshop)</p>
 </li>
 <li>
-<p><a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> (The Web Terminal URL for the workshop)</p>
+<p><a href="https://red.ht/36VbwDX" class="bare">https://red.ht/36VbwDX</a> (The Web Terminal URL for the workshop)</p>
 </li>
 </ul>
 </div>
@@ -697,7 +652,7 @@ The attendee will be using a browser for interacting with both the OpenShift Con
 <div class="sect2">
 <h3 id="starting-up-logging-on-and-creating-a-project"><a class="anchor" href="#starting-up-logging-on-and-creating-a-project"></a>Starting up - logging on and creating a project</h3>
 <div class="paragraph">
-<p>Log on to cluster at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
+<p>Log on to cluster at <a href="https://red.ht/35V5zps">https://red.ht/35V5zps</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View - at the top left of the UI is a selection box which describes the current view selected.</p>
@@ -990,7 +945,7 @@ The CLI is ideal in situations where you are:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a></p>
+<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://red.ht/36VbwDX">https://red.ht/36VbwDX</a></p>
 </div>
 <div class="paragraph">
 <p>The first time you visit the terminal application you will be prompted for a logon - use the same credentials as your OpenShift logon, userx and openshift</p>
@@ -1022,10 +977,16 @@ The CLI is ideal in situations where you are:</p>
 </div>
 <div class="paragraph">
 <p>Login to the OCP system through the UI. (userX / openshift)
-Ensure that you are in the Developer mode of the user interface by selecting Developer in the top left corner menu. Select the project drop down menu and select Create Project.
-Create a new project:
-Name: oconline-userX
-Display Name: OC Terminal</p>
+Ensure that you are in the Developer mode of the user interface by selecting Developer in the top left corner menu. Select the project drop down menu and select Create Project.</p>
+</div>
+<div class="paragraph">
+<p>Create a new project:</p>
+</div>
+<div class="paragraph">
+<p>Name: oconline-userX</p>
+</div>
+<div class="paragraph">
+<p>Display Name: OC Terminal</p>
 </div>
 <div class="paragraph">
 <p>You will then see a Topology view that allows you to create new workloads from a variety of sources as shown below:</p>
@@ -1047,9 +1008,13 @@ Display Name: OC Terminal</p>
 <p>Press the search button on the end of the line to force the application to examine the repository image.</p>
 </div>
 <div class="paragraph">
-<p>For the Application name enter : DevEx-Terminal
-For the Name : enter DevEx-Terminal
-Ensure the box is ticked for 'Create a route to the application'</p>
+<p>For the Application name enter : DevEx-Terminal</p>
+</div>
+<div class="paragraph">
+<p>For the Name enter : devex-terminal</p>
+</div>
+<div class="paragraph">
+<p>Ensure the box is ticked for 'Create a route to the application'</p>
 </div>
 <div class="paragraph">
 <p>Click create.</p>
@@ -1342,7 +1307,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p>Press 'Create'</p>
 </div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a></p>
+<p>Go back to the command line tab at <a href="https://red.ht/36VbwDX">https://red.ht/36VbwDX</a></p>
 </div>
 <div class="paragraph">
 <p>Type ‘oc get configmaps’</p>
@@ -1387,7 +1352,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p><strong>Note that the env variables from the config map have been expressed within the Pod as env variables (with the nodenewsconfig prefixed)</strong></p>
 </div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and enter the following commands:</p>
+<p>Go back to the command line tab at <a href="https://red.ht/36VbwDX" class="bare">https://red.ht/36VbwDX</a> and enter the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1650,7 +1615,7 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="sect3">
 <h4 id="workshop-content"><a class="anchor" href="#workshop-content"></a>Workshop Content</h4>
 <div class="paragraph">
-<p><strong>The application to be used in this workshop is a simple NodeJS REST interface. Version 1 exists on the master branch of the GIT Repository and verison 2 exists on the experimental branch.</strong></p>
+<p><strong>The application to be used in this workshop is a simple NodeJS REST interface. Version 1 exists on the master branch of the GIT Repository and version 2 exists on the experimental branch.</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>To begin the creation of the application use the following commands in an command line window. :</strong></p>
@@ -1658,17 +1623,20 @@ any information provided via the config map is controlled and immutable.</strong
 </div>
 <div class="sect3">
 <h4 id="creation-of-version-1"><a class="anchor" href="#creation-of-version-1"></a>Creation of version 1</h4>
-<div class="paragraph">
-<p>oc new-project master-slaveX</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-project master-slaveX</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>(Where X is your user number)</strong></p>
 </div>
-<div class="paragraph">
-<p>oc new-app --name slave-app-v1-0  <a href="https://github.com/marrober/slave-node-app.git" class="bare">https://github.com/marrober/slave-node-app.git</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-app --name slave-app-v1-0  https://github.com/marrober/slave-node-app.git
+
+oc expose service slave-app-v1-0 --name="slave-app-route"</code></pre>
 </div>
-<div class="paragraph">
-<p>oc expose service slave-app-v1-0 --name="slave-app-route"</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1691,10 +1659,10 @@ any information provided via the config map is controlled and immutable.</strong
 <p>A build configuration is created to compile the application source code which is extracted from the associated GIT repository.</p>
 </li>
 <li>
-<p>The build configuration will create a buid instance which includes logs of the build process and a reference to the built image.</p>
+<p>The build configuration will create a build instance which includes logs of the build process and a reference to the built image.</p>
 </li>
 <li>
-<p>The newly created image is deployed as a runnning pod (or pods depending on the number of pods defined in the deployment configuration).</p>
+<p>The newly created image is deployed as a running pod (or pods depending on the number of pods defined in the deployment configuration).</p>
 </li>
 <li>
 <p>A service is created as part of the application creation process. The service endpoints will point to the pod(s) created by the build process. In the case of a rebuild and redeploy operation the service endpoints are updated to point to the new pods in accordance with the deployment strategy of the deployment configuration.</p>
@@ -1705,7 +1673,7 @@ any information provided via the config map is controlled and immutable.</strong
 </ul>
 </div>
 <div class="paragraph">
-<p>The diagram below shows the above and how the relate together.</p>
+<p>The diagram below shows the above and how they relate together.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1726,13 +1694,15 @@ any information provided via the config map is controlled and immutable.</strong
 <p><strong>This will display a formatted URL with the 'http://' part at the beginning which will be similar to :</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="http://slave-app-route-master-slave.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com" class="bare">http://slave-app-route-master-slave.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com</a></p>
+<p><a href="http://slave-app-route-master-slave.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com/ip" class="bare">http://slave-app-route-master-slave.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com/ip</a></p>
 </div>
 <div class="paragraph">
-<p>*To test the application use the command line window to issue a curl command to:</p>
+<p><strong>To test the application use the command line window to issue a curl command to:</strong></p>
 </div>
-<div class="paragraph">
-<p>curl -k &lt;url from the above command&gt;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl -k &lt;url from the above command&gt;</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>The response should be as shown below (example ip address) :</strong></p>
@@ -1746,8 +1716,10 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="paragraph">
 <p><strong>The development team now wants to introduce an experimental version 2 of the application and introduce it to the users in a number of different ways. The first action is to create the new build process for the experimental version using the command below.</strong></p>
 </div>
-<div class="paragraph">
-<p>oc new-app --name slave-app-v2-0 <a href="https://github.com/marrober/slave-node-app.git#experimental" class="bare">https://github.com/marrober/slave-node-app.git#experimental</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-app --name slave-app-v2-0 https://github.com/marrober/slave-node-app.git#experimental</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Note the use of the #experimental branch identifier in the end of the GIT repository. This syntax cannot be used through the web interface to openshift so any requirements for non-standard GIT connectivity must be done through the command line interface. It is also possible to configure the source-2-image capability to reference a specific sub directory of the repository using the --context option.</strong></p>
@@ -1833,8 +1805,10 @@ any information provided via the config map is controlled and immutable.</strong
 <div class="paragraph">
 <p><strong>The details of the route patched by the above command are displayed by the command:</strong></p>
 </div>
-<div class="paragraph">
-<p>oc get route/slave-app-route -o yaml</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc get route/slave-app-route -o yaml</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>The output of the above command is shown below, and the nested information from spec &#8594; to &#8594; name is easy to see.</strong></p>
@@ -1904,8 +1878,10 @@ status:
 <div class="paragraph">
 <p><strong>To migrate 10% of traffic to version 2 execute the following command:</strong>.</p>
 </div>
-<div class="paragraph">
-<p>oc set route-backends slave-app-route slave-app-v1-0=90 slave-app-v2-0=10</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc set route-backends slave-app-route slave-app-v1-0=90 slave-app-v2-0=10</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Switch back to the command window running the shell script and after a short wait you will see the occasional report from version 2.</strong></p>
@@ -1913,8 +1889,10 @@ status:
 <div class="paragraph">
 <p><strong>To balance the workload between the two versions execute the following command:</strong></p>
 </div>
-<div class="paragraph">
-<p>oc set route-backends slave-app-route slave-app-v1-0=50 slave-app-v2-0=50</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc set route-backends slave-app-route slave-app-v1-0=50 slave-app-v2-0=50</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Switch back to the command window running the shell script and after a short wait you will see a more even distribution of calls between versions 1 and 2.</strong></p>
@@ -1922,8 +1900,10 @@ status:
 <div class="paragraph">
 <p><strong>The details of the route patched by the above command are displayed by the command:</strong></p>
 </div>
-<div class="paragraph">
-<p>oc get route/slave-app-route -o yaml</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc get route/slave-app-route -o yaml</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>A section of the output of the above command is included below, showing the split of traffic between versions 1 and 2.</strong></p>
@@ -1948,8 +1928,10 @@ status:
 <div class="paragraph">
 <p><strong>When satisfied that version 2 is working as required the following command will switch all traffic to that version and will remove the references to version 1 from the route.</strong></p>
 </div>
-<div class="paragraph">
-<p>oc set route-backends slave-app-route slave-app-v1-0=0 slave-app-v2-0=100</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">oc set route-backends slave-app-route slave-app-v1-0=0 slave-app-v2-0=100</code></pre>
+</div>
 </div>
 <div class="sect3">
 <h4 id="cleaning-up"><a class="anchor" href="#cleaning-up"></a>Cleaning up</h4>
@@ -1976,7 +1958,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.</p>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL at <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL at <a href="https://red.ht/35V5zps" class="bare">https://red.ht/35V5zps</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1985,7 +1967,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p><strong>In this section we will create a couple of simple applications and show how they are represented via the Service and load-balancing of Pods within the SDN itself.</strong></p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and again logon as 'userx' with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/36VbwDX" class="bare">https://red.ht/36VbwDX</a> and again logon as 'userx' with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2163,7 +2145,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl http://application1.networktest(x).svc.cluster.local:8080</code></pre>
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl http://application1.networktestx.svc.cluster.local:8080</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2180,7 +2162,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">curl http://application2:8080’</code></pre>
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl http://application2:8080</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2209,8 +2191,10 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <div class="paragraph">
 <p>For each of the policies listed click on the triple dot icon on the far right and choose ‘Delete Network Policy’.</p>
 </div>
-<div class="paragraph">
-<p>image::sdn-5.png</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/sdn-5.png" alt="Delete Network Policies">
+</div>
 </div>
 <div class="paragraph">
 <p>The Network Policy tab should display ‘No Network Policies Found’.</p>
@@ -2321,10 +2305,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 </table>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://red.ht/35V5zps" class="bare">https://red.ht/35V5zps</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/36VbwDX" class="bare">https://red.ht/36VbwDX</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2596,10 +2580,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="introduction-6"><a class="anchor" href="#introduction-6"></a>Introduction</h3>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new" class="bare">http://console-openshift-console.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com#new</a> and logon as userx (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://red.ht/35V5zps" class="bare">https://red.ht/35V5zps</a> and logon as userx (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-devex1-37b5.devex1-37b5.example.opentlc.com/</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/36VbwDX" class="bare">https://red.ht/36VbwDX</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -3522,1241 +3506,11 @@ Type ‘ProbesX’ (where X is your user number) such that the Delete button tur
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="openshift-do"><a class="anchor" href="#openshift-do"></a>OpenShift DO</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="introduction-8"><a class="anchor" href="#introduction-8"></a>Introduction</h3>
-<div class="paragraph">
-<p><strong>The OpenShift command line interface 'oc' is a general purpose interface with a vast set of commands for both development and administrative purposes. The odo command is a more developer centric command line interface for users who simply want to build, deploy and run applications on OpenShift. There is definitely a place for both tools within the kitbag of an OpenShift user, and for fast iterations of edit - run - edit - run the odo interface is perfect.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The approach described in the application basics chapter used a GIT repository as the source of the content to be built and deployed. This is a excellent approach when multiple users are working together in a complex application performing frequent integration of source code in GIT and validating their combined efforts as the project progresses. Avoiding such frequent integration activity will make the code of each developer diverge storing up integration headaches in the future.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The ability of the OpenShift 'Source-2-image' capability to identify the code within the GIT repository (from the options of Node.js, Java, Ruby, Perl, PHP, and Python), select a builder image, build the code and deliver a new container with the running application is a huge efficiency advantage for teams. However there are scenarios in which a single developer simply wants to get their code running as quickly as possible and which is where odo can be advantageous.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The principle of the odo command is that it can very quickly create a new project and use a 'GIT like' syntax to enable a developer to push the code into OpenShift. The receiving OpenShift cluster will then decide how to build the code, perform the build and deliver a running container. When the developer wants to make changes they simply push their code and the build and deploy operations are repeated. The first push process may take around a minute, but after that each iteration will take only a few seconds.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The diagram below shows how the odo command can fit into a development cycle. The outline diagram shows that the odo command is appropriate for single developers working with a degree of isolation, the team development involves multiple developers integrating their code through a GIT repository and the final phase involves the use of multiple clusters for the deployment of applications through to production.</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-1.png" alt="odo in the development cycle">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>In more detail the diagram below shows how odo and oc / source-2-image work together to create a scaled development experience. In the single user phase the odo command is used to push the application code to a container in OpenShift. In the light blue box the source code is pushed to OpenShift in which the language specific builder image is used to create a new image containing the built code. This  image is started to create a running container. When the developer needs to share the code with the work of others GIT is used as a vehicle for integration and to remove any code conflicts.  This is the medium blue box in which the code is pushed to GIT and the OpenShift source-2-image capability is used to build a new running container. In the final phase shown in the darker blue box, the built container image can then be pushed to the Quay image repository to be stored securely ready for deployment to further environments such as pre-production and production.</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-2.png" alt="odo in the development cycle - detail">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="installing"><a class="anchor" href="#installing"></a>Installing</h3>
-<div class="paragraph">
-<p>The odo command line interface is available for download from here : <a href="https://github.com/openshift/odo" class="bare">https://github.com/openshift/odo</a></p>
-</div>
-<div class="paragraph">
-<p><strong>The Applications Basics chapter describes two different mechanisms for getting access to the command line tools for this workshop. If you are using the terminal within a container (option 2) then you already have the odo command line available to you. If you have chosen to install the command line utilities locally on your laptop then you will need to install odo using the download location above.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>To use the command simply type 'odo' and you will see help regarding the objects and to get help on a specific object use 'odo &lt;object&gt; --help'.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="odo-command-set"><a class="anchor" href="#odo-command-set"></a>odo command set</h3>
-<div class="paragraph">
-<p><strong>The odo command has the following subcommands :</strong></p>
-</div>
-<div class="paragraph">
-<p>Commands:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>app         Perform application operations (delete, describe, list)
-catalog     Catalog related operations (describe, list, search)
-component   Manage components (create, delete, describe, link, list, log, push, unlink, update, watch)
-config      Change or view configuration (set, unset, view)
-debug       Debug commands (port-forward)
-preference  Modifies preference settings (set, unset, view)
-project     Perform project operations (create, delete, get, list, set)
-service     Perform service catalog operations (create, delete, list)
-storage     Perform storage operations (create, delete, list)
-url         Expose component to the outside world (create, delete, list)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Utility Commands:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>login       Login to cluster
-logout      Log out of the current OpenShift session
-utils       Utilities for terminal commands and modifying odo configurations (terminal)
-version     Print the client version information</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Component Shortcuts:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>create      Create a new component
-delete      Delete component
-describe    Describe component
-link        Link component to a service or component
-list        List all components in the current application
-log         Retrieve the log for the given component
-push        Push source code to a component
-unlink      Unlink component to a service or component
-update      Update the source code path of a component
-watch       Watch for changes, update component on change</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The most common are used within this workshop but feel free to experiment with any of the above commands.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging-in"><a class="anchor" href="#logging-in"></a>Logging in</h3>
-<div class="paragraph">
-<p><strong>To login using odo enter the command :</strong></p>
-</div>
-<div class="paragraph">
-<p>odo login &lt;user-name&gt;</p>
-</div>
-<div class="paragraph">
-<p><strong>If you are already logged in with the oc command then the credentials will be cached (assuming you use the same user name) and you will not have to enter a password.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The odo command will evolve over time and it performs a check to see if you have the latest version each time it is used. If there is an update available you will see a prompt similar to that which is shown below, underneath the text reporting the project that you are using.</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">---
-A newer version of odo (v1.0.2) is available,
-visit https://github.com/openshift/odo/releases to update.
-If you wish to disable this notification, run:
-odo preference set UpdateNotification false
----</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>*To see which version of odo you are using enter the command : *</p>
-</div>
-<div class="paragraph">
-<p>odo version</p>
-</div>
-<div class="sect3">
-<h4 id="download-source-assets"><a class="anchor" href="#download-source-assets"></a>Download source assets</h4>
-<div class="paragraph">
-<p><strong>The pipeline assets are located in a GIT repository. Using your terminal window download the assets using the command below (if you have not done so for a previous chapter).</strong></p>
-</div>
-<div class="paragraph">
-<p>If you are using the terminal in a pod ensure that the current directory is /workspace. If you are using your local machine select an appropriate location to which you have write access.</p>
-</div>
-<div class="paragraph">
-<p>git clone <a href="https://github.com/utherp0/workshop4.git" class="bare">https://github.com/utherp0/workshop4.git</a></p>
-</div>
-<div class="paragraph">
-<p>cd workshop4/attendee/slave</p>
-</div>
-<div class="paragraph">
-<p>ls -al</p>
-</div>
-<div class="paragraph">
-<p><strong>You will see that the directory only has the source file slave.js and the package file called package.json.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-push-source-run-cycle"><a class="anchor" href="#create-push-source-run-cycle"></a>Create, push source &amp; run cycle</h3>
-<div class="paragraph">
-<p><strong>Create a new project using the odo command replacing X with your user number below.</strong></p>
-</div>
-<div class="paragraph">
-<p>odo create nodejs node-app-slave --project master-slave-odo</p>
-</div>
-<div class="paragraph">
-<p><strong>The syntax of the above command is :</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>odo create &lt;component-type&gt; &lt;component-name&gt; --project &lt;project-for-the-component&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The result of running this command is simply the creation of a .odo directory containing a config.yaml file. The file contains the desired state for the application in OpenShift and is only committed to OpenShift and acted upon by OpenShift when the user issues the command 'odo push'. Examine the config.yaml file with the command:</strong></p>
-</div>
-<div class="paragraph">
-<p>cat .odo/config.yaml</p>
-</div>
-<div class="paragraph">
-<p><strong>Create a route for the application by using the command below:</strong></p>
-</div>
-<div class="paragraph">
-<p>odo url create node-app-slave</p>
-</div>
-<div class="paragraph">
-<p><strong>Examine the contents of the .odo/config.yaml file again and you will see that new content has been added:</strong></p>
-</div>
-<div class="paragraph">
-<p>cat .odo/config.yaml</p>
-</div>
-<div class="paragraph">
-<p><strong>Push the configuration to OpenShift:</strong></p>
-</div>
-<div class="paragraph">
-<p>odo push</p>
-</div>
-<div class="paragraph">
-<p><strong>The output from the above command is shown below:</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-3.png" alt="odo in the development cycle - detail">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The application is started up and will be running at the URL indicated in the output above. Copy the URL from your command window and paste it into a new browser tab. You should see an output similar to that shown below.</strong></p>
-</div>
-<div class="paragraph">
-<p>Hello - this is the simple slave REST interface v1.0</p>
-</div>
-<div class="paragraph">
-<p><strong>Make a small change to the comment in the source code of the slave.js file to change the line shown below:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">response.send('Hello - this is the simple slave REST interface' + versionIdentifier);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Change to :</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">response.send('Hello - MODIFIED and pushed with ODO' + versionIdentifier);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Push the change to OpenShift:</strong></p>
-</div>
-<div class="paragraph">
-<p>odo push</p>
-</div>
-<div class="paragraph">
-<p><strong>The code still needed to be pushed to the component, but the final stage of building the component is much faster. Refresh the browser widow showing the application output and you will see your code change. The edit - push - test cycle is as simple as that.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="odo-watch"><a class="anchor" href="#odo-watch"></a>odo watch</h3>
-<div class="paragraph">
-<p><strong>The odo process also has a 'watch' facility that allows you to force odo to constantly watch for source code changes and push them immediately. If you are using the terminal in a container open a second window so that you have two terminal windows. If you are using your local laptop simply open another terminal window. Ensure that the new terminal window is in the same directory as the first terminal window. Enter the command below to make odo watch for source code changes:</strong></p>
-</div>
-<div class="paragraph">
-<p>odo watch</p>
-</div>
-<div class="paragraph">
-<p><strong>The command window should report : 'Waiting for something to change in &lt;current-working-directory&gt;'</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>Switch back to your other terminal window and make another change to the source code, similar to the change above. After saving the edit switch to the terminal window in which you typed 'odo watch' and observe that a new push of the code to OpenShift has taken place.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The window with the watch command running will report:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">File &lt;path-to-source&gt;/slave.js changed
-Pushing files...
- ✓  Waiting for component to start [73ms]
- ✓  Syncing files to the component [11s]
- ✓  Building component [4s]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Refresh the browser widow showing the application output and you will see your code change.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>odo is clearly a very fast way to go from code to running your application without having to install tools and frameworks on your laptop.</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="openshift-pipelines-tekton"><a class="anchor" href="#openshift-pipelines-tekton"></a>OpenShift Pipelines - Tekton</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="introduction-9"><a class="anchor" href="#introduction-9"></a>Introduction</h3>
-<div class="paragraph">
-<p><strong>For many years teams have created automation pipelines to build, unit test, analyse and deploy applications in a variety of tool-chains. Some such tool-chains (Jenkins for one) pre-date the popularisation of containers and are now being questioned for their fit for the delivery of cloud native applications. While we are at pains not to criticise Jenkins (we are big users and fans) there is scope to look at alternative approaches for cloud native applications.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>OpenShift Pipelines are based on the Tekton open source project and they provide a Kubernetes style, resource based approach to the construction of pipelines. Tasks are defined as small units of operations (typically 10 to 15 lines of YAML) and such tasks are grouped together into taskruns or pipelines for execution</strong>.</p>
-</div>
-<div class="paragraph">
-<p><strong>A new command line exists for the execution of Tekton commands and a graphical user interface can be added to the cluster to provide a simple way to run tasks and to observe running or completed tasks.</strong></p>
-</div>
-<div class="paragraph">
-<p>The Tekton project can be found here : <a href="https://tekton.dev/" class="bare">https://tekton.dev/</a></p>
-</div>
-<div class="paragraph">
-<p>Further documentation on the specifics of Tekton can be found on the github site here : <a href="https://github.com/tektoncd/pipeline" class="bare">https://github.com/tektoncd/pipeline</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-a-project"><a class="anchor" href="#create-a-project"></a>Create a project</h3>
-<div class="paragraph">
-<p><strong>Create a project to use for the OpenShift pipeline examples called pipelines-userX replacing X with your user number in the following command:</strong></p>
-</div>
-<div class="paragraph">
-<p>oc new-project pipelines-userX</p>
-</div>
-<div class="paragraph">
-<p><strong>In order to use the pipeline capability of OpenShift within the project the following commands must be executed to manage the security profile of the project:</strong></p>
-</div>
-<div class="paragraph">
-<p>oc adm policy add-scc-to-user privileged -z pipeline</p>
-</div>
-<div class="paragraph">
-<p>oc adm policy add-role-to-user edit -z pipeline</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="tasks"><a class="anchor" href="#tasks"></a>Tasks</h3>
-<div class="sect3">
-<h4 id="download-pipeline-assets"><a class="anchor" href="#download-pipeline-assets"></a>Download pipeline assets</h4>
-<div class="paragraph">
-<p><strong>The pipeline assets are located in a GIT repository. Using your terminal window download the assets using the command below.</strong></p>
-</div>
-<div class="paragraph">
-<p>If you are using the terminal in a pod ensure that the current directory is /workspace. If you are using your local machine select an appropriate location to which you have write access.</p>
-</div>
-<div class="paragraph">
-<p>git clone <a href="https://github.com/utherp0/workshop4.git" class="bare">https://github.com/utherp0/workshop4.git</a></p>
-</div>
-<div class="paragraph">
-<p>cd workshop4/attendee/tekton/</p>
-</div>
-<div class="paragraph">
-<p>ls -al</p>
-</div>
-<div class="paragraph">
-<p>You should now see a list of yaml files that are used during the remainder of this chapter.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="simple-task-creation-and-execution"><a class="anchor" href="#simple-task-creation-and-execution"></a>Simple task creation and execution</h4>
-<div class="paragraph">
-<p><strong>In the simplest format a task can be executed by a taskrun object. The digram below shows a simple taskrun calling a single task.</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-1.png" alt="Simple pipeline with a task and taskrun">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Tekton command line</div>
-<div class="paragraph">
-<p>A new command line utility is used to manage the Tekton command line. The commands cover the various different pipeline objects such as task, taskrun, pipeline, pipelinerun,  resources, cluster tasks and conditions.</p>
-</div>
-<div class="paragraph">
-<p>The Tekton command line is downloaded from here : <a href="https://github.com/tektoncd/cli" class="bare">https://github.com/tektoncd/cli</a></p>
-</div>
-<div class="paragraph">
-<p>If you are using the terminal within a container (option 2) from the installation details in the Application Basics chapter then you already have the tkn command line available to you. If you have chosen to install the command line utilities locally on your laptop then you will need to install tkn using the download location above.</p>
-</div>
-<div class="paragraph">
-<p>To use the command simply type 'tkn' and you will see help regarding the objects and to get help on a specific object use 'tkn &lt;object&gt; --help'.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>To execute the above pipeline use the following commands to create the pipeline objects. Note that when creating the taskrun objects the associated task(s) will run immediately.</strong></p>
-</div>
-<div class="paragraph">
-<p>oc create -f task-1.yaml</p>
-</div>
-<div class="paragraph">
-<p>oc create -f taskrun-1.yaml</p>
-</div>
-<div class="paragraph">
-<p>tkn taskrun ls</p>
-</div>
-<div class="paragraph">
-<p><strong>The response from the last command will display a line similar to the following:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">NAME          STARTED           DURATION      STATUS
-task-run-1    9 seconds ago     ---           Running(Pending)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Repeat the final command a few times until you see it change to the following:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">NAME          STARTED           DURATION      STATUS
-task-run-1    3 minuites ago    21 seconds    Succeeded</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The result of running the task can then be viewed by executing the following command:</strong></p>
-</div>
-<div class="paragraph">
-<p>tkn taskrun logs task-run-1</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">[echo-statement-1] This is my first task in Tekton
-
-[echo-statement-2] ------------------------------------------------------------
-[echo-statement-2]   - This is a multi-line comment
-[echo-statement-2]   - This is useful as a separator but each line has
-[echo-statement-2]   - the title repeated next to it using different colours
-[echo-statement-2]   - which helps with the identification of different tasks.
-[echo-statement-2]  ------------------------------------------------------------
-[echo-statement-2]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Note that the command response above uses different colours for each block of command result titles in the [ ] brackets. This helps to differential between the response for each step.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="pipelines"><a class="anchor" href="#pipelines"></a>Pipelines</h3>
-<div class="paragraph">
-<p><strong>Pipelines are used to manage the execution of a series of tasks within a pipeline. The example pipeline below is used to execute the Tekton tasks : task-1, task-2 and task-3. Remember that each Tekton task can have multiple steps within it.</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">apiVersion: tekton.dev/v1alpha1
-kind: Pipeline
-metadata:
-  name: pipeline-1
-spec:
-  tasks:
-  - name: task-1
-    taskRef:
-      name: task-1
-  - name: task-2
-    taskref:
-      name: task-2
-  - name: task-3
-    taskref:
-      name: task-3</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Before executing this pipeline create the required additional resources with the commands :</strong></p>
-</div>
-<div class="paragraph">
-<p>oc create -f task-2.yaml</p>
-</div>
-<div class="paragraph">
-<p>oc create -f task-3.yaml</p>
-</div>
-<div class="paragraph">
-<p>oc create -f pipeline-1.yaml</p>
-</div>
-<div class="paragraph">
-<p><strong>Execute the pipeline with the following Tekton task</strong>.</p>
-</div>
-<div class="paragraph">
-<p>tkn pipeline start pipeline-1</p>
-</div>
-<div class="paragraph">
-<p><strong>The output of running this command will be something similar to that which is shown below:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">Pipelinerun started: pipeline-1-run-ffxsk
-Showing logs...
-[task-2 : what-directory] /workspace
-
-[task-2 : describe-command] ------------------------------------------------------------
-[task-2 : describe-command]   - Openshift oc command line example
-[task-2 : describe-command]  ------------------------------------------------------------
-[task-2 : describe-command]
-
-[task-2 : oc-version] Client Version: unknown
-[task-2 : oc-version] Kubernetes Version: v1.14.6+76aeb0c
-
-[task-3 : echo-statement-3] echo - statement 3
-[task-1 : echo-statement-1] This is my first task in Tekton
-
-
-[task-3 : echo-statement-4] echo - statement 4
-
-[task-1 : echo-statement-2] ------------------------------------------------------------
-[task-1 : echo-statement-2]   - This is a multi-line comment
-[task-1 : echo-statement-2]   - This is useful as a separator but each line has
-[task-1 : echo-statement-2]   - the title repeated next to it using different colours
-[task-1 : echo-statement-2]   - which helps with the identification of different tasks.
-[task-1 : echo-statement-2]  ------------------------------------------------------------</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>There may be an issue in the order of the execution above. The order of the pipeline expected is different to the order observed:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">   Expected               Actual
-task 1 - step 1       task 2 - step 1
-task 1 - step 2       task 2 - step 2
-task 2 - step 1       task 2 - step 3
-task 2 - step 2       task 3 - step 1
-task 2 - step 3       task 1 - step 1
-task 3 - step 1       task 3 - step 2
-task 3 - step 2       task 1 - step 2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>In some pipelines the order of execution may not matter but if it does the order can be managed by the addition of the 'runAfter' directive to a specific task as shown in the update to the pipeline-1 pipeline shown below:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">apiVersion: tekton.dev/v1alpha1
-kind: Pipeline
-metadata:
-  name: pipeline-1
-spec:
-  tasks:
-  - name: task-1
-    taskRef:
-      name: task-1
-  - name: task-2
-    taskref:
-      name: task-2
-    runAfter:
-    - task-1
-  - name: task-3
-    taskref:
-      name: task-3
-    runAfter:
-    - task-2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Make the above changes to the pipeline-1.yaml file and then remove the pipeline definition and recreate it before re-running it with the commands :</p>
-</div>
-<div class="paragraph">
-<p>oc delete -f pipeline-1.yaml</p>
-</div>
-<div class="paragraph">
-<p>oc create -f pipeline-1.yaml</p>
-</div>
-<div class="paragraph">
-<p>tkn pipeline start pipeline-1</p>
-</div>
-<div class="paragraph">
-<p><strong>This time the execution will follow the intended order.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="viewing-pipelines-through-the-web-ui"><a class="anchor" href="#viewing-pipelines-through-the-web-ui"></a>Viewing pipelines through the Web UI</h3>
-<div class="paragraph">
-<p><strong>Pipelines and pipeline runs are visible through the OpenShift web user interface.</strong></p>
-</div>
-<div class="paragraph">
-<p>Ensure that you are on the 'Developer' view of the OpenShift web user interface as shown below and select the project created above from the drop down list.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-2.png" alt="Developer view of OpenShift WEB UI">
-</div>
-</div>
-<div class="paragraph">
-<p>Select the pipelines tab on the left hand side of the screen.</p>
-</div>
-<div class="paragraph">
-<p>You will see the pipeline recently created and it will show a green bar to the right indicating the previous successful execution of the pipeline, as shown below. Note that the green bar will display dark blue sections for running tasks, light blue sections for pending tasks, green for completed and red for failed.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-3.png" alt="Pipeline view showing a completed pipeline run">
-</div>
-</div>
-<div class="paragraph">
-<p>From the three dot menu on the right hand side it is possible to start a run of the pipeline. Do this now and watch as the screen changes to show the details of the pipeline run as shown below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-4.png" alt="Pipelinerun in progress">
-</div>
-</div>
-<div class="paragraph">
-<p>Each block can be clicked on to show the details of the steps within the task. Experiment with the different screens to look at the details of the running or completed tasks.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="task-inputs"><a class="anchor" href="#task-inputs"></a>Task inputs</h3>
-<div class="paragraph">
-<p><strong>There will be scenarios where it is necessary to provide specific parameters to a pipeline process and the underlying tasks that the pipeline call.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>There are two mechanisms for getting specific values into tasks :</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>parameters - used to provide specific values to tasks at runtime. If a parameter is declared it must either have a default value defined within the task or it must have a value supplied from a calling taskrun or pipeline run.</p>
-</li>
-<li>
-<p>pipeline resources - a reference to a defined resource object that can be accessed by a Tekton pipeline. If a resource is referenced by a task then the resource must exist unless it has been defined as an optional resource in the task definition.</p>
-</li>
-</ul>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Pipeline Resource Types</div>
-<div class="paragraph">
-<p>The following pipeline resource types exist :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Git Resource - The git resource identifies a git repository, that contains the source code to be built by the pipeline. The resource can point to a specific branch or commit and can extract content from a specific directory.</p>
-</li>
-<li>
-<p>Pull Request - Can be used as an input resource to identify specific meta data about a pull request. if used as an output a pull request can be updated with changes made during the pipeline process.</p>
-</li>
-<li>
-<p>Image - An image to be created as part of the pipeline process.</p>
-</li>
-<li>
-<p>Cluster Resource - A different cluster to the cluster on which the pipeline is running. This can be used to deploy content to an alternative cluster as part of a deployment pipeline process.</p>
-</li>
-<li>
-<p>Storage Resource - Blob storage that contains either an object or directory.</p>
-</li>
-<li>
-<p>Cloud Event Resource - A cloud event that is sent to a target URI upon completion of a TaskRun.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Further details on the options for all of the above resources is included here : <a href="https://github.com/tektoncd/pipeline/blob/master/docs/resources.md" class="bare">https://github.com/tektoncd/pipeline/blob/master/docs/resources.md</a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="task-input-example"><a class="anchor" href="#task-input-example"></a>Task input example</h4>
-<div class="paragraph">
-<p><strong>The task defined in task-4.yaml uses both parameters and pipeline resources to get information into the task. This allows a generic task to be written with specific values supplied to it from the taskrun. The Taskrun object acts as a 'value provider' giving specific values for parameters and referencing specific pipeline resources. The following diagram shows the relationship between the three specific objects.</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-5.png" alt="Task and resource relationship">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>As shown above the task has place-holders for two parameters. The first parameter has a value defined within the taskrun. The second parameter has a default value so it is not essential to provide a value for it in the taskrun. Both parameters are referenced from the steps of the task using the notation $(inputs.params.&lt;parameter-name&gt;).</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>The task also defines a resource object called git-repo-slave of type git. Within the taskrun an input resource object is defined with the same name (git-repo-slave) referring to a pipeline resource object called git-repo-slave-resource. A pipeline resource object is created from the yaml file git-resources.yaml which makes a reference to the actual git repository.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>To create the resource object execute the following command :</strong></p>
-</div>
-<div class="paragraph">
-<p>oc create -f git-resources.yaml</p>
-</div>
-<div class="paragraph">
-<p><strong>To view the resources in the project use the command:</strong></p>
-</div>
-<div class="paragraph">
-<p>tkn resources list</p>
-</div>
-<div class="paragraph">
-<p><strong>The response will be :</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">NAME                      TYPE   DETAILS
-git-repo-slave-resource   git    url: https://github.com/marrober/slave-node-app.git</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The use of pipeline resource objects for git repositories and created images (as output resources) helps teams to create generic build, test and deploy pipelines that can be reused across multiple projects where the projects simply define the custom pipeline resource objects that are specific to their project or environment.</strong></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="workspaces-and-volumes"><a class="anchor" href="#workspaces-and-volumes"></a>Workspaces and Volumes</h3>
-<div class="paragraph">
-<p><strong>Workspaces allow you to organise the content used by tasks and the assets that are produced by tasks. This can be useful to add structure to the content during large complex pipelines. Workspaces are storage structures within the pod that runs the containers of the pipeline and workspaces are scoped at the task level. Separate steps within a task can see the same workspace. Volumes are similar to workspaces except for the fact that they are backed by persistent volumes. This ensures that content written to the volume is accessible by steps from multiple tasks, allowing for a greater separation of steps into different tasks. For example a generic build task could be used to create an executable, writing the deliverable to a volume. A separate testing task could then be invoked by a pipeline to perform tests against the newly created deliverable. Accessing the file via a volume will work for the two separate tasks.</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>Task 5 has steps for creating files in the workspace and in a volume, followed by steps to display the files in the workspace and the volume which work fine. Task 6 only has tasks for attempting to display the content of the workspace and the volume. Since the workspace in task 6 is a different workspace to that used in task 5 there is no content to display. The volume however shows the file written in the step in task 5. Tasks 5 and 6 are orchestrated by the pipeline called pipeline-5.</strong></p>
-</div>
-<div class="paragraph">
-<p>Create the persistent volume claim to use in this exercise with the command :</p>
-</div>
-<div class="paragraph">
-<p>oc create -f persistentvolumeclaim.yaml</p>
-</div>
-<div class="paragraph">
-<p>Create tasks 5 and 6 :</p>
-</div>
-<div class="paragraph">
-<p>oc create -f task-5.yaml</p>
-</div>
-<div class="paragraph">
-<p>oc create -f task-6.yaml</p>
-</div>
-<div class="paragraph">
-<p>Create the pipeline task :</p>
-</div>
-<div class="paragraph">
-<p>oc create -f pipeline-5.yaml</p>
-</div>
-<div class="paragraph">
-<p><strong>The persistent volume will show that it is in an pending state after creation as no resource has attempted to consume it. After the task has been executed look again at the persistent volume and it will show that it is bound.</strong></p>
-</div>
-<div class="paragraph">
-<p>oc get pvc</p>
-</div>
-<div class="paragraph">
-<p><strong>Before executing the task</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">NAME                    STATUS        VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-tekton-task-cache-pvc   Pending                                                                            gp2            4s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>After executing the task</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">NAME                    STATUS        VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-tekton-task-cache-pvc   Bound         pvc-1d894a93-2646-11ea-9f45-0a9970779e5c   1Gi        RWO            gp2            2m2s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Execute the pipeline :</p>
-</div>
-<div class="paragraph">
-<p>tkn pipeline start pipeline-5</p>
-</div>
-<div class="paragraph">
-<p>The results (including the colour of the output) is shown below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/pipelines-6.png" alt="Workspace and volume example output">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>As shown above in task 5 the creation of the file in the workspace and in the volume functions as required and the files are present. When task 6 attempts to display the files there is an empty workspace, but the volume does show the file created in task 5</strong></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="camel-k-on-openshift"><a class="anchor" href="#camel-k-on-openshift"></a>Camel K on Openshift</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="introduction-10"><a class="anchor" href="#introduction-10"></a>Introduction</h3>
-<div class="paragraph">
-<p>Apache Camel K is a lightweight integration framework built from Apache Camel that runs natively on Kubernetes and is specifically designed for serverless and microservice architectures.</p>
-</div>
-<div class="paragraph">
-<p>Users of Camel K can instantly run integration code written in Camel DSL on their preferred cloud (Kubernetes or OpenShift).</p>
-</div>
-<div class="paragraph">
-<p>We are going to use a new project to create our Camel K integrations</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are not already logged on go to the UI URL and login as userx (x is the number provided to you) and password openshift. Open another tab in the browser and go to the terminal URL provided and again logon as userx with password openshift
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-a-new-project"><a class="anchor" href="#create-a-new-project"></a>Create a new project</h3>
-<div class="paragraph">
-<p>In the browser based terminal window, create a new project called 'camelk-userx' where 'x' is your allocated user number</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc new-project camelk-userx</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="camel-k-and-the-operator-lifecycle-manager"><a class="anchor" href="#camel-k-and-the-operator-lifecycle-manager"></a>Camel K and the Operator Lifecycle Manager</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Camel K and the Operator Lifecycle Manager</div>
-<div class="paragraph">
-<p>Camel K uses the Operator Lifecycle manager, this means that new Custom Resource Definitions (CRDs) will be added to Openshift. These CRDs will extend the Openshift data model and allow Camel K to be managed using the standard ‘oc’ command. Installing operators requires a higher cluster privilage so the presenter will demonstrate the installation of the operator shortly.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Before installing Camel K, make sure that the CRDs do not exist.</p>
-</div>
-<div class="paragraph">
-<p>In the terminal window type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc whoami</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the response from the command is not your user name. Type ‘oc login’ and enter your username (userx) and password ‘openshift’. Rather than using your username and password, you could also use the recommended solution in the web console overview.</p>
-</div>
-<div class="paragraph">
-<p>In the terminal browser window, type:-</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get integrations
-oc get integrationplatforms</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Both of these commands should return a <strong>resource type</strong> error</p>
-</div>
-<div class="paragraph">
-<p><strong>'ADMIN only - Presenter demonstrates'</strong></p>
-</div>
-<div class="paragraph">
-<p>Explain both of the above CRDs and what they are used for in Camel K</p>
-</div>
-<div class="paragraph">
-<p>Install Camel K:</p>
-</div>
-<div class="paragraph">
-<p>If you are not already logged on go to the UI URL and login as 'opentlc-mgr' (Don’t forget to explain that this is a cluster admin function) and the admin password</p>
-</div>
-<div class="paragraph">
-<p>Make sure you are on the 'Administration View' in the console</p>
-</div>
-<div class="paragraph">
-<p>Go to 'Operators/Operator Hub'</p>
-</div>
-<div class="paragraph">
-<p>Search for 'camel k'</p>
-</div>
-<div class="paragraph">
-<p>Install for all 'namespaces' in the cluster</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camelk-1.png" alt="Camel K Operator Installation">
-</div>
-</div>
-<div class="paragraph">
-<p>Wait until the 'Camel K Operator' is shown as installed on the Operators/Installed Operators window</p>
-</div>
-<div class="paragraph">
-<p><strong>'ADMIN only - finished'</strong></p>
-</div>
-<div class="paragraph">
-<p>In the browser terminal window
-Type:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get integrations
-oc get integrationplatforms</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This time, both commands should return “no resources found”</p>
-</div>
-<div class="paragraph">
-<p>Download the 'Camel K' examples using the browser terminal :-</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="download-and-configure-your-environment"><a class="anchor" href="#download-and-configure-your-environment"></a>Download and configure your environment</h3>
-<div class="paragraph">
-<p>Create a directory to download the examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">mkdir camel
-cd camel</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Download the Camel K examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">wget https://github.com/pprosser-redhat/devex-camelk/raw/master/camelexamples/camel-k-examples-1.0.0-M4.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create a new directory for the examples</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">mkdir examples</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Uncompress the file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">tar -xf camel-k-examples-1.0.0-M4.tar.gz -C examples</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To allow a developer to easily interact with an Openshift cluster, Camel K has it&#8217;s own command line interface. Download the 'Camel K cli' :-</p>
-</div>
-<div class="paragraph">
-<p>In the same directory, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">wget https://github.com/pprosser-redhat/devex-camelk/raw/master/camelkcli/camel-k-client-1.0.0-M4-linux-64bit.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Uncompress the file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">tar -xf camel-k-client-1.0.0-M4-linux-64bit.tar.gz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Before we can create an integration, we need to add a Camel K 'IntegrationPlatform'.</p>
-</div>
-<div class="paragraph">
-<p>In the terminal window, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc apply -f   https://raw.githubusercontent.com/pprosser-redhat/devex-camelk/master/camelkconfig/integrationplatform.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>You should now have all the pieces you need to start creating and deploying lightweight Camel Integrations to Openshift.</strong></p>
-</div>
-<div class="paragraph">
-<p>If you type 'ls' on the command line, then you should see a similer list of files to those below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camelk-2.png" alt="Camel K file list">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deploy-a-camel-k-interation"><a class="anchor" href="#deploy-a-camel-k-interation"></a>Deploy a Camel K Interation</h3>
-<div class="paragraph">
-<p>Firstly, let’s start by deploying a simple integration, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel run examples/simple.groovy</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The first time you deploy an Integration, it will take a few minutes. The operator manages all dependencies required by the Integration and downloads these from the Red Hat repository on demand. Once downloaded, the operator caches dependancies therefore subsequent deployments are significantly quicker. If you want to see what&#8217;s happen, in the terminal window type 'oc get pods', you will see that there are builds running
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can see what’s going on :-</p>
-</div>
-<div class="paragraph">
-<p>If you go to the console UI in the Browser, make sure you are switched to 'Developer view'</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Topology'</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Simple' (this is your integration), and you can see what’s going on.</p>
-</div>
-<div class="paragraph">
-<p>Once the pod has a dark blue ring around it, it is running, as per the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camelk-3.png" alt="Running Integration">
-</div>
-</div>
-<div class="paragraph">
-<p>If you haven&#8217;t already, click 'inside the circle' to open the overview window</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Resources'</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Pods &#8594; simple-xxxxxxxx' (xxxxxxx is randomly generated)</p>
-</div>
-<div class="paragraph">
-<p>Click on 'Logs' to see the output from the integration, it should look similer to the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camelk-4.png" alt="Integration logs">
-</div>
-</div>
-<div class="paragraph">
-<p>The integration is a simple timer that triggers every 1 second and writes to the log file.</p>
-</div>
-<div class="paragraph">
-<p>In the Terminal Browser window type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc get integrations</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should now see an integration called 'simple' in the list.</p>
-</div>
-<div class="paragraph">
-<p>In the Terminal browser window type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell"> oc describe integration simple</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You’ll see the “Integration” CRD definition that includes the integration defined as groovy code.</p>
-</div>
-<div class="paragraph">
-<p>Let’s make a change to the integration</p>
-</div>
-<div class="paragraph">
-<p>In the browser terminal window</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">vi examples/simple.groovy</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You will see the text - 'Hello Camel K from ${routeId}'</p>
-</div>
-<div class="paragraph">
-<p>Change the text e.g. 'Hello Camel K from ${routeId}. Added some more text'</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-To change the text, use the arrow gets to move to the text you want to change, press 'i', and type in the text. To save, press 'esc' and type ':wq' followed by 'enter'
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Now, you need to deploy this integration to Openshift again to test</p>
-</div>
-<div class="paragraph">
-<p>Type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel run examples/simple.groovy</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you are quick enough (you need to be really quick!), you’ll see the integration doing a rolling deployment</p>
-</div>
-<div class="paragraph">
-<p>Look at the log file again (as above) to see if the change has been deployed</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deploy-camel-k-in-developer-mode"><a class="anchor" href="#deploy-camel-k-in-developer-mode"></a>Deploy Camel K in Developer mode</h3>
-<div class="paragraph">
-<p><strong>While the process of redeploying is simple, it isn’t very developer friendly. The 'kamel' cli has a developer friendly “hot deploy” mode that makes this experience much better</strong></p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s try it out :-</p>
-</div>
-<div class="paragraph">
-<p>Delete the integration :-
-There are 2 ways you can do this in the Terminal Browser window (your choice) :-</p>
-</div>
-<div class="paragraph">
-<p>Use the “kamel” cli</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel delete simple</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Or</p>
-</div>
-<div class="paragraph">
-<p>Use the Openshift cli</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">oc delete integration simple</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This is the great thing about CRDs, you can use the normal Openshift cli to managed the custom data model (integrations in this case)
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Lets deploy the integration in developer mode, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">./kamel run examples/simple.groovy --dev</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You will see the deployment phases logged on the screen, followed by the log outputting automatically from the integration pod, useful for a developer to see what’s going on. The output should look similer to the screenshot below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/camelk-5.png" alt="Developer Mode">
-</div>
-</div>
-<div class="paragraph">
-<p>For the next exercise, you will need 2 terminal windows.</p>
-</div>
-<div class="paragraph">
-<p>Copy the URL for the “browser terminal” and paste into a new browser tab</p>
-</div>
-<div class="paragraph">
-<p>It should look something like :-
-<a href="https://xxxxxxxxxxxxx/terminal/session/1" class="bare">https://xxxxxxxxxxxxx/terminal/session/1</a></p>
-</div>
-<div class="paragraph">
-<p><strong>You will notice that the terminal window is also outputting the log, you need to create a new terminal session</strong></p>
-</div>
-<div class="paragraph">
-<p>Change the url to a new session number e.g.
-<a href="https://xxxxxxxxxxxxx/terminal/session/2" class="bare">https://xxxxxxxxxxxxx/terminal/session/2</a></p>
-</div>
-<div class="paragraph">
-<p>In the new terminal, make sure you go back to the camel directory - if you followed the instructions, it will be called 'camel' (cd 'camel')</p>
-</div>
-<div class="paragraph">
-<p>Make another change to the text in “simple.groovy” by following the same instructions above</p>
-</div>
-<div class="paragraph">
-<p>Once you have saved the changes, go back to the browser terminal tab outputting the log.</p>
-</div>
-<div class="paragraph">
-<p>You should see that the changes have been automatically applied to the running integration, without the need to redeploy</p>
-</div>
-<div class="paragraph">
-<p><strong>That’s a much better way of round trip development of integrations…</strong></p>
-</div>
-<div class="paragraph">
-<p>Go back to the browser terminal that’s outputting the log, press ‘ctrl c’</p>
-</div>
-<div class="paragraph">
-<p>Look at the Topology view in the Openshift console(or oc get integrations)</p>
-</div>
-<div class="paragraph">
-<p>The integration should have been deleted -</p>
-</div>
-<div class="paragraph">
-<p><strong>Just like a developer would see by pressing 'ctrl c' on a Java application running on their laptop</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="optional-labs"><a class="anchor" href="#optional-labs"></a>Optional labs</h3>
-<div class="paragraph">
-<p>Feel free to take a look at some of the other examples</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Instructions on how to run the integrations are in the integration source code
-E.g. ./kamel run --name=rest-with-restlet --dependency=camel-rest --dependency=camel-restlet examples/RestWithRestlet.java
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The example above demonstrates Camel K deploying a Java based Camel Route that exposes a Restful service via an Openshift route - the Camel K operator does all the hard work for you</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-some of the examples might take a little longer to deploy as the operator will need to download more dependencies
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To test the rest api, you need to know what the Openshift Route is</p>
-</div>
-<div class="paragraph">
-<p>In the Developer UI, go back to the Topology view, and click on “rest-with-restlet” application</p>
-</div>
-<div class="paragraph">
-<p>Click on resources, and you will see the http route at the bottom of the page</p>
-</div>
-<div class="paragraph">
-<p>Click on the http link</p>
-</div>
-<div class="paragraph">
-<p>You will get an error as the integration will only response to /hello. Append ‘/hello’ to the URI
-Now you should see a response</p>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2020-01-08 12:55:15 UTC
+Last updated 2020-01-13 09:51:25 UTC
 </div>
 </div>
 </body>
