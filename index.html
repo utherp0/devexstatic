@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<meta name="author" content="DSA UK Team &lt;uther@redhat.com&gt;">
+<meta name="author" content="Ian Lawson &lt;ilawson@redhat.com&gt;">
 <title>OpenShift 4.x DevEx Basics Workshop</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -436,10 +436,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>OpenShift 4.x DevEx Basics Workshop</h1>
 <div class="details">
-<span id="author" class="author">DSA UK Team</span><br>
-<span id="email" class="email"><a href="mailto:uther@redhat.com">uther@redhat.com</a></span><br>
+<span id="author" class="author">Ian Lawson</span><br>
+<span id="email" class="email"><a href="mailto:ilawson@redhat.com">ilawson@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">January 29, 2020</span>
+<span id="revdate">February 05, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -595,10 +595,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="https://www.openshift.com/products/container-platform">https://www.openshift.com/products/container-platform</a></p>
 </li>
 <li>
-<p><a href="https://red.ht/2RAX3rA" class="bare">https://red.ht/2RAX3rA</a> (the Web Console URL for the Workshop)</p>
+<p><a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> (the Web Console URL for the Workshop)</p>
 </li>
 <li>
-<p><a href="https://red.ht/38MSjoI" class="bare">https://red.ht/38MSjoI</a> (The Web Terminal URL for the workshop)</p>
+<p><a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> (The Web Terminal URL for the workshop)</p>
 </li>
 </ul>
 </div>
@@ -652,7 +652,7 @@ The attendee will be using a browser for interacting with both the OpenShift Con
 <div class="sect2">
 <h3 id="starting-up-logging-on-and-creating-a-project"><a class="anchor" href="#starting-up-logging-on-and-creating-a-project"></a>Starting up - logging on and creating a project</h3>
 <div class="paragraph">
-<p>Log on to cluster at <a href="https://red.ht/2RAX3rA">https://red.ht/2RAX3rA</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
+<p>Log on to cluster at <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View - at the top left of the UI is a selection box which describes the current view selected.</p>
@@ -945,7 +945,7 @@ The CLI is ideal in situations where you are:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://red.ht/38MSjoI">https://red.ht/38MSjoI</a></p>
+<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a></p>
 </div>
 <div class="paragraph">
 <p>The first time you visit the terminal application you will be prompted for a logon - use the same credentials as your OpenShift logon, userx and openshift</p>
@@ -1307,7 +1307,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p>Press 'Create'</p>
 </div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://red.ht/38MSjoI">https://red.ht/38MSjoI</a></p>
+<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a></p>
 </div>
 <div class="paragraph">
 <p>Type ‘oc get configmaps’</p>
@@ -1352,7 +1352,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p><strong>Note that the env variables from the config map have been expressed within the Pod as env variables (with the nodenewsconfig prefixed)</strong></p>
 </div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://red.ht/38MSjoI" class="bare">https://red.ht/38MSjoI</a> and enter the following commands:</p>
+<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and enter the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1958,7 +1958,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.</p>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL at <a href="https://red.ht/2RAX3rA" class="bare">https://red.ht/2RAX3rA</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL at <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1967,7 +1967,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p><strong>In this section we will create a couple of simple applications and show how they are represented via the Service and load-balancing of Pods within the SDN itself.</strong></p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/38MSjoI" class="bare">https://red.ht/38MSjoI</a> and again logon as 'userx' with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as 'userx' with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2305,10 +2305,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 </table>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="https://red.ht/2RAX3rA" class="bare">https://red.ht/2RAX3rA</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/38MSjoI" class="bare">https://red.ht/38MSjoI</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2580,10 +2580,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="introduction-6"><a class="anchor" href="#introduction-6"></a>Introduction</h3>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="https://red.ht/2RAX3rA" class="bare">https://red.ht/2RAX3rA</a> and logon as userx (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as userx (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://red.ht/38MSjoI" class="bare">https://red.ht/38MSjoI</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
