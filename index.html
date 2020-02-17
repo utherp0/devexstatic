@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="author" content="Ian Lawson &lt;ilawson@redhat.com&gt;">
-<title>OpenShift 4.x DevEx Basics Workshop</title>
+<title>OpenShift 4.3 DevEx Basics Workshop</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -434,12 +434,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>OpenShift 4.x DevEx Basics Workshop</h1>
+<h1>OpenShift 4.3 DevEx Basics Workshop</h1>
 <div class="details">
 <span id="author" class="author">Ian Lawson</span><br>
 <span id="email" class="email"><a href="mailto:ilawson@redhat.com">ilawson@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">February 05, 2020</span>
+<span id="revdate">February 17, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -595,10 +595,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="https://www.openshift.com/products/container-platform">https://www.openshift.com/products/container-platform</a></p>
 </li>
 <li>
-<p><a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> (the Web Console URL for the Workshop)</p>
+<p><a href="https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> (the Web Console URL for the Workshop)</p>
 </li>
 <li>
-<p><a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> (The Web Terminal URL for the workshop)</p>
+<p><a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> (The Web Terminal URL for the workshop)</p>
 </li>
 </ul>
 </div>
@@ -652,7 +652,7 @@ The attendee will be using a browser for interacting with both the OpenShift Con
 <div class="sect2">
 <h3 id="starting-up-logging-on-and-creating-a-project"><a class="anchor" href="#starting-up-logging-on-and-creating-a-project"></a>Starting up - logging on and creating a project</h3>
 <div class="paragraph">
-<p>Log on to cluster at <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
+<p>Log on to cluster at <a href="https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/">https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View - at the top left of the UI is a selection box which describes the current view selected.</p>
@@ -774,7 +774,7 @@ versions.</strong></p>
 <p>Close the github tab</p>
 </div>
 <div class="paragraph">
-<p>Back at the OCP4.2 Ux leave the Application as ‘Create Application’.</p>
+<p>Back at the OCP4.3 UI click on the 'Application Name' entry box. It will auto-fill with the Application Name and the Name will auto-fill as well.</p>
 </div>
 <div class="paragraph">
 <p><strong>OpenShift 4 introduces the concept of Application Grouping. This allows a visualisation of multiple Applications in the same 'group', making visibility of the Application much
@@ -785,6 +785,12 @@ simpler.</strong></p>
 </div>
 <div class="paragraph">
 <p>Ensure the Name is ‘nodenews’</p>
+</div>
+<div class="paragraph">
+<p>Scroll down to 'Resources'. Click the selection box for 'Deployment Config' rather than the default of 'Deployment'</p>
+</div>
+<div class="paragraph">
+<p><strong>OpenShift supports the Kubernetes mechanism of 'Deployment' but DeploymentConfigs are more advanced and offer more features for deploying an application, including strategies.</strong></p>
 </div>
 <div class="paragraph">
 <p>Ensure the ‘Create Route is checked’</p>
@@ -810,6 +816,11 @@ exported for the Application and the routes, if the Application has any.</strong
 </div>
 <div class="paragraph">
 <p>Wait for the Build to finish, the Pod to change from Container Creating to Running</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/applicationbasics-4b.png" alt="Node Sidepanel with App Running">
+</div>
 </div>
 <div class="paragraph">
 <p><strong>When an Application is created the Pod ring will be empty, indicating that an Application will appear once the build has completed. When the build
@@ -841,7 +852,7 @@ integrated registry.</strong></p>
 <p>Search for ‘httpd’</p>
 </div>
 <div class="paragraph">
-<p>Select the (httpd) template - if there is more than one you want to select the one that is a <strong>builder</strong> and not the example application one</p>
+<p>Select the Apache HTTP Server (httpd) template - Note that there are two options, you want to choose the one that is labelled (httpd) and starts with the text 'Build and serve static content'</p>
 </div>
 <div class="paragraph">
 <p>Click on 'Create Application'</p>
@@ -856,7 +867,13 @@ integrated registry.</strong></p>
 <p>Make sure the Application is ‘nodenews-app’</p>
 </div>
 <div class="paragraph">
+<p>Click on the entry point for 'Name' - it should autofill</p>
+</div>
+<div class="paragraph">
 <p>Make sure the Name is forumstaticassets</p>
+</div>
+<div class="paragraph">
+<p>In the Resources section leave the Deployment as 'Deployment'</p>
 </div>
 <div class="paragraph">
 <p>Make sure the ‘Create a Route’ checkbox is clicked</p>
@@ -872,7 +889,12 @@ the group as a single action.</strong></p>
 <p>Click on the forumstaticassets Pod</p>
 </div>
 <div class="paragraph">
-<p>Watch the build complete, the Container Creating and the Running event</p>
+<p>Watch the build complete, the Container Creating and the Running event.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/applicationbasics-4c.png" alt="Multi-app topology">
+</div>
 </div>
 <div class="paragraph">
 <p>Click 'Add'</p>
@@ -905,16 +927,24 @@ the group as a single action.</strong></p>
 <p>Ensure the Name is ‘ocpnode’</p>
 </div>
 <div class="paragraph">
+<p>In 'Resources' set the deployment type to DeploymentConfig</p>
+</div>
+<div class="paragraph">
 <p>Ensure the ‘Create Route’ is checked</p>
 </div>
 <div class="paragraph">
 <p>Click 'Create'</p>
 </div>
 <div class="paragraph">
-<p>Click on the ‘ocpnode’ Application in the topology - click on the ‘cross’ icon situated at the bottom left of the Topology panel to centralise the topology</p>
+<p>Click on the ‘ocpnode’ Application in the topology - click on the ‘cross’ icon (if you hang over it it will say 'Fit To Screen') situated at the bottom left of the Topology panel to centralise the topology</p>
 </div>
 <div class="paragraph">
 <p><strong>Now we have created a new Application grouping you will see two ''cloud'' groupings, labelled with the appropriate Application name you entered.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/applicationbasics-4d.png" alt="Multi-app topology">
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -945,10 +975,13 @@ The CLI is ideal in situations where you are:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a></p>
+<p>For the duration of the course you will be using a provided Application hosted within OpenShift itself - this is reachable at <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a></p>
 </div>
 <div class="paragraph">
 <p>The first time you visit the terminal application you will be prompted for a logon - use the same credentials as your OpenShift logon, userx and openshift</p>
+</div>
+<div class="paragraph">
+<p><strong>For the sakes of simplicity we advise you use the Terminal application provided - the following instructions for installation are completely optional</strong></p>
 </div>
 <div class="paragraph">
 <p>If you want to optionally install the oc client or use the terminal applications plus additional command line tools, such as ODO and tkn, you have two options; either install <code>oc</code> on your localhost or use a docker image in OpenShift. The image option is pre-built and running already and is easier if you have a locked-down laptop and are unable to download and install additional applications.</p>
@@ -1173,16 +1206,28 @@ Volume Mounts, labelled targetting of Nodes and the like.</strong></p>
 <p>Click on 'Workloads' and then select Pods.</p>
 </div>
 <div class="paragraph">
+<p>In the headers for the Pods panel you will see a number of selectable points describing the types of Pods.</p>
+</div>
+<div class="paragraph">
+<p>Click on 'Running' to toggle them off</p>
+</div>
+<div class="paragraph">
+<p>Click on 'Completed' to toggle them on</p>
+</div>
+<div class="paragraph">
+<p><strong>Note that all the builds and deployments you have done, for the deployments that have a DeploymentConfig, have completed Pods. All of the actions are executed in separate Pods which is one of the key features that makes OpenShift so scaleable</strong></p>
+</div>
+<div class="paragraph">
 <p>Change to Developer mode and then select Topology if the Topology page isn’t already shown</p>
 </div>
 <div class="paragraph">
-<p>Click and hold on the forumstaticassets Pod and drag it onto the ocpnode-app</p>
+<p>Hold down the shift button, click and hold on the forumstaticassets icon, and pull it out of the application grouping graphic. Release the hold on the forumstaticassets icon.</p>
 </div>
 <div class="paragraph">
-<p>Select ‘move’ when it prompts whether you want to move it</p>
+<p><strong>The UI will now promnpt you if you wish to remove the application component. Select Remove. This component is now separated from the application group</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>This concept of Application grouping allows for much better visualisation of the complete application.</strong></p>
+<p>Now hold down the shift button again, click and hold on the free floating forumstaticassets icon, and drag back over the boundary displayed for the nodenews-app application group. Release the hold and the application should be re-grouped.</p>
 </div>
 <div class="paragraph">
 <p>Continue on with the Deployments chapter, which uses the applications created here to show the capabilities of the deployment configuration and how to alter the behaviour and file system of a Container without changing the image.</p>
@@ -1307,7 +1352,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p>Press 'Create'</p>
 </div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a></p>
+<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a></p>
 </div>
 <div class="paragraph">
 <p>Type ‘oc get configmaps’</p>
@@ -1325,7 +1370,7 @@ Select 'Workloads/Deployment Configs'</p>
 <p>Click on 'Environment'</p>
 </div>
 <div class="paragraph">
-<p>In ‘All Values from existing config maps’ select nodenewsconfig from the pulldown on the left and add nodenewsconfig as the prefix</p>
+<p>In ‘All Values from existing config maps’ select nodenewsconfig from the pulldown on the left and add nodenewsconfig as the prefix in the righthand textbox (labelled PREFIX (OPTIONAL) )</p>
 </div>
 <div class="paragraph">
 <p>Click 'Save'</p>
@@ -1351,8 +1396,13 @@ Select 'Workloads/Deployment Configs'</p>
 <div class="paragraph">
 <p><strong>Note that the env variables from the config map have been expressed within the Pod as env variables (with the nodenewsconfig prefixed)</strong></p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/deployment-5.png" alt="Injected config map environment variables">
+</div>
+</div>
 <div class="paragraph">
-<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and enter the following commands:</p>
+<p>Go back to the command line tab at <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and enter the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1419,7 +1469,7 @@ oc get configmaps</code></pre>
 <p>Click on 'Workloads/Pods'. Watch the new versions of the nodenews application deploy.</p>
 </div>
 <div class="paragraph">
-<p>When they finish deploying click on one of the Pods. Click on 'Terminal'.</p>
+<p>When they finish deploying click on one of the nodenews Pods. Click on 'Terminal'.</p>
 </div>
 <div class="paragraph">
 <p>In the terminal type:</p>
@@ -1542,16 +1592,10 @@ any information provided via the config map is controlled and immutable.</strong
 <p>Once the count has gone to 4 and all the Pods are indicated as healthy (the colour of the Pod ring is blue for all Pods) select Action/Start Rollout.</p>
 </div>
 <div class="paragraph">
-<p>Ignore the 404 (race condition) - click Back on the browser to go to the deployment config again</p>
-</div>
-<div class="paragraph">
-<p>Watch the colours of the Pods</p>
+<p>The DC panel will now render the results of the deployment.</p>
 </div>
 <div class="paragraph">
 <p><strong>Deployments can have one of two strategies. This example uses the 'Rolling' strategy which is designed for zero downtime deployments. It works but spinning up a single copy of the new Pod, and when that Pod reports as being healthy only then is one of the old Pods removed. This ensures that at all times the required number of replicas are running healthy with no downtime for the Application itself.</strong></p>
-</div>
-<div class="paragraph">
-<p>Click on 'Workloads/Deployment Configs', click on the nodenews DC again</p>
 </div>
 <div class="paragraph">
 <p>Click on 'Actions/Edit Deployment Config'</p>
@@ -1587,10 +1631,7 @@ any information provided via the config map is controlled and immutable.</strong
 <p>Click on ‘Action/Start Rollout’</p>
 </div>
 <div class="paragraph">
-<p>Click back on the browser to go to the Deployment Configs/nodenews overview</p>
-</div>
-<div class="paragraph">
-<p>Watch the colour of the Pod ring</p>
+<p>Watch the colour of the Pod rings as the system carries out the deployment</p>
 </div>
 <div class="paragraph">
 <p><strong>In the case of a Recreate strategy the system ensures that NO copies of the old deployment are running simultaneously with the new ones. It deletes all the running Pods, irregardless of the required number of replicas, and when all Pods report as being fully deleted it will start spinning up the new copies. This is for a scenario when you must NOT have any users interacting with the old Application once the new one is deployed, such as a security flaw in the old Application</strong></p>
@@ -1958,7 +1999,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.</p>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL at <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL at <a href="https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1967,7 +2008,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p><strong>In this section we will create a couple of simple applications and show how they are represented via the Service and load-balancing of Pods within the SDN itself.</strong></p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as 'userx' with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and again logon as 'userx' with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2012,6 +2053,9 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>Set the 'Name' to 'application1'</p>
 </div>
 <div class="paragraph">
+<p>In Resources set the deployment type to DeploymentConfig</p>
+</div>
+<div class="paragraph">
 <p>Click 'Create'</p>
 </div>
 <div class="paragraph">
@@ -2039,6 +2083,9 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>Set the Name to ‘application2’</p>
 </div>
 <div class="paragraph">
+<p>In Resources set the deployment type to DeploymentConfig</p>
+</div>
+<div class="paragraph">
 <p>Click 'Create'</p>
 </div>
 <div class="paragraph">
@@ -2064,7 +2111,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 </div>
 </div>
 <div class="paragraph">
-<p><strong>The Services UI shows the services currently availble in the Project. Note that there is a Service per application, so in this case there are two Services, application1 and application2. The Location is a singular IP address for each Service within the SDN - more on this later.</strong></p>
+<p><strong>The Services UI shows the services currently available in the Project. Note that there is a Service per application, so in this case there are two Services, application1 and application2. The Location is a singular IP address for each Service within the SDN - more on this later.</strong></p>
 </div>
 <div class="paragraph">
 <p>Click on 'Workloads/Deployment Configs'</p>
@@ -2076,7 +2123,7 @@ Type ‘master-slaveX’ (where X is your user number) such that the Delete butt
 <p>Using the arrows next to the Pod indicator scale the application to three replicas</p>
 </div>
 <div class="paragraph">
-<p>Click on ‘Pods’</p>
+<p>Click on ‘Pods’ in the DC view (not Workloads/Pods)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2305,10 +2352,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 </table>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2332,7 +2379,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="examining-service-accounts"><a class="anchor" href="#examining-service-accounts"></a>Examining Service Accounts</h3>
 <div class="paragraph">
-<p>Once the project has been created, click on 'Administration/Service Accounts'</p>
+<p>Once the project has been created, click on 'User Management/Service Accounts'</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2373,6 +2420,9 @@ For the majority of this chapter the attendee will need to pair up with another.
 <p>Set the Name to ‘rbactest’</p>
 </div>
 <div class="paragraph">
+<p>In Resources set the deployment to DeploymentConfig</p>
+</div>
+<div class="paragraph">
 <p>Click 'Create'</p>
 </div>
 <div class="paragraph">
@@ -2388,10 +2438,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <p>Switch back to Administrator view using the top left selection point</p>
 </div>
 <div class="paragraph">
-<p>Click on 'Home/Projects'</p>
-</div>
-<div class="paragraph">
-<p>Click on Administration/Role Bindings</p>
+<p>Click on User Management/Role Bindings</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2422,7 +2469,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="adding-role-bindings-to-your-namespaceproject"><a class="anchor" href="#adding-role-bindings-to-your-namespaceproject"></a>Adding Role Bindings to your namespace/project</h3>
 <div class="paragraph">
-<p>Click on 'Administration/Role Bindings'</p>
+<p>Click on 'User Management/Role Bindings'</p>
 </div>
 <div class="paragraph">
 <p>Click on 'Create Binding'</p>
@@ -2500,7 +2547,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="giving-users-lower-levels-of-permission"><a class="anchor" href="#giving-users-lower-levels-of-permission"></a>Giving Users lower levels of permission</h3>
 <div class="paragraph">
-<p>Click on 'Administration/Role Bindings'</p>
+<p>Click on 'User Management/Role Bindings'</p>
 </div>
 <div class="paragraph">
 <p>Click on 'Create Binding'</p>
@@ -2580,10 +2627,10 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="sect2">
 <h3 id="introduction-6"><a class="anchor" href="#introduction-6"></a>Introduction</h3>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com" class="bare">http://console-openshift-console.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com</a> and logon as userx (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://console-openshift-console.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and logon as userx (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
-<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-fab1-86ea.fab1-86ea.example.opentlc.com/</a> and again logon as userx with password openshift</p>
+<p>Open another tab in the browser and go to the terminal URL <a href="https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/" class="bare">https://terminal-terminal.apps.cluster-landg-2a04.landg-2a04.example.opentlc.com/</a> and again logon as userx with password openshift</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View (top level, select Administrator)</p>
@@ -2632,6 +2679,9 @@ For the majority of this chapter the attendee will need to pair up with another.
 </div>
 <div class="paragraph">
 <p>In Name put ‘nodeatomic’</p>
+</div>
+<div class="paragraph">
+<p>In Resources set the deployment to DeploymentConfig</p>
 </div>
 <div class="paragraph">
 <p>Click on ‘Create’</p>
@@ -2725,8 +2775,13 @@ For the majority of this chapter the attendee will need to pair up with another.
 <div class="paragraph">
 <p><strong>As we have changed the configuration of the Deployment, and the default triggers are set to redeploy if the Image changes OR the configuration of the Deployment changes, a redeployment will now occur.</strong></p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/pvs-1b.png" alt="Active Application">
+</div>
+</div>
 <div class="paragraph">
-<p>When the deployment has completed, click on ‘Pods’</p>
+<p>When the deployment has completed, click on ‘Pods’ in the DeploymentConfig display (not Workloads/Pods)</p>
 </div>
 <div class="paragraph">
 <p>Select the first running Pod - take a note of its name (nodeatomic-2-xxxxx) - click on the Pod</p>
@@ -2762,7 +2817,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <p>Click on 'Networking/Routes'</p>
 </div>
 <div class="paragraph">
-<p>On the Location of the nodeatomic RT (route) press the right mouse button (two fingers on the Mac mousepad) and select ‘Open link in new tab’</p>
+<p>Click on the Route address for the nodeatomic route - it should open in a separate tab</p>
 </div>
 <div class="paragraph">
 <p>Ensure the OpenShift NodeAtomic Example webpage is displayed</p>
@@ -2858,7 +2913,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 <p>Click on the nodeatomic DC</p>
 </div>
 <div class="paragraph">
-<p>Scale to ZERO pods</p>
+<p>Scale to ZERO pods by clicking the down arrow displayed next to the Pod icon until the count reaches 0</p>
 </div>
 <div class="paragraph">
 <p>Ensure the Pod graphic displays zero running Pods.</p>
@@ -3520,7 +3575,7 @@ Type ‘ProbesX’ (where X is your user number) such that the Delete button tur
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2020-01-13 09:51:25 UTC
+Last updated 2020-02-12 10:13:05 UTC
 </div>
 </div>
 </body>
