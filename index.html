@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Red Hat DSA UKI</span><br>
 <span id="email" class="email"><a href="mailto:uther@redhat.com">uther@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">May 01, 2020</span>
+<span id="revdate">May 04, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -516,9 +516,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#replace-knative-in-memory-messaging-with-amq-streams-kafka">Replace Knative in-memory messaging with AMQ Streams (Kafka)</a>
 <ul class="sectlevel3">
 <li><a href="#install-a-kafka-broker-using-amq-streams">Install a Kafka Broker using AMQ Streams</a></li>
-<li><a href="#install-knative-kafka-eventing">Install Knative Kafka Eventing</a></li>
 <li><a href="#run-the-examples">Run the examples</a></li>
-<li><a href="#accessing-the-kafka-topics-directly">Accessing the Kafka Topics directly</a></li>
 </ul>
 </li>
 </ul>
@@ -816,7 +814,7 @@ ls -alR</code></pre>
 <div class="sect2">
 <h3 id="installing"><a class="anchor" href="#installing"></a>Installing</h3>
 <div class="paragraph">
-<p>The odo command line interface is available for download from here : <a href="https://github.com/openshift/odo" class="bare">https://github.com/openshift/odo</a></p>
+<p>The odo command line interface is built into the terminal that you create as a pre-requisite for this workshop so you don&#8217;t have to install anything right now. However, if you want to install the interface on your own workstation then it is available for download from here : <a href="https://github.com/openshift/odo" class="bare">https://github.com/openshift/odo</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>If you haven&#8217;t already please follow the instructions in the pre-req chapter which explains the creation and setting up of the terminal application. For this chapter you will be using that application which has the odo command pre-installed for you</strong></p>
@@ -992,7 +990,13 @@ cat .odo/config.yaml
 </div>
 </div>
 <div class="paragraph">
-<p>The application has started up and will be running at the URL indicated in the output above. Copy the URL from your command window and paste it into a new browser tab. You should see an output similar to that shown below</p>
+<p>Wait for the response "Changes successfully pushed to component"</p>
+</div>
+<div class="paragraph">
+<p>The application has started up and will be running at the URL indicated in the output above. Copy the URL from your command window and paste it into a new browser tab. You should see an output similar to that shown below.</p>
+</div>
+<div class="paragraph">
+<p>Note - within the terminal window to copy text you should highlight the text, right click and select copy. To past to the terminal window use ctrl-shift-v.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1583,13 +1587,10 @@ In the simplest format a task can be executed by a taskrun object. The diagram b
 <div class="content">
 <div class="title">Tekton command line</div>
 <div class="paragraph">
-<p>A new command line utility is used to manage the Tekton command line. The commands cover the various different pipeline objects such as task, taskrun, pipeline, pipelinerun,  resources, cluster tasks and conditions</p>
+<p>A new command line utility is used to manage the Tekton command line. The commands cover the various different pipeline objects such as task, taskrun, pipeline, pipelinerun,  resources, cluster tasks and conditions.</p>
 </div>
 <div class="paragraph">
-<p>The Tekton command line is downloaded from here : <a href="https://github.com/tektoncd/cli" class="bare">https://github.com/tektoncd/cli</a></p>
-</div>
-<div class="paragraph">
-<p>The pre-installed terminal application created in the pre-requisites already has the command line installed</p>
+<p>The Tekton command line interface is built into the terminal that you create as a pre-requisite for this workshop so you don&#8217;t have to install anything right now. However, if you want to install the interface on your own workstation then it is available for download from here : <a href="https://github.com/tektoncd/cli" class="bare">https://github.com/tektoncd/cli</a></p>
 </div>
 <div class="paragraph">
 <p>To use the command simply type 'tkn' and you will see help regarding the objects and to get help on a specific object use 'tkn &lt;object&gt; --help'</p>
@@ -1602,9 +1603,7 @@ In the simplest format a task can be executed by a taskrun object. The diagram b
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc create -f task-1.yaml
-
 oc create -f taskrun-1.yaml
-
 tkn taskrun ls</code></pre>
 </div>
 </div>
@@ -1694,9 +1693,7 @@ spec:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc create -f task-2.yaml
-
 oc create -f task-3.yaml
-
 oc create -f pipeline-1.yaml</code></pre>
 </div>
 </div>
@@ -1837,9 +1834,7 @@ spec:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc delete pipeline pipeline-1
-
 oc create -f pipeline-1.yaml
-
 tkn pipeline start pipeline-1</code></pre>
 </div>
 </div>
@@ -1994,7 +1989,6 @@ git-repo-slave-resource   git    url: https://github.com/marrober/slave-node-app
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc create -f task-5.yaml
-
 oc create -f task-6.yaml</code></pre>
 </div>
 </div>
@@ -2013,7 +2007,7 @@ oc create -f task-6.yaml</code></pre>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The persistent volume will show that it is in an pending state after creation as no resource has attempted to consume it. After the task has been executed look again at the persistent volume and it will show that it is bound.
+The persistent volume will show that it is in a pending state after creation as no resource has attempted to consume it. After the task has been executed look again at the persistent volume and it will show that it is bound.
 </td>
 </tr>
 </table>
@@ -2069,7 +2063,49 @@ tekton-task-cache-pvc   Bound         pvc-1d894a93-2646-11ea-9f45-0a9970779e5c  
 </div>
 </div>
 <div class="paragraph">
-<p>When you are satisfied that the pipeline has executed as expected, perform the check on the pvc in the terminal window</p>
+<p>To examine the pipeline run in the terminal window use the command :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>tkn pipelinerun logs pipeline-5-run-XXXXX | grep -v level</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace the XXXX with the information reported on screen after the execution of the tkn pipeline start command. The grep command is used to remove the erroneous logging reports.</p>
+</div>
+<div class="paragraph">
+<p>The output will be similar to that that is shown below. Within task 5 the first step creates a file called /workspace/message. The second step displays the file name and the content of the file within the workspace. The third step creates a file in the persistent volume and the fourth step displays the file name and the content of the file within the volume.</p>
+</div>
+<div class="paragraph">
+<p>Within task 6 the first step displays the contents of the workspace. Note that this is empty because the workspace is unique to the task. The second step of task 6 shows the content of the persistent volume which is the same a that which was reported for step 5. This shows that workspaces can be used for sharing data between steps in the same task and volumes should be used for sharing data between steps within different tasks.</p>
+</div>
+<div class="paragraph">
+<p>[task-5 : create-a-file-in-workspace] /workspace/message</p>
+</div>
+<div class="paragraph">
+<p>[task-5 : view-workspace-content] message
+[task-5 : view-workspace-content] This is a file in the workspace</p>
+</div>
+<div class="paragraph">
+<p>[task-5 : create-a-file-in-volume] /var/run/message</p>
+</div>
+<div class="paragraph">
+<p>[task-5 : view-volume-content] lost+found
+[task-5 : view-volume-content] message
+[task-5 : view-volume-content] secrets
+[task-5 : view-volume-content] This is a file in the volume</p>
+</div>
+<div class="paragraph">
+<p>[task-6 : view-workspace-content] view workspace content
+[task-6 : view-workspace-content] total 0
+[task-6 : view-workspace-content] drwxrwsrwx. 2 root 1000800000  6 May  1 14:17 .
+[task-6 : view-workspace-content] drwxr-xr-x. 1 root root       37 May  1 14:17 ..</p>
+</div>
+<div class="paragraph">
+<p>[task-6 : view-volume-content] lost+found
+[task-6 : view-volume-content] message
+[task-6 : view-volume-content] secrets
+[task-6 : view-volume-content] This is a file in the volume</p>
 </div>
 </div>
 </div>
@@ -2748,136 +2784,13 @@ Ready      True</p>
 <img src="images/camekknative-20.png" alt="AMQ Streams Topology View">
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="install-knative-kafka-eventing"><a class="anchor" href="#install-knative-kafka-eventing"></a>Install Knative Kafka Eventing</h4>
-<div class="paragraph">
-<p>Note:  Knative Kafka is operator based, the operator has been installed previously for you so the installation should be straight forward</p>
-</div>
-<div class="paragraph">
-<p>The CRD for Knative Kafka is called "KnativeEventingKafka", you need to add a CRD to your namespace to integrate Knative eventing with Kafka.</p>
-</div>
-<div class="paragraph">
-<p>Firstly,</p>
-</div>
-<div class="paragraph">
-<p>You need to find the bootstrap server of your Kafka Cluster.</p>
-</div>
-<div class="paragraph">
-<p>To do this, go to the terminal window and type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get services</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You will see a list of services similar to the list below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>NAME                          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
-devex4                        ClusterIP   172.30.227.91    &lt;none&gt;        8080/TCP                     3h55m
-my-cluster-kafka-bootstrap    ClusterIP   172.30.67.254    &lt;none&gt;        9091/TCP,9092/TCP,9093/TCP   65m
-my-cluster-kafka-brokers      ClusterIP   None             &lt;none&gt;        9091/TCP,9092/TCP,9093/TCP   65m
-my-cluster-zookeeper-client   ClusterIP   172.30.178.174   &lt;none&gt;        2181/TCP                     66m
-my-cluster-zookeeper-nodes    ClusterIP   None             &lt;none&gt;        2181/TCP,2888/TCP,3888/TCP   66m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You are after the service name ending in "bootstrap" - make a note of it as you will need it in the next step</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd /workspace/workshop4/camelfiles/streams</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create a KnativeEventing Kafka CRD</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>vi mykafkaknative.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Paste the following into the file, ensuring you replace the bootstrapServer with the one you noted above. Please make sure you keep the single quotes in the file.</p>
-</div>
-<div class="paragraph">
-<p>Replace the 'X' o 'sandbox' with your allocated number</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>apiVersion: eventing.knative.dev/v1alpha1
-kind: KnativeEventingKafka
-metadata:
-  name: knative-eventing-kafka
-  namespace: sandboxX
-spec:
-  bootstrapServers: 'replacewithyourbootstrapserver:9092'
-  setAsDefaultChannelProvisioner: true</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Once you have changed the bootstrapserver, save the file</p>
-</div>
-<div class="paragraph">
-<p>You can now store the CRD into OpenShift by typing the following :-</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc apply -f mykafkaknative.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will now perform perform the Integration between Knative Eventing and Kafka</p>
-</div>
-<div class="paragraph">
-<p>To check the status of the Integration, type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc describe KnativeEventingKafka knative-eventing-kafka</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output will look similar to below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>Name:         knative-eventing-kafka
-Namespace:    sandbox30
-Labels:       &lt;none&gt;
-Annotations:  kubectl.kubernetes.io/last-applied-configuration:
-                {"apiVersion":"eventing.knative.dev/v1alpha1","kind":"KnativeEventingKafka","metadata":{"annotations":{},"name":"knative-eventing-kafka","...
-API Version:  eventing.knative.dev/v1alpha1
-Kind:         KnativeEventingKafka
-Metadata:
-  Creation Timestamp:  2020-04-02T15:18:07Z
-  Generation:          1
-  Resource Version:    196044
-  Self Link:           /apis/eventing.knative.dev/v1alpha1/namespaces/sandbox30/knativeeventingkafkas/knative-eventing-kafka
-  UID:                 f8278481-3991-4d8d-a145-4d11ddfa56fb
-Spec:
-  Bootstrap Servers:                   my-cluster-kafka-bootstrap:9092
-  Set As Default Channel Provisioner:  true
-Status:
-  Conditions:
-    Last Transition Time:  2020-04-02T15:18:28Z
-    Status:                True
-    Type:                  DeploymentsAvailable
-    Last Transition Time:  2020-04-02T15:18:19Z
-    Status:                True
-    Type:                  InstallSucceeded
-    Last Transition Time:  2020-04-02T15:18:28Z
-    Status:                True
-    Type:                  Ready
-  Version:                 0.13.2
-Events:                    &lt;none&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Very near the bottom of the output, it should say Type = Ready. This means that you are good to go.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Note</dt>
+<dd>
+<p>To use AMQ Streams, you will use a different channel - the new channel you are going to use is called KafkaChannel. There is also a little bug at present, when you create the channels, the actual Kafka Topics will be created in the Central Broker, rather than your own. If you want to see this then please ask the instructor.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
@@ -2888,7 +2801,47 @@ Events:                    &lt;none&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Create the Knative Eventing channel backed by Kafka as a persistent store</p>
+<p>Before you can do work with Kafka, we need to configure the Knative Kafka dispatcher. You need to add a configmap called config-kafka to your project</p>
+</div>
+<div class="paragraph">
+<p>edit the configmap and change the namespace to your own namespace <strong>sandboxXX</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>vi config-kafka.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The configmap should look similar to the one below :-</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-kafka
+  namespace: sandboxXX
+data:
+  # Broker URL. Replace this with the URLs for your kafka cluster,
+  # which is in the format of my-cluster-kafka-bootstrap.my-kafka-namespace:9092.
+  bootstrapServers: my-cluster-kafka-bootstrap</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>oc apply -f config-kafka.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create the "messages" Knative Eventing channel backed by Kafka as a persistent store. Please edit the messages.yaml file and change the namespace to your own</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>vi messages.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create the KafkaChannel on Openshift</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2910,7 +2863,7 @@ Events:                    &lt;none&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If everything worked as expected, you should see the output similar to below</p>
+<p>If everything worked as expected, you should see the output similar to below (This might take a couple of minutes the first time - Openshift is pulling and starting up the dispatcher)</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2922,86 +2875,6 @@ messages   True             http://messages-kn-channel.sandbox30.svc.cluster.loc
 <p>OK, so the above output suggests that the channel is ready and working.</p>
 </div>
 <div class="paragraph">
-<p>Lets make sure that a topic has been created in Kafka for us.</p>
-</div>
-<div class="paragraph">
-<p>If you recall, the AMQ streams operator has a number of different CRDs, therefore the creation of the Knative Channel should have created a KafkaTopic CRD. Let&#8217;s check to make sure that&#8217;s the case.</p>
-</div>
-<div class="paragraph">
-<p>Type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get kafkatopics</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output should look similar to below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>NAME                                         PARTITIONS   REPLICATION FACTOR
-knative-messaging-kafka.sandbox30.messages   1            1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This goes to show that the Kafka Topic has successfully been created with the number of partitions and replication factor that was asked for when creating the channel.</p>
-</div>
-<div class="paragraph">
-<p>If you are more comfortable using the Kafka CLI, then you still have access to this within the Kafka statefulset.</p>
-</div>
-<div class="paragraph">
-<p>Assuming you did not change the name of your Kafka Cluster then the stateful set should be called "my-cluster-kafka-0"</p>
-</div>
-<div class="paragraph">
-<p>If you did change the name of the cluster, then please change the name of the statefulset accordingly.</p>
-</div>
-<div class="paragraph">
-<p>Type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc exec -it my-cluster-kafka-0 -- bin/kafka-topics.sh --zookeeper localhost:2181 --list</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output should look like the following</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
-knative-messaging-kafka.sandbox30.messages</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>It confirms that there is a topic called knative-messaging-kafka.sandbox30.messages defined to the cluster.</p>
-</div>
-<div class="paragraph">
-<p>And finally, you can check how the topic is laid out in the cluster (Not so exciting as there is only one broker)</p>
-</div>
-<div class="paragraph">
-<p>Type</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc exec -it my-cluster-kafka-0 -- bin/kafka-topics.sh --describe --zookeeper localhost:2181  --topic knative-messaging-kafka.sandboxX.messages</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output should look like the following</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>----OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
-Topic: knative-messaging-kafka.sandbox30.messages       PartitionCount: 1       ReplicationFactor: 1    Configs:
-        Topic: knative-messaging-kafka.sandbox30.messages       Partition: 0    Leader: 0       Replicas: 0     Isr: 0
-----</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This shows that 1 partition has been created. ISR is zero because the replication factor is 1. The partition is not being replicated. This is not recommended for production. This is purely to limit the resources on our OpenShift cluster.</p>
-</div>
-<div class="paragraph">
 <p>Lets deploy the second channel called 'words' again, this time based on a Kafka Channel</p>
 </div>
 <div class="listingblock">
@@ -3010,15 +2883,20 @@ Topic: knative-messaging-kafka.sandbox30.messages       PartitionCount: 1       
 </div>
 </div>
 <div class="paragraph">
-<p>Create the Knative Eventing channel backed by Kafka as a persistent store</p>
+<p>Create the "words" Knative Eventing channel backed by Kafka as a persistent store. Please edit the words.yaml file and change the namespace to your own</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>vi words.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create the KafkaChannel on Openshift</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc apply -f words.yaml</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>We wont go through all the checking we did above, lets just type</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3167,17 +3045,6 @@ The integration should now look like</p>
 </div>
 <div class="paragraph">
 <p>See if you can fix the problem for this integration by following the same steps above. The name of the file is printer.groovy</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="accessing-the-kafka-topics-directly"><a class="anchor" href="#accessing-the-kafka-topics-directly"></a>Accessing the Kafka Topics directly</h4>
-<div class="paragraph">
-<p>In the terminal window, type :-</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc exec -it my-cluster-kafka-0 -- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic knative-messaging-kafka.sandboxX.messages --from-beginning</code></pre>
-</div>
 </div>
 <div class="paragraph">
 <p>There you go, all the messaging sent using Knative eventing channels available in a Kafka topic. This means that all the events flying around the event driven network can also be made available to many other tools supported by Kafka. This could be big data systems, AI systems, mirroring events to different Kafka Clusters and many more things. Of course, the biggest benefit is that the events are now persisted, partitioned for scale, and replicated using classic Kafka functionality.</p>
