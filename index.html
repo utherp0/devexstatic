@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Red Hat DSA UKI</span><br>
 <span id="email" class="email"><a href="mailto:uther@redhat.com">uther@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">May 04, 2020</span>
+<span id="revdate">May 05, 2020</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
@@ -3070,11 +3070,11 @@ oc delete kafka my-cluster</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Delete Knative Eventing</p>
+<p>Delete Knative Eventing Kafka dispatcher</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc delete KnativeEventingKafka knative-eventing-kafka</code></pre>
+<pre class="highlight"><code>oc delete deployment kafka-ch-dispatcher</code></pre>
 </div>
 </div>
 </div>
@@ -3099,7 +3099,7 @@ oc delete kafka my-cluster</code></pre>
 <p>OpenShift Serverless supports "Serving" and "Eventing"</p>
 </div>
 <div class="paragraph">
-<p>At the time of writing, Serving is in Technology Preview, and Eventing is in Developer Preview</p>
+<p>At the time of writing, Eventing is in Tech Preview</p>
 </div>
 <div class="paragraph">
 <p>"Serving" enables request/response workloads, and Eventing enables asynchronous event based workloads using cloudevents. In this lab, we are going to look at serving, and how easy it is to integrate with Camel K.</p>
