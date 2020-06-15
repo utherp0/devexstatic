@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="author" content="UKI DSA Team &lt;uther@redhat.com&gt;">
-<title>Full DevEx Workshop</title>
+<title>Daiwa OpenShift DevEx</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -434,12 +434,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Full DevEx Workshop</h1>
+<h1>Daiwa OpenShift DevEx</h1>
 <div class="details">
 <span id="author" class="author">UKI DSA Team</span><br>
 <span id="email" class="email"><a href="mailto:uther@redhat.com">uther@redhat.com</a></span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">June 09, 2020</span>
+<span id="revdate">June 15, 2020</span>
 <br><span id="revremark"></span>
 </div>
 <div id="toc" class="toc2">
@@ -587,23 +587,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#knative-in-action-2">Knative in action</a></li>
 </ul>
 </li>
-<li><a href="#openshift-do-devtools">OpenShift DO [DEVTOOLS]</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-12">Introduction</a></li>
-<li><a href="#installing">Installing</a></li>
-<li><a href="#odo-command-set">odo command set</a></li>
-<li><a href="#logging-in">Logging in</a>
-<ul class="sectlevel3">
-<li><a href="#examining-source-assets">Examining source assets</a></li>
-</ul>
-</li>
-<li><a href="#create-push-source-run-cycle">Create, push source &amp; run cycle</a></li>
-<li><a href="#odo-watch">odo watch</a></li>
-</ul>
-</li>
 <li><a href="#openshift-pipelines-tekton-innovation">OpenShift Pipelines - Tekton [INNOVATION]</a>
 <ul class="sectlevel2">
-<li><a href="#introduction-13">Introduction</a></li>
+<li><a href="#introduction-12">Introduction</a></li>
 <li><a href="#tasks">Tasks</a>
 <ul class="sectlevel3">
 <li><a href="#download-pipeline-assets">Download pipeline assets</a></li>
@@ -618,67 +604,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#workspaces-and-volumes">Workspaces and Volumes</a></li>
-</ul>
-</li>
-<li><a href="#openshift-service-mesh-innovation">OpenShift Service Mesh [INNOVATION]</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-14">Introduction</a>
-<ul class="sectlevel3">
-<li><a href="#istio">Istio</a></li>
-<li><a href="#kiali">Kiali</a></li>
-<li><a href="#jaeger">Jaeger</a></li>
-</ul>
-</li>
-<li><a href="#using-red-hat-service-mesh">Using Red Hat Service Mesh</a>
-<ul class="sectlevel3">
-<li><a href="#create-a-new-project-for-the-service-mesh-activity">Create a new project for the service mesh activity</a></li>
-</ul>
-</li>
-<li><a href="#phase-1-initial-application">Phase 1 -Initial application</a>
-<ul class="sectlevel3">
-<li><a href="#adding-istio-capability">Adding Istio capability</a></li>
-<li><a href="#view-the-istio-related-resources">View the istio related resources</a></li>
-</ul>
-</li>
-<li><a href="#service-mesh-visualisation-with-kiali">Service mesh visualisation with Kiali</a></li>
-<li><a href="#phase-2-further-content-in-the-communication-chain">Phase 2 - Further content in the communication chain</a></li>
-<li><a href="#phase-3-further-multi-versioned-applications-in-the-communication-chain">Phase 3 - Further multi-versioned applications in the communication chain</a></li>
-<li><a href="#phase-4-service-timeout">Phase 4 - Service timeout</a>
-<ul class="sectlevel3">
-<li><a href="#introducing-application-delay">Introducing application delay</a></li>
-</ul>
-</li>
-<li><a href="#cleaning-up-4">Cleaning up</a></li>
-</ul>
-</li>
-<li><a href="#openshift-and-the-quay-image-repository-innovation">OpenShift and the Quay Image Repository [INNOVATION]</a>
-<ul class="sectlevel2">
-<li><a href="#introduction-15">Introduction</a></li>
-<li><a href="#using-the-quay-workshop-cluster">Using the Quay workshop cluster</a></li>
-<li><a href="#creating-the-openshift-project">Creating the OpenShift Project</a></li>
-<li><a href="#creating-the-quay-image-repositories">Creating the Quay image repositories</a></li>
-<li><a href="#managing-the-quay-organization-and-repositories">Managing the Quay organization and repositories</a>
-<ul class="sectlevel3">
-<li><a href="#granting-permissions-to-repositories">Granting permissions to repositories</a></li>
-<li><a href="#creating-a-robot-account">Creating a robot account</a></li>
-<li><a href="#summary-of-quay-ui-work">Summary of Quay UI work</a></li>
-</ul>
-</li>
-<li><a href="#pulling-openshift-images-and-pushing-to-quay">Pulling OpenShift images and pushing to Quay</a>
-<ul class="sectlevel3">
-<li><a href="#login-to-the-openshift-registry-using-buildah">Login to the OpenShift registry using Buildah</a></li>
-<li><a href="#login-to-quay-using-buildah">Login to Quay using Buildah</a></li>
-<li><a href="#examine-the-local-buildah-repository">Examine the local buildah repository</a></li>
-<li><a href="#tagging-images-for-the-quay-repository">Tagging images for the Quay repository</a></li>
-<li><a href="#push-the-images-to-quay">Push the images to Quay</a></li>
-</ul>
-</li>
-<li><a href="#using-the-images-in-a-qa-environment">Using the images in a QA environment</a>
-<ul class="sectlevel3">
-<li><a href="#creating-the-openshift-project-for-qa">Creating the OpenShift Project for QA</a></li>
-</ul>
-</li>
-<li><a href="#cleaning-up-5">Cleaning up</a></li>
 </ul>
 </li>
 </ul>
@@ -736,7 +661,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="https://www.openshift.com/products/container-platform" target="_blank" rel="noopener">https://www.openshift.com/products/container-platform</a></p>
 </li>
 <li>
-<p><a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a> (the Web Console URL for the Workshop)</p>
+<p><a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a> (the Web Console URL for the Workshop)</p>
 </li>
 </ul>
 </div>
@@ -802,7 +727,7 @@ If you leave the Terminal window open for a long time without using it it will d
 </table>
 </div>
 <div class="paragraph">
-<p>Open the browser and navigate to the console url <a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a></p>
+<p>Open the browser and navigate to the console url <a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a></p>
 </div>
 <div class="paragraph">
 <p>Logon using the user provided by the course administrator (user*x* where <strong>x</strong> is a unique number for your session)</p>
@@ -1236,7 +1161,7 @@ The attendee will be using a browser for interacting with both the OpenShift Con
 <div class="sect2">
 <h3 id="starting-up-logging-on-and-creating-a-project"><a class="anchor" href="#starting-up-logging-on-and-creating-a-project"></a>Starting up - logging on and creating a project</h3>
 <div class="paragraph">
-<p>Log on to cluster at <a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
+<p>Log on to cluster at <a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a> as 'userx', where x is the number assigned to you by the course administrator, password 'openshift'</p>
 </div>
 <div class="paragraph">
 <p>Ensure you are on the Administrator View - at the top left of the UI is a selection box which describes the current view selected.</p>
@@ -2228,7 +2153,7 @@ Type ‘sandboxX’ (where X is your user number) such that the Delete button tu
 <p><strong>DevOps is a much overloaded term that is used to describe a variety of concepts in the creation of modern applications. In a simple definition DevOps is concerned with the interface between development practices used for the creative elements of software engineering and the procedural rigour of operationally running applications in production. Clearly these concepts have different objectives so it is important for teams (whether tasked with development or operations) to have a good understanding of the concepts, objectives and concerns of their counterparts on the other side of the fence.</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>In terms of this workshop it is important to highlight the  capabilities of containerised platforms with respect to the roll out of new versions of applications and how they get introduced to production and to end users. Terms such as blue/green deployments, black and white deployments, A/B deployments and canary deployments are used in various text books on 'DevOps' principles and some of these areas will be used in this chapter of the workshop.</strong></p>
+<p><strong>In terms of this workshop it is important to highlight the  capabilities of containerized platforms with respect to the roll out of new versions of applications and how they get introduced to production and to end users. Terms such as blue/green deployments, black and white deployments, A/B deployments and canary deployments are used in various text books on 'DevOps' principles and some of these areas will be used in this chapter of the workshop.</strong></p>
 </div>
 <div class="paragraph">
 <p>The activities in this workshop will introduce a new version of a simple application to use in two different manners.</p>
@@ -2255,7 +2180,7 @@ The application to be used in this workshop is a simple NodeJS REST interface. V
 <h4 id="creation-of-version-1"><a class="anchor" href="#creation-of-version-1"></a>Creation of version 1</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc new-project master-slaveX</code></pre>
+<pre class="highlight"><code>oc new-project simple-rest-X</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2263,24 +2188,24 @@ The application to be used in this workshop is a simple NodeJS REST interface. V
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc new-app --name slave-app-v1-0  https://github.com/marrober/slave-node-app.git
+<pre class="highlight"><code>oc new-app --name simple-rest-app-v1-0  https://github.com/marrober/simpleRest.git
 
-oc expose service slave-app-v1-0 --name="slave-app-route"</code></pre>
+oc expose service simple-rest-app-v1-0 --name="simple-rest-app-route"</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">What got created ?</div>
 <div class="paragraph">
-<p>It is important to understand the artefacts and content that are created by the above commands within OpenShift:</p>
+<p>It is important to understand the resources and content that are created by the above commands within OpenShift:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A new project is created called master-slaveX.</p>
+<p>A new project is created called simple-rest-X.</p>
 </li>
 <li>
-<p>A deployment configuration is created called slave-app-v1-0.</p>
+<p>A deployment configuration is created called simple-rest-app-v1-0.</p>
 </li>
 <li>
 <p>A replication controller is created associated with the application and the built objects. This defines the scaling of the application in terms of the number of pods and the deployment strategy (rolling or recreate).</p>
@@ -2317,21 +2242,21 @@ oc expose service slave-app-v1-0 --name="slave-app-route"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</code></pre>
+<pre class="highlight"><code>oc get route simple-rest-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This will display a formatted URL with the 'http://' part at the beginning which will be similar to :</p>
 </div>
 <div class="paragraph">
-<p>http://slave-app-route-master-slave.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com/ip</p>
+<p>http://simple-rest-app-route-simple-rest.apps.cluster-xxxx-yyyy.xxxx-yyyy.example.opentlc.com/ip</p>
 </div>
 <div class="paragraph">
 <p>To test the application use the command line window to issue a curl command to:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>curl -k &lt;url from the above command&gt;</code></pre>
+<pre class="highlight"><code>curl &lt;url from the above command&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2348,7 +2273,7 @@ oc expose service slave-app-v1-0 --name="slave-app-route"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc new-app --name slave-app-v2-0 https://github.com/marrober/slave-node-app.git#experimental</code></pre>
+<pre class="highlight"><code>oc new-app --name simple-rest-app-v2-0 https://github.com/marrober/simpleRest.git#experimental</code></pre>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -2358,14 +2283,14 @@ oc expose service slave-app-v1-0 --name="slave-app-route"</code></pre>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Note the use of the #experimental branch identifier in the end of the GIT repository. This syntax cannot be used through the web interface to openshift so any requirements for non-standard GIT connectivity must be done through the command line interface. It is also possible to configure the source-2-image capability to reference a specific sub directory of the repository using the --context option.
+Note the use of the #experimental branch identifier in the end of the GIT repository. This syntax cannot be used through the web interface to OpenShift so any requirements for non-standard GIT connectivity must be done through the command line interface. It is also possible to configure the source-2-image capability to reference a specific sub directory of the repository using the --context option.
 </td>
 </tr>
 </table>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">What got added to the project ?</div>
+<div class="title">What was added to the project ?</div>
 <div class="paragraph">
 <p>New content was added to the project as a result of the above command specific to the experimental (v2) version of the application.</p>
 </div>
@@ -2389,7 +2314,7 @@ Note the use of the #experimental branch identifier in the end of the GIT reposi
 </ul>
 </div>
 <div class="paragraph">
-<p>The diagram below shows the above and how the relate together.</p>
+<p>The diagram below shows the above and how they relate together.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2420,20 +2345,9 @@ The benefit of creating the new version of the application alongside the old is 
 <div class="paragraph">
 <p>Switching the route from v1 to v2 involves patching the route to change configuration. Before executing this operation open a new command window and execute the command below to send requests to the route every second. The responses received should all include the ip address of the pod and the version (v1) of the application.</p>
 </div>
-<div class="paragraph">
-<p>Get the URI of the route using the command :</p>
-</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get route slave-app-route -o jsonpath='{"http://"}{.spec.host}{"/ip\n"}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Copy the result of the above command and paste it into the shell script below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>for i in {1..1000}; do curl -k &lt;URI&gt; ; echo ""; sleep 1; done</code></pre>
+<pre class="highlight"><code>for i in {1..1000}; do curl $(oc get route simple-rest-app-route -o jsonpath='{"http://"}{.spec.host}') ; echo ""; sleep 1; done</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2444,7 +2358,7 @@ The benefit of creating the new version of the application alongside the old is 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v2-0"}}}'</code></pre>
+<pre class="highlight"><code>oc patch route/simple-rest-app-route -p '{"spec":{"to":{"name":"simple-rest-app-v2-0"}}}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2455,7 +2369,7 @@ The benefit of creating the new version of the application alongside the old is 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get route/slave-app-route -o yaml</code></pre>
+<pre class="highlight"><code>oc get route/simple-rest-app-route -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2470,20 +2384,20 @@ metadata:
     openshift.io/host.generated: "true"
   creationTimestamp: 2019-12-04T17:16:37Z
   labels:
-    app: slave-app-v1-0
-  name: slave-app-route
-  namespace: master-slave
+    app: simple-rest-app-v1-0
+  name: simple-rest-app-route
+  namespace: simple-rest-XX
   resourceVersion: "884652"
-  selfLink: /apis/route.openshift.io/v1/namespaces/master-slave/routes/slave-app-route
+  selfLink: /apis/route.openshift.io/v1/namespaces/simple-rest/routes/simple-rest-app-route
   uid: d4910fef-16b9-11ea-a6c5-0a580a800048
 spec:
-  host: slave-app-route-master-slave.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
+  host: simple-rest-app-route-simple-rest.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
   port:
     targetPort: 8080-tcp
   subdomain: ""
   to:
     kind: Service
-    name: slave-app-v2-0
+    name: simple-rest-app-v2-0
     weight: 100
   wildcardPolicy: None
 status:
@@ -2492,7 +2406,7 @@ status:
     - lastTransitionTime: 2019-12-04T17:16:38Z
       status: "True"
       type: Admitted
-    host: slave-app-route-master-slave.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
+    host: simple-rest-app-route-simple-rest.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
     routerCanonicalHostname: apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
     routerName: default
     wildcardPolicy: None</code></pre>
@@ -2503,7 +2417,7 @@ status:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc patch route/slave-app-route -p '{"spec":{"to":{"name":"slave-app-v1-0"}}}'</code></pre>
+<pre class="highlight"><code>oc patch route/simple-rest-app-route -p '{"spec":{"to":{"name":"simple-rest-app-v1-0"}}}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2533,11 +2447,11 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 </div>
 </div>
 <div class="paragraph">
-<p>To migrate 10% of traffic to version 2 execute the following command:</p>
+<p>To migrate 30% of traffic to version 2 execute the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set route-backends slave-app-route slave-app-v1-0=90 slave-app-v2-0=10</code></pre>
+<pre class="highlight"><code>oc set route-backends simple-rest-app-route simple-rest-app-v1-0=70 simple-rest-app-v2-0=30</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2548,7 +2462,7 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set route-backends slave-app-route slave-app-v1-0=50 slave-app-v2-0=50</code></pre>
+<pre class="highlight"><code>oc set route-backends simple-rest-app-route simple-rest-app-v1-0=50 simple-rest-app-v2-0=50</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2559,7 +2473,7 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get route/slave-app-route -o yaml</code></pre>
+<pre class="highlight"><code>oc get route/simple-rest-app-route -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2570,15 +2484,15 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 <pre class="highlight"><code>spec:
   alternateBackends:
   - kind: Service
-    name: slave-app-v2-0
+    name: simple-rest-app-v2-0
     weight: 50
-  host: slave-app-route-master-slave.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
+  host: simple-rest-app-route-simple-rest.apps.cluster-telf-c8e6.telf-c8e6.example.opentlc.com
   port:
     targetPort: 8080-tcp
   subdomain: ""
   to:
     kind: Service
-    name: slave-app-v1-0
+    name: simple-rest-app-v1-0
     weight: 50</code></pre>
 </div>
 </div>
@@ -2587,14 +2501,14 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set route-backends slave-app-route slave-app-v1-0=0 slave-app-v2-0=100</code></pre>
+<pre class="highlight"><code>oc set route-backends simple-rest-app-route simple-rest-app-v1-0=0 simple-rest-app-v2-0=100</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="url-based-routing"><a class="anchor" href="#url-based-routing"></a>URL based routing</h3>
 <div class="paragraph">
-<p>Many organisations want to use a common URL for their web sites so that it is easy for users. This is often achieved by pointing a specific URL at an OpenShift cluster route within a global load balancer function, however this is not essential and it is possible to use routes to achieve the same result. Take as an example a holiday company called myholiday.com. The company wishes to sell package holidays, short breaks, cruises and adventure holidays and they create different applications for these purposes. By using a common host name in a series of route it is possible to ensure that traffic flows to the right location, based on the path of the url used. The diagram below shows the descried sceanrio and how the routes, services and applications work together</p>
+<p>Many organizations want to use a common URL for their web sites so that it is easy for users. This is often achieved by pointing a specific URL at an OpenShift cluster route within a global load balancer function, however this is not essential and it is possible to use routes to achieve the same result. Take as an example a holiday company called myholiday.com. The company wishes to sell package holidays, short breaks, cruises and adventure holidays and they create different applications for these purposes. By using a common host name in a series of route it is possible to ensure that traffic flows to the right location, based on the path of the url used. The diagram below shows the descried scenario and how the routes, services and applications work together</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2612,13 +2526,13 @@ The benefit of an A/B deployment strategy is that it is possible to gradually mi
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>oc new-project myholidayX
-oc new-app https://github.com/marrober/workshop4.git --context-dir=attendee/myholiday \
+oc new-app https://github.com/utherp0/workshop4.git --context-dir=attendee/myholiday \
 --name=short-holiday -l app.kubernetes.io/part-of=holidays HOLIDAY_TYPE=short-break
-oc new-app https://github.com/marrober/workshop4.git --context-dir=attendee/myholiday \
+oc new-app https://github.com/utherp0/workshop4.git --context-dir=attendee/myholiday \
 --name=package-holiday -l app.kubernetes.io/part-of=holidays HOLIDAY_TYPE=package
-oc new-app https://github.com/marrober/workshop4.git --context-dir=attendee/myholiday \
+oc new-app https://github.com/utherp0/workshop4.git --context-dir=attendee/myholiday \
 --name=cruise-holiday -l app.kubernetes.io/part-of=holidays HOLIDAY_TYPE=cruise
-oc new-app https://github.com/marrober/workshop4.git --context-dir=attendee/myholiday \
+oc new-app https://github.com/utherp0/workshop4.git --context-dir=attendee/myholiday \
 --name=adventure-holiday -l app.kubernetes.io/part-of=holidays HOLIDAY_TYPE=adventure</code></pre>
 </div>
 </div>
@@ -2757,14 +2671,14 @@ short-holiday-route   myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com   /s
 </div>
 </div>
 <div class="paragraph">
-<p>Test the routes (copy and paste from your result of the 'oc get routes' command) by accessing the four different holiday types from the common url with the curl commands below. The text responses will show that the correct application is responding to each request.</p>
+<p>Test the routes (copy and paste from your result of the 'oc get routes' command - do not copy the commands below &#8230;&#8203;. ) by accessing the four different holiday types from the common url with the curl commands below. The text responses will show that the correct application is responding to each request.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>curl myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com/adventure
-curl myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com/cruise
-curl myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com/package
-curl myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com/short-break</code></pre>
+<pre class="highlight"><code>curl &lt;common-url&gt;/adventure
+curl &lt;common-url&gt;/cruise
+curl &lt;common-url&gt;/package
+curl &lt;common-url&gt;/short-break</code></pre>
 </div>
 </div>
 </div>
@@ -2774,8 +2688,8 @@ curl myholiday2.apps.cluster-c2d5.c2d5.example.opentlc.com/short-break</code></p
 <p>From the OpenShift browser window click on 'Advanced' and then 'Projects' on the left hand side menu.</p>
 </div>
 <div class="paragraph">
-<p>In the triple dot menu next to your own project (master-slaveX) select ‘Delete Project’
-Type ‘master-slaveX’ (where X is your user number) such that the Delete button turns red and is active.
+<p>In the triple dot menu next to your own project (simple-rest-X) select ‘Delete Project’
+Type ‘simple-rest-X’ (where X is your user number) such that the Delete button turns red and is active.
 Press Delete to remove the project.</p>
 </div>
 <div class="paragraph">
@@ -2794,7 +2708,7 @@ Press Delete to remove the project.</p>
 <p>This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.</p>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL at <a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL at <a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3228,7 +3142,7 @@ For the majority of this chapter the attendee will need to pair up with another.
 </table>
 </div>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a> and logon as 'userx' (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
 <p>If you do not already have a terminal tab running as defined in the pre-requisites please open one following the instructions in the pre-requisites</p>
@@ -3560,7 +3474,7 @@ Note that you cannot delete the other persons project.
 <div class="sect2">
 <h3 id="introduction-7"><a class="anchor" href="#introduction-7"></a>Introduction</h3>
 <div class="paragraph">
-<p>If you are not already logged on go to the UI URL <a href="https://example.manifest.com" target="_blank" rel="noopener">https://example.manifest.com</a> and logon as userx (x is the number provided to you) and password openshift.</p>
+<p>If you are not already logged on go to the UI URL <a href="https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com" target="_blank" rel="noopener">https://console-openshift-console.apps.cluster-daiwa-db5c.daiwa-db5c.example.opentlc.com</a> and logon as userx (x is the number provided to you) and password openshift.</p>
 </div>
 <div class="paragraph">
 <p>If you do not already have a terminal tab running as defined in the pre-requisites please open one following the instructions in the pre-requisites</p>
@@ -3969,7 +3883,7 @@ cat /pvtest/files/webfile1.txt
 <div class="sect2">
 <h3 id="introduction-8"><a class="anchor" href="#introduction-8"></a>Introduction</h3>
 <div class="paragraph">
-<p>Liveness and Readiness probes are Kubernetes capabilities that enable teams to make their containerised applications more reliable and robust. However, if used inappropriately they can result in none of the intended benefits, and can actually make a microservice based application unstable.</p>
+<p>Liveness and Readiness probes are Kubernetes capabilities that enable teams to make their containerized applications more reliable and robust. However, if used inappropriately they can result in none of the intended benefits, and can actually make a microservice based application unstable.</p>
 </div>
 <div class="paragraph">
 <p>The purpose of each probe is quite simple and is described well in the OpenShift documentation here. The use of each probe is best understood by examining the action that will take place if the probe is activated.</p>
@@ -4049,8 +3963,8 @@ cat /pvtest/files/webfile1.txt
 <div class="content">
 <div class="title">Source-2-Image</div>
 <div class="paragraph">
-<p>One of the most exciting features of OpenShift from a developer&#8217;s perspective is the concept of S2I, or <strong>Source-2-Image</strong> which provides a standardised way of taking a base image, containing, for example, the framework for running a node.js application,
-a source code repository, containing the code of the application that matches the framework provided in the base image, and constructing  and delivering a composite Application image to the Registry. Simply put this enables a developer to create source code for an application and OpenShift will convert that to a running application within a container with minimal effort. The process that you will use below is the Source-2-Image capability.</p>
+<p>One of the most exciting features of OpenShift from a developer&#8217;s perspective is the concept of S2I, or <strong>Source-2-Image</strong> which provides a standardized way of taking a base image, containing, for example, the framework for running a node.js application,
+a source code repository, containing the code of the application that matches the framework provided in the base image, and constructing and delivering a composite Application image to the Registry. Simply put this enables a developer to create source code for an application and OpenShift will convert that to a running application within a container with minimal effort. The process that you will use below is the Source-2-Image capability.</p>
 </div>
 </div>
 </div>
@@ -4074,10 +3988,10 @@ a source code repository, containing the code of the application that matches th
 <p>Select the default offering for the Builder Image Version</p>
 </div>
 <div class="paragraph">
-<p>For the GIT repository use : <a href="https://github.com/marrober/slave-node-app.git" target="_blank" rel="noopener">https://github.com/marrober/slave-node-app.git</a></p>
+<p>For the GIT repository use : <a href="https://github.com/marrober/simpleRest.git" target="_blank" rel="noopener">https://github.com/marrober/simpleRest.git</a></p>
 </div>
 <div class="paragraph">
-<p>In a separate browser tab go to <a href="https://github.com/marrober/slave-node-app.git" target="_blank" rel="noopener">https://github.com/marrober/slave-node-app.git</a></p>
+<p>In a separate browser tab go to <a href="https://github.com/marrober/simpleRest.git" target="_blank" rel="noopener">https://github.com/marrober/simpleRest.git</a></p>
 </div>
 <div class="paragraph">
 <p><strong>You can see that the GIT repository at this location only has a small number of files specific to the application. There is no content specific to how the application should be built or deployed into a container.</strong></p>
@@ -4089,13 +4003,10 @@ a source code repository, containing the code of the application that matches th
 <p>Back at the OCP4.2 user interface complete the following information in the section titled 'General'.</p>
 </div>
 <div class="paragraph">
-<p>For the Application drop down menu select 'Create Application'.</p>
+<p>For the Application name enter 'rest-application'.</p>
 </div>
 <div class="paragraph">
-<p>For the Application name enter 'Slave-application'.</p>
-</div>
-<div class="paragraph">
-<p>For the Name field enter 'node-app-slave'</p>
+<p>For the Name field enter 'node-app-rest'</p>
 </div>
 <div class="paragraph">
 <p><strong>The application name field is used to group together multiple items under a single grouping within the topology view. The name field is used to identify the specific containerised application.</strong></p>
@@ -4181,13 +4092,13 @@ a source code repository, containing the code of the application that matches th
 <p>Click on the arrow on the top right corner of the Pod, or click on the route URL shown in the right hand side resource details window. The application window will launch in a new browser window and should display text as shown below:</p>
 </div>
 <div class="paragraph">
-<p><strong>Hello - this is the simple slave REST interface v1.0</strong></p>
+<p><strong>Hello - this is a simple REST interface v1.0</strong></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="liveness-probe"><a class="anchor" href="#liveness-probe"></a>Liveness Probe</h3>
 <div class="paragraph">
-<p><strong>A number of probes will be created to show the different behaviours. The first probe will be a liveness probe that will result in the restart of the pod.</strong></p>
+<p><strong>A number of probes will be created to show the different behaviors. The first probe will be a liveness probe that will result in the restart of the pod.</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Since this work will be done using the oc command line you need to switch the current oc command line to work with the new project using the command:</strong></p>
@@ -4205,7 +4116,7 @@ a source code repository, containing the code of the application that matches th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set probe dc/node-app-slave --liveness --initial-delay-seconds=30 --failure-threshold=1 --period-seconds=10 --get-url=http://:8080/health</code></pre>
+<pre class="highlight"><code>oc set probe dc/node-app-rest --liveness --initial-delay-seconds=30 --failure-threshold=1 --period-seconds=10 --get-url=http://:8080/health</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4220,7 +4131,7 @@ a source code repository, containing the code of the application that matches th
 <p>Initiated a reboot after 1 instance of a failure to respond</p>
 </li>
 <li>
-<p>Probe the application every 10 seconds <em>Note that ordinarily a gap of 10 seconds between probes would be considered very long, but we use this time delay within the workshop to allow time for observing the behaviour of the probe.</em></p>
+<p>Probe the application every 10 seconds <em>Note that ordinarily a gap of 10 seconds between probes would be considered very long, but we use this time delay within the workshop to allow time for observing the behavior of the probe.</em></p>
 </li>
 <li>
 <p>Use the URL /health on the application at port 8080. Note that there is no need to specify a URL for the application.</p>
@@ -4232,7 +4143,7 @@ a source code repository, containing the code of the application that matches th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>deploymentconfig.apps.openshift.io/node-app-slave probes updated</code></pre>
+<pre class="highlight"><code>deploymentconfig.apps.openshift.io/node-app-rest probes updated</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4240,7 +4151,7 @@ a source code repository, containing the code of the application that matches th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc describe dc/node-app-slave</code></pre>
+<pre class="highlight"><code>oc describe dc/node-app-rest</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4249,11 +4160,11 @@ a source code repository, containing the code of the application that matches th
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>Pod Template:
-  Labels:	app=node-app-slave
-		    deploymentconfig=node-app-slave
+  Labels:	app=node-app-rest
+		    deploymentconfig=node-app-rest
   Containers:
-   node-app-slave:
-    Image:		image-registry.openshift-image-registry.svc:5000/probes2/node-app-slave@sha256:bf377...241
+   node-app-rest:
+    Image:		image-registry.openshift-image-registry.svc:5000/probes2/node-app-rest@sha256:bf377...241
     Port:		    8080/TCP
     Host Port:		0/TCP
     Liveness:		http-get http://:8080/health delay=30s timeout=1s period=10s #success=1 #failure=1
@@ -4267,7 +4178,7 @@ a source code repository, containing the code of the application that matches th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get dc/node-app-slave -o yaml</code></pre>
+<pre class="highlight"><code>oc get dc/node-app-rest -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4350,7 +4261,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set probe dc/node-app-slave --liveness --remove</code></pre>
+<pre class="highlight"><code>oc set probe dc/node-app-rest --liveness --remove</code></pre>
 </div>
 </div>
 </div>
@@ -4362,7 +4273,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc set probe dc/node-app-slave --readiness --initial-delay-seconds=30 --failure-threshold=3 --success-threshold=1  --period-seconds=5 --get-url=http://:8080/health</code></pre>
+<pre class="highlight"><code>oc set probe dc/node-app-rest --readiness --initial-delay-seconds=30 --failure-threshold=3 --success-threshold=1  --period-seconds=5 --get-url=http://:8080/health</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4392,7 +4303,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>deploymentconfig.apps.openshift.io/node-app-slave probes updated</code></pre>
+<pre class="highlight"><code>deploymentconfig.apps.openshift.io/node-app-rest probes updated</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4400,7 +4311,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc describe dc/node-app-slave</code></pre>
+<pre class="highlight"><code>oc describe dc/node-app-rest</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4408,7 +4319,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get dc/node-app-slave -o yaml</code></pre>
+<pre class="highlight"><code>oc get dc/node-app-rest -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4416,7 +4327,7 @@ From the action menu on the right hand side click <strong>Edit Deployment Config
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get ep/node-app-slave -o yaml</code></pre>
+<pre class="highlight"><code>oc get ep/node-app-rest -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4431,17 +4342,17 @@ metadata:
     endpoints.kubernetes.io/last-change-trigger-time: 2019-11-26T16:04:50Z
   creationTimestamp: 2019-11-26T09:37:12Z
   labels:
-    app: node-app-slave
-    app.kubernetes.io/component: node-app-slave
-    app.kubernetes.io/instance: node-app-slave
+    app: node-app-rest
+    app.kubernetes.io/component: node-app-rest
+    app.kubernetes.io/instance: node-app-rest
     app.kubernetes.io/name: nodejs
-    app.kubernetes.io/part-of: master-slave
+    app.kubernetes.io/part-of: master-rest
     app.openshift.io/runtime: nodejs
     app.openshift.io/runtime-version: "10"
-  name: node-app-slave
+  name: node-app-rest
   namespace: probes1
   resourceVersion: "1172051"
-  selfLink: /api/v1/namespaces/probes1/endpoints/node-app-slave
+  selfLink: /api/v1/namespaces/probes1/endpoints/node-app-rest
   uid: 534139aa-1030-11ea-af1c-024039909e8a
 subsets:
 - addresses:
@@ -4449,7 +4360,7 @@ subsets:
     nodeName: ip-10-0-136-74.eu-central-1.compute.internal
     targetRef:
       kind: Pod
-      name: node-app-slave-5-hwj89
+      name: node-app-rest-5-hwj89
       namespace: probes1
       resourceVersion: "1172049"
       uid: ad6cc0e5-1043-11ea-af1c-024039909e8a
@@ -4511,7 +4422,7 @@ subsets:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get ep/node-app-slave -o yaml</code></pre>
+<pre class="highlight"><code>oc get ep/node-app-rest -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4540,7 +4451,7 @@ subsets:
 <p><strong>Note that you will see a large number of pod readiness probe failures while you were reading the notes.</strong></p>
 </div>
 <div class="paragraph">
-<p>In the OpenShift Console choose Adminstrator View, then Workloads/Pods. Click on the Pod that is active and in the Pod information page click on the Terminal option.</p>
+<p>In the OpenShift Console choose Administrator View, then Workloads/Pods. Click on the Pod that is active and in the Pod information page click on the Terminal option.</p>
 </div>
 <div class="paragraph">
 <p>Within the Pod Terminal enter the command :</p>
@@ -4566,7 +4477,7 @@ subsets:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>oc get ep/node-app-slave -o yaml</code></pre>
+<pre class="highlight"><code>oc get ep/node-app-rest -o yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5767,329 +5678,13 @@ Options are available in Knative to determine how to scale based on concurrent c
 </div>
 </div>
 <div class="sect1">
-<h2 id="openshift-do-devtools"><a class="anchor" href="#openshift-do-devtools"></a>OpenShift DO [DEVTOOLS]</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Author: Mark Roberts (feedback to <a href="mailto:mroberts@redhat.com">mroberts@redhat.com</a>)</p>
-</div>
-<div class="sect2">
-<h3 id="introduction-12"><a class="anchor" href="#introduction-12"></a>Introduction</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">An overview of odo</div>
-<div class="paragraph">
-<p>The OpenShift command line interface 'oc' is a general purpose interface with a vast set of commands for both development and administrative purposes. The odo command is a more developer centric command line interface for users who simply want to build, deploy and run applications on OpenShift. There is definitely a place for both tools within the kitbag of an OpenShift user, and for fast iterations of edit - run - edit - run the odo interface is perfect.</p>
-</div>
-<div class="paragraph">
-<p>The approach described in the application basics chapter used a GIT repository as the source of the content to be built and deployed. This is a excellent approach when multiple users are working together in a complex application performing frequent integration of source code in GIT and validating their combined efforts as the project progresses. Avoiding such frequent integration activity will make the code of each developer diverge storing up integration headaches in the future.</p>
-</div>
-<div class="paragraph">
-<p>The ability of the OpenShift 'Source-2-image' capability to identify the code within the GIT repository (from the options of Node.js, Java, Ruby, Perl, PHP, and Python), select a builder image, build the code and deliver a new container with the running application is a huge efficiency advantage for teams. However there are scenarios in which a single developer simply wants to get their code running as quickly as possible and which is where odo can be advantageous.</p>
-</div>
-<div class="paragraph">
-<p>The principle of the odo command is that it can very quickly create a new project and use a 'GIT like' syntax to enable a developer to push the code into OpenShift. The receiving OpenShift cluster will then decide how to build the code, perform the build and deliver a running container. When the developer wants to make changes they simply push their code and the build and deploy operations are repeated. The first push process may take around a minute, but after that each iteration will take only a few seconds.</p>
-</div>
-<div class="paragraph">
-<p>The diagram below shows how the odo command can fit into a development cycle. The outline diagram shows that the odo command is appropriate for single developers working with a degree of isolation, the team development involves multiple developers integrating their code through a GIT repository and the final phase involves the use of multiple clusters for the deployment of applications through to production.</p>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-1.png" alt="odo in the development cycle">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>In more detail the diagram below shows how odo and oc / source-2-image work together to create a scaled development experience. In the single user phase the odo command is used to push the application code to a container in OpenShift. In the light blue box the source code is pushed to OpenShift in which the language specific builder image is used to create a new image containing the built code. This  image is started to create a running container. When the developer needs to share the code with the work of others GIT is used as a vehicle for integration and to remove any code conflicts.  This is the medium blue box in which the code is pushed to GIT and the OpenShift source-2-image capability is used to build a new running container. In the final phase shown in the darker blue box, the built container image can then be pushed to the Quay image repository to be stored securely ready for deployment to further environments such as pre-production and production.</p>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-2.png" alt="odo in the development cycle - detail">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="installing"><a class="anchor" href="#installing"></a>Installing</h3>
-<div class="paragraph">
-<p>The odo command line interface is built into the terminal that you create as a pre-requisite for this workshop so you don&#8217;t have to install anything right now. However, if you want to install the interface on your own workstation then it is available for download from here : <a href="https://github.com/openshift/odo" target="_blank" rel="noopener">https://github.com/openshift/odo</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>If you haven&#8217;t already please follow the instructions in the pre-req chapter which explains the creation and setting up of the terminal application. For this chapter you will be using that application which has the odo command pre-installed for you</strong></p>
-</div>
-<div class="paragraph">
-<p>Switch to the terminal application tab of the browser as described in the pre-req chapter</p>
-</div>
-<div class="paragraph">
-<p><strong>To use the command simply type 'odo' and you will see help regarding the objects and to get help on a specific object use 'odo &lt;object&gt; --help'.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="odo-command-set"><a class="anchor" href="#odo-command-set"></a>odo command set</h3>
-<div class="paragraph">
-<p><strong>The odo command has the following subcommands :</strong></p>
-</div>
-<div class="paragraph">
-<p>Commands:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>app         Perform application operations (delete, describe, list)
-catalog     Catalog related operations (describe, list, search)
-component   Manage components (create, delete, describe, link, list, log, push, unlink, update, watch)
-config      Change or view configuration (set, unset, view)
-debug       Debug commands (port-forward)
-preference  Modifies preference settings (set, unset, view)
-project     Perform project operations (create, delete, get, list, set)
-service     Perform service catalog operations (create, delete, list)
-storage     Perform storage operations (create, delete, list)
-url         Expose component to the outside world (create, delete, list)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Utility Commands:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>login       Login to cluster
-logout      Log out of the current OpenShift session
-utils       Utilities for terminal commands and modifying odo configurations (terminal)
-version     Print the client version information</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Component Shortcuts:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>create      Create a new component
-delete      Delete component
-describe    Describe component
-link        Link component to a service or component
-list        List all components in the current application
-log         Retrieve the log for the given component
-push        Push source code to a component
-unlink      Unlink component to a service or component
-update      Update the source code path of a component
-watch       Watch for changes, update component on change</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The most common are used within this workshop but feel free to experiment with any of the above commands.</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging-in"><a class="anchor" href="#logging-in"></a>Logging in</h3>
-<div class="paragraph">
-<p><strong>At this point if you are using the terminal as explained in the pre-req chapter you will already be logged into the system. This can be checked by typing the following:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc whoami
-odo project list</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This should result in your user name being displayed followed by the sandboxX project being shown by the result to the odo command</p>
-</div>
-<div class="paragraph">
-<p><strong>If you do need to login to odo outside of this workshop use the 'odo login' command with appropriate parameters</strong></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The odo command will evolve over time and it performs a check to see if you have the latest version each time it is used. If there is an update available you will be given a prompt to update from a given URL
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>To see which version of odo you are using enter the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>odo version</code></pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="examining-source-assets"><a class="anchor" href="#examining-source-assets"></a>Examining source assets</h4>
-<div class="paragraph">
-<p>The pipeline assets are located in a GIT repository that has been preinstalled in the terminal. Using your terminal window check the assets using the commands below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd /workspace/workshop4/attendee/slave
-
-ls -al</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You will see that the directory only has the source file slave.js and the package file called package.json.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-push-source-run-cycle"><a class="anchor" href="#create-push-source-run-cycle"></a>Create, push source &amp; run cycle</h3>
-<div class="paragraph">
-<p>Create a new project using the odo command replacing X with your user number below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>odo create nodejs node-app-slave</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>TIP:The syntax of the above command is 'odo create &lt;component-type&gt; &lt;component-name&gt; --project &lt;project-for-the-component&gt;'</p>
-</div>
-<div class="paragraph">
-<p>The result of running this command is simply the creation of a .odo directory containing a config.yaml file. The file contains the desired state for the application in OpenShift and is only committed to OpenShift and acted upon by OpenShift when the user issues the command 'odo push'. Examine the config.yaml file with the command below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>---
-cat .odo/config.yaml
----</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create a route for the application by using the command below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>odo url create node-app-slave</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Examine the contents of the .odo/config.yaml file again and you will see that new content has been added</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cat .odo/config.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now push the configuration to OpenShift by using the command below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>odo push</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output from the above command is shown below</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/odo-3.png" alt="odo in the development cycle - detail">
-</div>
-</div>
-<div class="paragraph">
-<p>Wait for the response "Changes successfully pushed to component"</p>
-</div>
-<div class="paragraph">
-<p>The application has started up and will be running at the URL indicated in the output above. Copy the URL from your command window and paste it into a new browser tab. You should see an output similar to that shown below.</p>
-</div>
-<div class="paragraph">
-<p>Note - within the terminal window to copy text you should highlight the text, right click and select copy. To paste to the terminal window use ctrl-shift-v.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>Hello - this is the simple slave REST interface v1.0</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now make a small change to the comment in the source code of the slave.js file to change the line shown below</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>response.send('Hello - this is the simple slave REST interface' + versionIdentifier);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Change the response to the following</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>response.send('Hello - MODIFIED and pushed with ODO' + versionIdentifier);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now use odo to push the changed source to OpenShift</p>
-</div>
-<div class="paragraph">
-<p>odo push</p>
-</div>
-<div class="paragraph">
-<p>The code still needed to be pushed to the component, but the final stage of building the component is much faster. Refresh the browser window showing the application output and you will see your code change. The edit - push - test cycle is as simple as that</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="odo-watch"><a class="anchor" href="#odo-watch"></a>odo watch</h3>
-<div class="paragraph">
-<p>The odo process also has a 'watch' facility that allows you to force odo to constantly watch for source code changes and push them immediately. Open another instance of the terminal application by pointing a new tab in the browser to the route to the terminal application.</p>
-</div>
-<div class="paragraph">
-<p>In the new terminal tab enter</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd /workspace/workshop4/attendee/slave
-odo watch</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The command window should report : 'Waiting for something to change in &lt;current-working-directory&gt;'</p>
-</div>
-<div class="paragraph">
-<p>Switch back to your other terminal window and make another change to the source code, similar to the change above. After saving the edit switch to the terminal window in which you typed 'odo watch' and observe that a new push of the code to OpenShift has taken place</p>
-</div>
-<div class="paragraph">
-<p>The window with the watch command running will report:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>File &lt;path-to-source&gt;/slave.js changed
-Pushing files...
- ✓  Waiting for component to start [73ms]
- ✓  Syncing files to the component [11s]
- ✓  Building component [4s]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Refresh the browser window showing the application output and you will see your code change</p>
-</div>
-<div class="paragraph">
-<p>odo is clearly a very fast way to go from code to running your application without having to install tools and frameworks on your laptop</p>
-</div>
-<div class="paragraph">
-<p>Finally, let&#8217;s clean up the project by typing</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>odo delete node-app-slave</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will delete the application from the project</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="openshift-pipelines-tekton-innovation"><a class="anchor" href="#openshift-pipelines-tekton-innovation"></a>OpenShift Pipelines - Tekton [INNOVATION]</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Author: Mark Roberts (feedback to <a href="mailto:mroberts@redhat.com">mroberts@redhat.com</a>)</p>
 </div>
 <div class="sect2">
-<h3 id="introduction-13"><a class="anchor" href="#introduction-13"></a>Introduction</h3>
+<h3 id="introduction-12"><a class="anchor" href="#introduction-12"></a>Introduction</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -6498,7 +6093,7 @@ tkn pipeline start pipeline-1</code></pre>
 <p>As shown above the task has place-holders for two parameters. The first parameter has a value defined within the taskrun. The second parameter has a default value so it is not essential to provide a value for it in the taskrun. Both parameters are referenced from the steps of the task using the notation $(inputs.params.&lt;parameter-name&gt;).</p>
 </div>
 <div class="paragraph">
-<p>The task also defines a resource object called git-repo-slave of type git. Within the taskrun an input resource object is defined with the same name (git-repo-slave) referring to a pipeline resource object called git-repo-slave-resource. A pipeline resource object is created from the yaml file git-resources.yaml which makes a reference to the actual git repository.</p>
+<p>The task also defines a resource object called git-repo-simple-rest of type git. Within the taskrun an input resource object is defined with the same name (git-repo-simple-rest) referring to a pipeline resource object called git-repo-simple-rest-resource. A pipeline resource object is created from the yaml file git-resources.yaml which makes a reference to the actual git repository.</p>
 </div>
 <div class="paragraph">
 <p>To create the resource object go back to the terminal app and execute the following command :</p>
@@ -6522,7 +6117,7 @@ tkn pipeline start pipeline-1</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>NAME                      TYPE   DETAILS
-git-repo-slave-resource   git    url: https://github.com/marrober/slave-node-app.git</code></pre>
+git-repo-simple-rest-resource   git    url: https://github.com/marrober/simpleRest.git</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6679,1445 +6274,11 @@ tekton-task-cache-pvc   Bound         pvc-1d894a93-2646-11ea-9f45-0a9970779e5c  
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="openshift-service-mesh-innovation"><a class="anchor" href="#openshift-service-mesh-innovation"></a>OpenShift Service Mesh [INNOVATION]</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Author: Mark Roberts (feedback to <a href="mailto:mroberts@redhat.com">mroberts@redhat.com</a>)</p>
-</div>
-<div class="sect2">
-<h3 id="introduction-14"><a class="anchor" href="#introduction-14"></a>Introduction</h3>
-<div class="paragraph">
-<p>OpenShift is a platform that enables developers to deliver and manage extremely complex polyglot applications covering a variety of language runtimes and underlying technologies. However, OpenShift to date has not provided controls and monitoring regarding how each application component interacts with other components within an application or wider enterprise. This is where the Red Hat OpenShift Service Mesh adds value to the development and operations staff responsible for applications.</p>
-</div>
-<div class="paragraph">
-<p>Red Hat OpenShift Service mesh is comprised of a number of separate open source projects that have been tested and integrated as a whole to deliver value to the OpenShift user. Each open source project breaks down further to specific named elements, some of which are encountered and described in the following workshop chapter.</p>
-</div>
-<div class="sect3">
-<h4 id="istio"><a class="anchor" href="#istio"></a>Istio</h4>
-<div class="paragraph">
-<p>Istio is an implementation of the service-mesh and this component is responsible for the overall management of communication traffic between the elements of the application. The service mesh provides the manageable and measurable interaction between different services and enables teams to introduce new functionality and services in a controlled manner. One of the major benefits of the service-mesh is the fact that functionality such as Load balancing, resilience, security and observation is delivered by the mesh and not by the application. Application developers can focus in the value of their application and not how to add the resilience etc. to the application. In the earlier chapter on 'Application deployment strategies' users created a mechanism for blue/green deployments and A/B deployments to spread the load across different versions of services. These capabilities are extended further with Istio in terms of the basis for the rules that are used for traffic management. For a more detailed introduction to Istio please take a look at the free O&#8217;Reilly book 'Introducing Istio Service Mesh for Microservices' which can be downloaded from <a href="https://developers.redhat.com/books/introducing-istio-service-mesh-microservices/" target="_blank" rel="noopener">here</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="kiali"><a class="anchor" href="#kiali"></a>Kiali</h4>
-<div class="paragraph">
-<p>Kiali provides the observability capability to the Red Hat Service Mesh. This enables users to build a picture of service interaction, observe traffic and look in detail at the resources that are added to the OpenShit platform to create the operational service mesh. Kiali is used to understand the structure of the mesh and to gather metrics. A link is available to from Kiali to Jaeger for distributed tracing.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="jaeger"><a class="anchor" href="#jaeger"></a>Jaeger</h4>
-<div class="paragraph">
-<p>Jaeger provides a detailed distributed traffic tracing capability. This shows accurately message interaction and enables teams to understand in detail the sequencing of traffic flow and to identify bottlenecks and weaknesses within the mesh.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="using-red-hat-service-mesh"><a class="anchor" href="#using-red-hat-service-mesh"></a>Using Red Hat Service Mesh</h3>
-<div class="paragraph">
-<p>The following workshop steps will show you how to create a service mesh using a simple application. The application communication will work perfectly fine with the use of OpenShift services and routes, and the introduction of the service mesh to provide more capable communication management will have no implications on the application code.</p>
-</div>
-<div class="paragraph">
-<p>The application is called layers and it is a very simple Node JS REST interface that receives request either from an external curl command or from another version of itself. The application uses a number of environment variables that are set within the deployment yaml files. If the application instance has an environment variable called NEXT_LAYER_NAME then it will send a message to that layer. This continues down the layers of communication until an application instance is reached that does not have the environment variable. With each response the application returns its name, version identifier and IP address.</p>
-</div>
-<div class="sect3">
-<h4 id="create-a-new-project-for-the-service-mesh-activity"><a class="anchor" href="#create-a-new-project-for-the-service-mesh-activity"></a>Create a new project for the service mesh activity</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc new-project service-mesh-X</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>(Where X is your user number)</p>
-</div>
-<div class="paragraph">
-<p>Not all projects are required to be managed by service mesh. As a result you need to add the project that you just created to the service mesh control plane so that the sidecar containers will be injected into the pods. We will be using some preloaded assets in the Terminal window, so enter the following command to set the context:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd /workspace/workshop4/attendee/service-mesh</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To add the current project as a service mesh member within the control plane called 'istio-system' execute the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc create -f servicemeshmember.yaml</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="phase-1-initial-application"><a class="anchor" href="#phase-1-initial-application"></a>Phase 1 -Initial application</h3>
-<div class="paragraph">
-<p>The micro-service based application that you are about to create is very simple and uses a rest interface that can be asked to call another downstream version of itself. This can continue for as many application instances as needed to illustrate the features of the service mesh.</p>
-</div>
-<div class="paragraph">
-<p>To create the first application instance do the following :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd phase1
-oc create -f layer1.yaml --save-config</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Switch to the web user interface and select the developer view for your current project. Select the topology view and you will see the application start to be created. Click on the centre of the blue circle for the application and you should see the fly out menu on the right with details of the service and the running pod. Select the pod and scroll down the details of the pod until you see a section titled 'Containers'. This should show two containers as indicated below which are the 'layers' application container and the Istio sidecar container.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-01.png" alt="Pod with application container and sidecar container">
-</div>
-</div>
-<div class="paragraph">
-<p>Expose the service using a route by executing the following command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc expose service/layer1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>At this point the application has all of the components required for network communication without the use of Istio. The resources required that exist can be viewed with the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get all</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will list the following resources :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>deployment</p>
-</li>
-<li>
-<p>pod</p>
-</li>
-<li>
-<p>replicaset</p>
-</li>
-<li>
-<p>service</p>
-</li>
-<li>
-<p>route</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The route, service and pod are shown in the diagram below to indicate the network communication to the application.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-02.png" alt="Route" width="service and application">
-</div>
-</div>
-<div class="paragraph">
-<p>Communication to the application will work as expected using the above resources. This can be tested by pasting the following command into the terminal window to make 100 calls to the application, approximately ever 0.2 seconds.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>export ROUTE=$(oc get route -o jsonpath='{.items[0].spec.host}{"/call-layers"}')
-for i in {1..100}; do curl $ROUTE; echo ""; sleep .2;done</code></pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="adding-istio-capability"><a class="anchor" href="#adding-istio-capability"></a>Adding Istio capability</h4>
-<div class="paragraph">
-<p>To enable the service mesh communication requires further resources to be created. The initial resources to be created are the gateway and the virtual service. The gateway resource identifies a host for which communication should be intercepted and directed to the istio-ingress gateway. The virtual service  acts as a communication director selecting traffic that matches specific criteria for routing to a destination service. The gateway and virtual service yaml content is shown in the diagram below which also shows schematically how the communication is directed.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-03.png" alt="Istio gateway and virtual service">
-</div>
-</div>
-<div class="paragraph">
-<p>Create the gateway and the virtual service with the commands below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc create -f gateway-layer1.yaml
-oc create -f virtual-service-layer1.yaml</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="view-the-istio-related-resources"><a class="anchor" href="#view-the-istio-related-resources"></a>View the istio related resources</h4>
-<div class="paragraph">
-<p>The oc command 'oc get all' is often used to generate a list of all resources within a project. This is fine for listing the deployment configurations, services, replicasets and pods but it does not list the resources used to manage the service mesh. To view the istio related resources use the command below :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get istio-io</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above command will list the gateway and the virtual service. The virtual service also shows the gateway to which it relates and the hosts for which it is controlling traffic as shown in the example below.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>NAME                                        GATEWAYS           HOSTS                                                        AGE
-virtualservice.networking.istio.io/layers   [layer1-gateway]   [layer1-layers.apps.cluster-c2d5.c2d5.example.opentlc.com]   54s
-
-NAME                                         AGE
-gateway.networking.istio.io/layer1-gateway   63s</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="service-mesh-visualisation-with-kiali"><a class="anchor" href="#service-mesh-visualisation-with-kiali"></a>Service mesh visualisation with Kiali</h3>
-<div class="paragraph">
-<p>Red Hat Service mesh includes a component called Kiali which provides a visualization of the components of the mesh to assist in monitoring and managing the communication processes within a micro-service based application. To find the URL for the Kiali web application enter the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>echo "kiali-istio-system."$(oc whoami --show-console=true | cut -d'.' -f2-7)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will create the URL for the Kiali system in use within the cluster. Open this URL in a new browser tab.</p>
-</div>
-<div class="paragraph">
-<p>Press the blue 'Log In With OpenShift' button to authenticate with your OpenShift credentials and then select the blue '1 application' link in the box labelled with your service-mesh-XX project.</p>
-</div>
-<div class="paragraph">
-<p>On the left hand side of the Kiali screen select 'Graph and you should see a screen similar to that shown below :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-04.png" alt="Kiali initial screen">
-</div>
-</div>
-<div class="paragraph">
-<p>If your screen shows application nodes and services then Kiali is responding to the traffic that was sent in the 100 calls to the application a few minutes ago. Kiali will display a discovered configuration of applications and services if there has been traffic for it to observe.</p>
-</div>
-<div class="paragraph">
-<p>If the Kiali view has timed out and removed the discovered services oyu will see a screen identical to that which is shown above. In that case press the blue button with the text 'Display unused nodes' and you will see the nodes and services of the application.</p>
-</div>
-<div class="paragraph">
-<p>You will now see the layer-1 application which is broken out as the service (dotted triangle) and the application (dotted square). Press the legend button to see the key to the objects in the browser window. You will also see that the service has an Istio virtual service associated with it.</p>
-</div>
-<div class="paragraph">
-<p>Press the display drop down menu at the top of the screen and select the traffic animation option. Back at the terminal window start sending traffic to the service again using the for loop shell script used previously (and repeated below) :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>for i in {1..100}; do curl $ROUTE; echo ""; sleep .2;done</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Switch back to the Kiali window and watch the animation of the traffic flow in the graph. It will take a few seconds for the animation to start, but eventually you will see a screen similar to that which is shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-05.png" alt="Kiali traffic animation">
-</div>
-</div>
-<div class="paragraph">
-<p>Kiali has a number of sources of information which are selected from the left hand side menu. The animation display is shown on the graph view. If the for loop to send requests to the application has ended then restart it and you may want to change the number of calls to 1000 and change the sleep delay to 0.5 or 1.0 seconds to give more traffic while you explore the user interface.</p>
-</div>
-<div class="paragraph">
-<p>On the Kiali graph view click on the service (triangle) for layer1 and you will see information about the service on the right hand side panel. The panel shows information about the messages entering and leaving the service. Click on the application for layer1, identified as v1 (square) and the right hand side panel changes to display information about the application which only has inbound traffic.</p>
-</div>
-<div class="paragraph">
-<p>The top menu of the Graph screen has a number of different viewing modes. The first drop down menu allows users to display information on different versions of applications, to only show services or to display the workloads. The versioned application graph is particularly useful as it groups multiple versions of applications together along with their associated services.</p>
-</div>
-<div class="paragraph">
-<p>The second drop down menu allows for the display of requests per second, request percentage and response time on each communication line. The request percentage is particularly useful when splitting traffic between versions later.</p>
-</div>
-<div class="paragraph">
-<p>The third drop down menu allows users to select which objects to display on the main screen.</p>
-</div>
-<div class="paragraph">
-<p>On the left hand side of the Kiali screen there are options to display information about applications, workloads and services. These displays show useful information on the health of the resource. The Istio Config menu shows information about the istio resources (virtual services, gateways and many other Istio related resources). This is a useful source of information if something is wrong in the configuration of a resource as it will be highlighted clearly as shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-06.png" alt="Virtual service with error">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="phase-2-further-content-in-the-communication-chain"><a class="anchor" href="#phase-2-further-content-in-the-communication-chain"></a>Phase 2 - Further content in the communication chain</h3>
-<div class="paragraph">
-<p>The next phase of building the service mesh is to introduce another application and service.</p>
-</div>
-<div class="paragraph">
-<p>Change directory to phase 2 and create the new application for layer 2 with the following commands:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd ../phase2
-oc create -f layer2.yaml --save-config</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the topology view of the web user interface you will see that two deployments are created for the two different versions of layer2, with two pods for each application.</p>
-</div>
-<div class="paragraph">
-<p>Create the additional virtual service for the component with the commands:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc create -f virtual-service-layer2.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Reconfigure layer1 to send messages to layer2 using the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc apply -f layer1.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Switch to the OpenShift browser window and ensure that you are using the developer mode on the top left corner, you have the service-mesh-XX project selected and you are viewing the Topology view. You should see the 'layers' application grouping with layer1-v1 and layer2 (with versions v1 and v2) grouped together within the application group. Click on layer1-v1 and you will see on the fly-out window on the right hand side that it has one pod. This pod contains the running application container and the istio sidecar container too. If you select one of the layer 2 applications you will see that it has 2 replica pods as directed by the layer2.yaml deployment file.</p>
-</div>
-<div class="paragraph">
-<p>In the OpenShift terminal window restart the for loop to start sending http requests to layer1. You should now see that layer1 is sending requests on to layer 2 and you should see the IP address of the nodes on which those two layers are running as shown below. This also shows the distribution of traffic to the different versions of layer2.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v1) [10.130.3.146]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v2) [10.130.3.147]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v1) [10.131.1.184]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v2) [10.128.3.12]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v1) [10.130.3.146]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v2) [10.130.3.147]"
-"layer1 (v1) [10.128.3.13] ----&gt; layer2 (v1) [10.131.1.184]"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In most micro-service based applications messages will not conveniently display application versions or IP addresses as in this example application. Consequently Kiali visualization is very important to show what actually happens in the 'real world'.</p>
-</div>
-<div class="paragraph">
-<p>Switch to the Kiali browser view and select the graph view. Wait until the traffic starts to appear. You may see some extraneous traffic going to nodes that are not in the current project namespaces. These are genuine messages being send to the Istio system to provide the monitoring capability. To hide the unwanted nodes use a filter in the 'Hide' text field at the top of the graph and use a filter of "namespace!=service-mesh-XX". Replace XX with your user number and do not include quote characters.</p>
-</div>
-<div class="paragraph">
-<p>The Kiali graph view (shown below) is currently displaying the communication into layer 1 and then from layer 1 to layer 2. Layer 2 has a virtual service which is governing the conditions under which layer 2 will get any network traffic such as protocol filtering, path filtering etc. In the absence of a destination rule to govern the flow of traffic a (roughly) 50% - 50% split of traffic is seen between version 1 and version 2 of layer 2. Select "Request percentage" in the second dropdown menu to see the distribution to version 1 and version 2 of layer2. Restart the for loop to send traffic in the terminal window if necessary.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-07.png" alt="Kiali distribution of traffic to layer 2">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="phase-3-further-multi-versioned-applications-in-the-communication-chain"><a class="anchor" href="#phase-3-further-multi-versioned-applications-in-the-communication-chain"></a>Phase 3 - Further multi-versioned applications in the communication chain</h3>
-<div class="paragraph">
-<p>The next phase of building the service mesh is to introduce another multi-versioned application and service.</p>
-</div>
-<div class="paragraph">
-<p>Change directory to phase 3 and create the new application for layer 3 with the following commands:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd ../phase3
-oc create -f layer3.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You will see that four deployments are created for the four different versions of layer3.</p>
-</div>
-<div class="paragraph">
-<p>Switch to the OpenShift browser window and ensure that you are using the developer mode on the top left corner, you have the service-mesh-XX project selected and you are viewing the Topology view. You should see the 'layers' application grouping now has six micro-services within it. This is shown below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-08.png" alt="OpenShift topology view of micro-services">
-</div>
-</div>
-<div class="paragraph">
-<p>Under more common circumstances of a development project then names will often be cryptic and it will be hard to gain any understanding of the communication logic, sequence or hierarchy of an overall application. This is when the Kiali visualization view becomes extremely useful.</p>
-</div>
-<div class="paragraph">
-<p>To tie the service mesh together for the different versions of layer3 a virtual service and a destination rule will be used.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Virtual Services and Destination Rules</div>
-<div class="paragraph">
-<p>Virtual services and destination rules work hand-in-hand to define the routing of traffic. The virtual service is evaluated first and decides how to route traffic to a specific destination and then the destination rule is used to direct the traffic for the identified destination. The virtual service used in this phase is shown below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: layer3
-spec:
-  hosts:
-  - layer3
-  http:
-  - match:
-    - uri:
-        exact: /call-layers
-    - uri:
-        exact: /get-info
-    - uri:
-        exact: /
-  - route:
-    - destination:
-        host: layer3
-        subset: v1
-      weight: 50
-    - destination:
-        host: layer3
-        subset: v2
-      weight: 30
-    - destination:
-        host: layer3
-        subset: v3
-      weight: 20</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above will direct http traffic with the uri path of /call-layers, /get-info or / sent to application layer3 (spec: &#8594; hosts: &#8594; layer3) to the destinations subset v1 (50% of traffic), subset v2 (30% of traffic) and subset v3 (20% of traffic). At the present time no traffic is directed to subset v4.</p>
-</div>
-<div class="paragraph">
-<p>The destination rule associated with the above virtual service is shown below which ties the subsets shown in the virtual service to the specific versions of the applications :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>apiVersion: networking.istio.io/v1alpha3
-kind: DestinationRule
-metadata:
-  name: layer3
-spec:
-  host: layer3
-  subsets:
-  - name: v1
-    labels:
-      version: v1
-  - name: v2
-    labels:
-      version: v2
-  - name: v3
-    labels:
-      version: v3</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The destination rule defines to where the different subsets will direct traffic. Subset v1 directs traffic to the pod with the label v1 and subset v2 directs traffic to the pod with the label v2 etc.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The command below will display all pods and the labels defined on them:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get pods -o jsonpath='{range.items[*]}{.metadata.name}{"  "}{.metadata.labels.version}{"\n"}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The result of the above command will be similar to that shown below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>layer1-v1-5cdbdc64bc-hbm77  v1
-layer2-v1-747594d6d9-rd586  v1
-layer2-v1-747594d6d9-wlrhr  v1
-layer2-v2-7f8b4674cc-vbvt9  v2
-layer2-v2-7f8b4674cc-zs9lk  v2
-layer3-v1-85db7f87c6-rdz8c  v1
-layer3-v2-5649897bbf-6f99m  v2
-layer3-v3-769cfb5446-jcs4v  v3
-layer3-v4-858765c8c9-m5lzf  v4</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above shows that there is 1 version for layer1, 2 versions for layer 2 that are replicated pods (two instances) and 4 versions for layer 3.</p>
-</div>
-<div class="paragraph">
-<p>Destination rules require a virtual services and there cannot be more destinations than virtual services. For this reason when a destination rule is used the virtual service is either created at the same time or the virtual service already exists.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc create -f destination-rule-virtual-service-layer3.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the previous test it was seen that there was a 50% - 50% distribution of traffic going into layer 2. The command below will introduce a destination rule and add a distribution clause to the virtual service for layer 2 to distribute the traffic  80% to 20% in favour of version 1.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc apply -f destination-rule-virtual-service-layer2.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Reconfigure layer2 to send messages to layer3 using the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc apply -f layer2.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the OpenShift terminal window recall the for loop that sends messages to the applications and change the total number of messages to 200 and the sleep value from .2 to .5. This will give more time to explore the traffic in Kiali. Execute the command when the changes have been made. You should now see that layer1 is sending requests on to layer 2 which is sending requests on to layer 3 and you should see the IP address of the nodes on which those two layers are running as shown below. You will also see a distribution of workload across layer 3 v1, v2 and v3 in the percentages defined in the virtual service.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v2 (v2) [10.128.2.145]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v1 (v1) [10.128.2.143]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"
-"layer1 (v1) [10.130.2.240] ----&gt; layer2 (v1) [10.128.2.151] ----&gt; layer3-v3 (v3) [10.128.2.144]"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Of the above 25 calls, 10 are for v1 (40%), 8 are for v2 (32%) and 7 are for v3 (28%). The distribution percentages become more accurate the more messages are sent. When more calls are made the distribution gets closer to the desired values.</p>
-</div>
-<div class="paragraph">
-<p>Switch to the Kiali browser view and wait until the traffic starts to appear. On the second to left drop down option menu at the top of the Kiali screen select the option "Requests percentage". This will show the breakdown of traffic similar to that which is shown below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-09.png" alt="OpenShift topology view of micro-services">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="phase-4-service-timeout"><a class="anchor" href="#phase-4-service-timeout"></a>Phase 4 - Service timeout</h3>
-<div class="paragraph">
-<p>The service mesh has a capability to manage traffic flow in a number of different ways. This includes a circuit breaker function to remove applications from participation in communication and a timeout function to control the abandonment of communication with a service, to name just two. In this phase a timeout will be introduced to control the traffic flow such that version A of the application layer will force a timeout after 1.5 second and version B will force a timeout after 1 seconds.</p>
-</div>
-<div class="paragraph">
-<p>Change directory to phase 3 and create the new applications for layers 2A and 2B with the following commands:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>cd ../phase4
-oc create -f layer2-A.yaml --save-config
-oc create -f layer2-B.yaml --save-config</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create the virtual service and destination rule for each of the new applications. The destination rule and virtual service for application 2A is shown below :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>apiVersion: networking.istio.io/v1alpha3
-kind: DestinationRule
-metadata:
-  name: layer2-a
-spec:
-  host: layer2-a
-  subsets:
-  - name: inst-1
-    labels:
-      instance: instance1
-  - name: inst-2
-    labels:
-      instance: instance2
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: layer2-a
-spec:
-  hosts:
-  - layer2-a
-  http:
-  - match:
-    - uri:
-        prefix: /call-layers
-    - uri:
-        exact: /get-info
-    - uri:
-        exact: /
-    route:
-    - destination:
-        host: layer2-a
-        port:
-          number: 8080
-        subset: inst-1
-      weight: 80
-    - destination:
-        host: layer2-a
-        port:
-          number: 8080
-        subset: inst-2
-      weight: 20
-    timeout: 1.500s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The virtual service shows a traffic distribution of 80 % to inst-1 and 20% to inst-2. The final statement shows the timeout that applies to the entire route of 1.5 seconds.</p>
-</div>
-<div class="paragraph">
-<p>A similar configuration applies to the virtual service and destination rules for application 2-B with a distribution of 30% to 70% and a timeout of 1 second.</p>
-</div>
-<div class="paragraph">
-<p>Create the virtual services and destination rules with the commands :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc create -f destination-rule-virtual-service-layer2-A.yaml --save-config
-oc create -f destination-rule-virtual-service-layer2-B.yaml --save-config</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Modify layer 1 application so that it sends traffic to applications 2A and 2B.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc apply -f layer1.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the OpenShift terminal window recall the for loop that sends messages to the applications and execute it again.</p>
-</div>
-<div class="paragraph">
-<p>You should now see that layer1 is sending requests on to layer 2a (instances 1 and 2) and to layer 2b (instances 1 and 2) Take a look at the graph in Kiali and you will also see a distribution of workload across layer 2 in the percentages defined in the virtual service.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>layer1 (v1) [10.128.2.62] ----&gt; layer2-a (instance-2) [10.128.2.60]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-a (instance-1) [10.128.2.59]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-a (instance-1) [10.128.2.59]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-b (instance-1) [10.128.2.61]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-b (instance-2) [10.131.0.86]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-a (instance-2) [10.128.2.60]
-layer1 (v1) [10.128.2.62] ----&gt; layer2-a (instance-2) [10.128.2.60]</code></pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="introducing-application-delay"><a class="anchor" href="#introducing-application-delay"></a>Introducing application delay</h4>
-<div class="paragraph">
-<p>To show the impact of the timeout function a different rest endpoint is used. Reconfigure the ROUTE environment variable to use the alternative endpoint with the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>export ROUTE=$(oc get route -o jsonpath='{.items[0].spec.host}{"/call-layers-sleep"}')</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Call the applications with a delay of 900ms. This should result in no interruption to service. Execute the following shell command to make 100 calls.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>for i in {1..100}; do curl $ROUTE:900; echo "";done</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will result in a display similar to that which is shown below. Instances 1 and 2 of layers 2a and 2b are responding.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-b (instance-1) [10.128.2.61] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-b (instance-2) [10.131.0.86] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-b (instance-1) [10.128.2.61] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-b (instance-2) [10.131.0.86] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (900 ms)
-layer1 (v1) [10.128.2.62] sleep (900 ms) ----&gt; layer2-b (instance-2) [10.131.0.86] sleep (900 ms)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Increase the delay to 1100 ms using the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>for i in {1..100}; do curl $ROUTE:1100; echo "";done</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will result in a display similar to that which is shown below. Instances 1 and 2 of layers 2a are responding, while the delayed response from instances 1 and 2 of layer 2b are being timed out.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; upstream request timeout
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (1100 ms)
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; upstream request timeout
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; upstream request timeout
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (1100 ms)
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; layer2-a (instance-2) [10.128.2.60] sleep (1100 ms)
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; layer2-a (instance-2) [10.128.2.60] sleep (1100 ms)
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; layer2-a (instance-1) [10.128.2.59] sleep (1100 ms)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Increase the delay to 1600 ms using the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>for i in {1..100}; do curl $ROUTE:1600; echo "";done</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will result in a display similar to that which is shown below in which all calls are being timed out.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; upstream request timeout
-layer1 (v1) [10.128.2.62] sleep (1100 ms) ----&gt; upstream request timeout</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>While the for loop is running make a change to the timeout of one of the virtual services to increase the delay to 2500 ms. This can be done in two different ways.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Make a change to one the virtual service files using the vi editor and then re-apply the virtual service using the following :</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>vi destination-rule-virtual-service-layer2-A.yaml
-oc apply -f destination-rule-virtual-service-layer2-A.yaml
-
-or
-
-vi destination-rule-virtual-service-layer2-B.yaml
-oc apply -f destination-rule-virtual-service-layer2-B.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Alternatively use the Kiali browser window, switch to the istio-config section on the left hand side and select the virtual service for either layer2-A or layer2-A. Edit the yaml within the window to alter the timeout value and save the changes. One of the good things about using this editor is the immediate validation of the yaml code.</p>
-</div>
-<div class="paragraph">
-<p>Observe that traffic starts to be allowed through to that application only.</p>
-</div>
-<div class="paragraph">
-<p>Take a look at the traffic flow in the graph view of Kiali and you should see a display similar to that which is shown below (once Kiali has had the opportunity to catch up).</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/service-mesh-10.png" alt="Traffic distribution with errors">
-</div>
-</div>
-<div class="paragraph">
-<p>The above image shows red to indicate the communication that is being rejected by the timeout.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="cleaning-up-4"><a class="anchor" href="#cleaning-up-4"></a>Cleaning up</h3>
-<div class="paragraph">
-<p>To tidy up the cluster now that the chapter is complete please use the command</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc delete project service-mesh-XX</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>_where XX is your user ID number.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="openshift-and-the-quay-image-repository-innovation"><a class="anchor" href="#openshift-and-the-quay-image-repository-innovation"></a>OpenShift and the Quay Image Repository [INNOVATION]</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Author: Mark Roberts (feedback to <a href="mailto:mroberts@redhat.com">mroberts@redhat.com</a>)</p>
-</div>
-<div class="sect2">
-<h3 id="introduction-15"><a class="anchor" href="#introduction-15"></a>Introduction</h3>
-<div class="paragraph">
-<p>During the development process a number of container images will be produced. The source-2-image capability described in the basic workshop creates images catalogued under an image stream within a project. Other container images may be created using command line functions such as docker or buildah (both using docker files potentially) or images may be downloaded from the Red Hat Container Catalogue <a href="https://catalog.redhat.com/software/containers/explore" target="_blank" rel="noopener">here</a>, or other vendor supplied images may be used. From a variety of sources and through a variety of mechanisms images will be created that form the microservices of an application. Such images need to be managed through a lifecycle as they progress from Development to QA and finally to production in a process described in the diagram below. The purpose of Red Hat Quay is to provide a repository for the secure and structured storage of images that may be accessed by multiple users from multiple clusters. Quay also provides an image vulnerability scanning capability to identify issues with images stored within it.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Note on the workshop</div>
-<div class="paragraph">
-<p>At the present time there is an issue with the Red Hat demonstration Quay instance so if you wish to do this chapter please create an account on quay.io and use that URL instead of a URL supplied by the workshop leaders. Also the terminal that we use for the workshops cannot be used for the Buildah commands so you will need to install Buildah locally to complete this section. We apologize for this issue at this time and we are working to overcome these challenges as quickly as we can.</p>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-1.png" alt="Image management process through the route to live">
-</div>
-</div>
-<div class="paragraph">
-<p>The image below shows an OpenShift project and the various artefacts that are created. The image stream object is shown here within the context of the builder process that creates it and the running pod that consumes it.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-2.png" alt="Openshift project and the creation of the image stream">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">The structure of Quay</div>
-<div class="paragraph">
-<p>The Quay image repository uses a number of specific objects to manage the structure, security an maintenance of images.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Organisation - An organisation maps neatly to a project within OpenShift and is a structural container for a number of repositories.</p>
-</li>
-<li>
-<p>Repository - A repository maps neatly to an image stream within OpenShift (or any other single source of images). A repository may contain multiple tagged versions of a single image.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The organisation may have the following characteristics:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Default permissions to be applied to any new repositories created within the organisation.</p>
-</li>
-<li>
-<p>Teams that control access to the organisation and its repositories.</p>
-</li>
-<li>
-<p>Robot accounts for automated access to the repositories from scripted or command line processes.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="olist arabic">
-<div class="title">The objectives of this chapter are:</div>
-<ol class="arabic">
-<li>
-<p>To understand the Quay user interface and the objects created within Quay</p>
-</li>
-<li>
-<p>To create a process for pushing images from the OpenShift image repository to the Quay repository</p>
-</li>
-<li>
-<p>To pull images from Quay to a new project in OpenShift to simulate the use of the images in a QA cluster</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="using-the-quay-workshop-cluster"><a class="anchor" href="#using-the-quay-workshop-cluster"></a>Using the Quay workshop cluster</h3>
-<div class="paragraph">
-<p>In order to use the Quay instance for the workshop you need to request that an id is created for you by the workshop administrators. This will take very little time and will result in the creation of the following:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>An organisation will be created in Quay using the same name as the OpenShift project used in this section, for example master-slave-user23.</p>
-</li>
-<li>
-<p>A Quay user matching the OpenShift username and password.</p>
-</li>
-<li>
-<p>The Quay user will have read/write access to the organisation, but you will have to create access to the specific repositories as part of the steps to follow.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="creating-the-openshift-project"><a class="anchor" href="#creating-the-openshift-project"></a>Creating the OpenShift Project</h3>
-<div class="paragraph">
-<p>In order to interact with Quay each user requires an OpenShift project containing images. While the administrator is creating your Quay content use the commands below to quickly create the OpenShift project and the required content:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc new-project master-slave-userXX
-
-oc new-app --name node-app-slave  https://github.com/marrober/slave-node-app.git
-
-oc new-app --name node-app-master  https://github.com/marrober/master-node-app.git
-
-oc expose service node-app-master --name="master-app-route"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>where XX is your user number</em></p>
-</div>
-<div class="paragraph">
-<p>The above commands will create image streams for the master and the slave which can be viewed using the command below.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get is</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will display image streams similar to that which is shown in the table below:</p>
-</div>
-<table class="tableblock frame-none grid-none stretch">
-<colgroup>
-<col style="width: 20%;">
-<col>
-<col style="width: 10%;">
-<col style="width: 15%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NAME</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IMAGE REPOSITORY</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TAGS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UPDATED</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">node-app-master</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">default-route-openshift-&lt;reduced&gt;.com/master-slave-userX/node-app-master</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">latest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22 hours ago</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">node-app-slave</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">default-route-openshift-&lt;reduced&gt;.com/master-slave-userX/node-app-slave</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">latest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22 hours ago</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The image repository field will show the route to use to get access to the container images within the container image repository. Now that you have some images to manage it is necessary to create the repositories in Quay.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="creating-the-quay-image-repositories"><a class="anchor" href="#creating-the-quay-image-repositories"></a>Creating the Quay image repositories</h3>
-<div class="paragraph">
-<p>When the workshop administrator tells you that they have created your user and organisation in Quay you may login at the provided Quay URL. The username and password for Quay will be the same as those used for OpenShift.</p>
-</div>
-<div class="paragraph">
-<p><em>The example screen shots below show a user ID of user23, but obviously yours may be different.</em></p>
-</div>
-<div class="paragraph">
-<p>When you have logged into Quay you will see the web user interface similar to that shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-3.png" alt="Quay web user interface">
-</div>
-</div>
-<div class="paragraph">
-<p>You see two namespaces within Quay for the storage of repositories. The namespace identified by your user name can hold repositories outside the scope of an organization. The organization can hold repositories with the added benefits provided by the organization which are :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Default permissions may be set on the organization that apply to new repositories created within it.</p>
-</li>
-<li>
-<p>The use of teams and users to manage the allocation of permissions to the organisation and the repositories created within it.</p>
-</li>
-</ol>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Quay permissions</div>
-<div class="paragraph">
-<p>The diagram below shows the permission structure for an organization.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-4.png" alt="Quay organization permissions">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Teams contain users and robot (automation) users who have permissions on specific repositories.</p>
-</li>
-<li>
-<p>Teams can have a role of 'Creator' - Create new repositories which will inherit the organisation default permissions)or 'Admin' - perform all actions including delete, or 'member' - permission is indicated by each repository.</p>
-</li>
-<li>
-<p>Member permissions are allocated on a per repository basis and can include 'none' - no access, 'read' - can pull images, 'write' - can pull and push images, 'admin' - can pull, push and perform admin functions such as delete and manage permissions.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="managing-the-quay-organization-and-repositories"><a class="anchor" href="#managing-the-quay-organization-and-repositories"></a>Managing the Quay organization and repositories</h3>
-<div class="paragraph">
-<p>Select the Quay organisation called master-slave-userXX.</p>
-</div>
-<div class="paragraph">
-<p>This will show a largely blank screen with options down the left hand side.</p>
-</div>
-<div class="paragraph">
-<p>Click on the '+ Create New Repository' link at the top right of the screen.</p>
-</div>
-<div class="paragraph">
-<p>Since the names of the repositories need to match the names of the image streams in OpenShift refer back to the command line window and the names of the image streams from the 'oc get is' commands used above.</p>
-</div>
-<div class="paragraph">
-<p>Enter the name of one of the image streams for the repository, select public for access and then click on 'Create Public Repository'.</p>
-</div>
-<div class="paragraph">
-<p>Click the browser back button to go back to the repository creation screen and repeat the repository creation process for the second image stream.</p>
-</div>
-<div class="paragraph">
-<p>Press the left facing arrow on the top left of the screen to go back to the list of repositories.</p>
-</div>
-<div class="paragraph">
-<p>Select the master-slave-userXX organization and you should see the details of the organization as shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-5.png" alt="Quay organization details">
-</div>
-</div>
-<div class="sect3">
-<h4 id="granting-permissions-to-repositories"><a class="anchor" href="#granting-permissions-to-repositories"></a>Granting permissions to repositories</h4>
-<div class="paragraph">
-<p>Select the Teams and Membership tab on the left hand side of the screen (2nd icon down). Here you can create new teams and manage the users and permissions of existing teams.</p>
-</div>
-<div class="paragraph">
-<p>Create a new team called 'development' (only lower case letters and numbers are allowed).</p>
-</div>
-<div class="paragraph">
-<p>You will then be prompted to add permissions for the two existing repositories. Select 'Write' permission for both repositories.</p>
-</div>
-<div class="paragraph">
-<p>When the permissions have been added for the development team you will see the summary for teams and memberships as shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-6.png" alt="Quay teams and memberships">
-</div>
-</div>
-<div class="paragraph">
-<p>At this point the development team has no members so click on the link stating '0 members' and add userXX to the team, by typing the user name into the 'add user' field on the right hand side. Press the left pointing arrow at the top left corner to return to the organization and you should see that the development team has 1 member and 2 repositories.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="creating-a-robot-account"><a class="anchor" href="#creating-a-robot-account"></a>Creating a robot account</h4>
-<div class="paragraph">
-<p>Click on the next tab down from the teams and memberships tab on the left hand side of the screen to select Robot accounts. Create a new robot account called userXX_automation (where XX is you user number). You may optionally add a description if you want to.</p>
-</div>
-<div class="paragraph">
-<p>Grant write permission to the robot account on both repositories and then click 'close'.</p>
-</div>
-<div class="paragraph">
-<p>Click on the cog on the right hand side of the robot account name and select 'view credentials'.</p>
-</div>
-<div class="paragraph">
-<p>You will see a list of many different types of credentials that you can generate such as token, Kubernetes secret, rkt configuration, Docker login, Docker configuration and Mesos credentials. For the access required in the workshop copy the username and token from the Robot Token tab and store them in a local editor or notepad ready to use later. Once they are copied close the dialog box.</p>
-</div>
-<div class="paragraph">
-<p>Back on the organisation screen take a look at the options for creating default permissions (the next tab down on the left). It is possible to create default permissions to be applied to new repositories for specific uses, teams and robot users as appropriate.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="summary-of-quay-ui-work"><a class="anchor" href="#summary-of-quay-ui-work"></a>Summary of Quay UI work</h4>
-<div class="paragraph">
-<p>The organization, repositories, user, robot user and permissions are all now in place within Quay for the images to be pulled from OpenShift and pushed to Quay.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="pulling-openshift-images-and-pushing-to-quay"><a class="anchor" href="#pulling-openshift-images-and-pushing-to-quay"></a>Pulling OpenShift images and pushing to Quay</h3>
-<div class="paragraph">
-<p>Buildah will be used to pull images to a local repository, re-tag the images for the location on Quay and then push the images to Quay.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Image management tools</div>
-<div class="paragraph">
-<p>A number of tools exist for the management of images, three of which are described below.</p>
-</div>
-<table class="tableblock frame-none grid-none stretch">
-<colgroup>
-<col style="width: 20%;">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
-<div class="content">
-<img src="images/buildah.png" alt="buildah">
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Buildah is an image building open source project that can either use Buildah specific commands to build an image or it can simply use an existing docker file. One major advantage of Buildah for some users is that it does not require a docker process to be constantly running on the workstation as root. In the workshop Buildah will be used to get images from / to OpenShift and from / to Quay.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
-<div class="content">
-<img src="images/podman.png" alt="podman">
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Podman overlaps somewhat with Buildah but its main focus is with regard to the running and interaction with container images.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
-<div class="content">
-<img src="images/skopeo.png" alt="skopeo">
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Skopeo can be used to copy container images from one image repository to another. It can also be used to convert images between formats. It is possible to perform many of the actions in this workshop with Skopeo but by using Buildah it is possible to see what is being created in an intermediate local repository which may add some value for users.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="login-to-the-openshift-registry-using-buildah"><a class="anchor" href="#login-to-the-openshift-registry-using-buildah"></a>Login to the OpenShift registry using Buildah</h4>
-<div class="paragraph">
-<p>In order to pull the images it is necessary to login to the OpenShift image repository using the Buildah command even though you may already be logged into the OpenShift cluster using the oc command. The URL for the OpenShift repository is the address in the image repository table up to and including .com.</p>
-</div>
-<div class="paragraph">
-<p>To get just the image repository URL use the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get is -o jsonpath={.items[0].status.publicDockerImageRepository} | cut -d'/' -f1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will return a string similar to :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The Buildah login command takes the form :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah login --username &lt;username&gt; --password &lt;token&gt; repository-URL</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The token for the login command will be generates from the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc whoami -t</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Combined together the Buildah login command (for the example repository-URL, and where XX is replaced by your user number) becomes :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah login --username userXX --password $(oc whoami -t) default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should get a response of "Login Succeeded!"</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="login-to-quay-using-buildah"><a class="anchor" href="#login-to-quay-using-buildah"></a>Login to Quay using Buildah</h4>
-<div class="paragraph">
-<p>It is also necessary to login to the Quay image repository using the Buildah command so that images can be pushed to Quay. The URL for the Quay repository is the address in the browser window for Quay up to and including .com and excluding the https:// part.</p>
-</div>
-<div class="paragraph">
-<p>The username and password are those which were generated and noted earlier on for the Quay robot user.</p>
-</div>
-<div class="paragraph">
-<p>The Quay login command will be similar to :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah login --username master-slave-user23+user23_automation --password 6A6ODEQT39ID52S9HZ4IRCBO3EK4O5KNAGZ2HWKSOQQUMU9QSKMBBPYNO6A3ED0O quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should get a response of "Login Succeeded!"</p>
-</div>
-<div class="paragraph">
-<p><em>You are now logged into both OpenShift and Quay with buildah and you are ready to pull and push images.</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="examine-the-local-buildah-repository"><a class="anchor" href="#examine-the-local-buildah-repository"></a>Examine the local buildah repository</h4>
-<div class="paragraph">
-<p>Use the command below to view the local buildah image repository. You should see that it contains no images.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah images</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Use the command below to list the images and their location within the OpenShift image repository :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get is -o jsonpath='{range.items[*]}{.metadata.name}{" "}{.status.publicDockerImageRepository}{"\n"}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will generate a list of all image streams and the registry location to use in the pull command. To pull the image use the full docker image repository name in the command below :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah pull docker://&lt;full-image-path&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>for example</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah pull docker://default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com/master-slave-user23/node-app-master</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The command will show the progress of pulling image layers and will complete with a message similar to that which is shown below :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>Getting image source signatures
-Copying blob 455ea8ab0621 done
-Copying blob 6a4fa4bc2d06 done
-Copying blob bb13d92caffa done
-Copying blob 2dd72bf14df1 done
-Copying blob ff52b8e1303b done
-Copying blob 84e620d0abe5 done
-Copying config abc6f7ad19 done
-Writing manifest to image destination
-Storing signatures
-abc6f7ad19646ed135d9b76946ccce2ae9b4c796a66472f34d853df009dbd18e</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>View the local image repository with the command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah images</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The result will be similar to that which is shown below:</p>
-</div>
-<table class="tableblock frame-none grid-none stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 10%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 10%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">REPOSITORY</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TAG</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IMAGE ID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CREATED</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SIZE</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com/master-slave-user23/node-app-master</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">latest</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">abc6f7ad1964</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6 hours ago</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">547 MB</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>An image now exists in a local repository - either on your laptop or within the terminal container depending on where you ran the command.</p>
-</div>
-<div class="paragraph">
-<p>Repeat the process to pull the image for the slave too. Notice this time that some of the layers are skipped as those layers already exist within the local repository.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="tagging-images-for-the-quay-repository"><a class="anchor" href="#tagging-images-for-the-quay-repository"></a>Tagging images for the Quay repository</h4>
-<div class="paragraph">
-<p>In order to push images to Quay they must have a repository identifier and tag attached to them. This is done using the Buildah tag command. The Buildah tag command takes the format :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah tag &lt;existing-repository-location&gt;:&lt;tag&gt; &lt;new-repository-location&gt;:&lt;tag&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The actual tag names used for the existing location need to match what is in the repository, while the new tag can be whatever is appropriate such as an incremental number, 'latest' or some other useful identifier. To reduce the amount of command line copy and paste operations when creating the existing repository location and tag the command below can be used :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get is -o jsonpath='{range.items[*]}{.metadata.name}{" "}{.status.publicDockerImageRepository}{":"}{.status.tags[0].tag}{"\n"}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The new repository location is the Quay URL address, organization and repository name. The easiest way to get this is to go to the Quay web user interface, select 'Repositories' on the top menu and then select the master repository within the master-slave organization. This will show a screen similar to that which is shown below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-7.png" alt="Quay repository details">
-</div>
-</div>
-<div class="paragraph">
-<p>Under the heading "Pull this container with the following Docker command:", copy the URL after the 'docker pull' text in the text field. It will look similar to the below:</p>
-</div>
-<div class="paragraph">
-<p>quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-master</p>
-</div>
-<div class="paragraph">
-<p>Create the Builah tag command from the information collected above such that it looks similar to the below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah tag default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com/master-slave-user23/node-app-master:latest quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-master:1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note that the tag used in the command for the destination tag is 1.</p>
-</div>
-<div class="paragraph">
-<p>Execute the command and then use the command below to list the images :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah images</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Repeat the similar command for the slave image.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="push-the-images-to-quay"><a class="anchor" href="#push-the-images-to-quay"></a>Push the images to Quay</h4>
-<div class="paragraph">
-<p>Push the images to Quay using the commands of the format :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah push &lt;new-repository-location&gt;:&lt;tag&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>for example :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>buildah push quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-master:1
-buildah push quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-slave:1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Switch to the Quay web user interface. If you are still displaying the repository information page where the image pull / push URL was copied from then refresh the browse window and then select the 'tags' view (2nd option down on the repository menu). This will show the tags view similar to that which is shown below.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/quay-8.png" alt="Quay repository tags view">
-</div>
-</div>
-<div class="paragraph">
-<p>The tags view shows information on the image tag and the buttons on the right of each line allow the user to select different mechanisms for extracting and manipulating the image.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="using-the-images-in-a-qa-environment"><a class="anchor" href="#using-the-images-in-a-qa-environment"></a>Using the images in a QA environment</h3>
-<div class="paragraph">
-<p>Referring to the image at the top of this section the image may now be pulled to different clusters such as a QA cluster, pre-production cluster and production cluster. Specific users will have the appropriate role based permissions to pull the images into those clusters to control the necessary separation of responsibilities within an organization. For this exercise you will create a new project with the same name as the existing project but with -qa on the end of the name to simulate the deployment to QA.</p>
-</div>
-<div class="paragraph">
-<p>The original commands used to create the images at the start of this section used the source-2-image capability and pulled the source code. The process from this point forward has no interaction with the application source code and pulls the immutable images into each successive cluster (simulated in the case of the workshop), with environment specific information being injected into the running containers using config maps. This use of immutable images is one significant advantage of containers and hence is another reason for the use of a secure image repository.</p>
-</div>
-<div class="sect3">
-<h4 id="creating-the-openshift-project-for-qa"><a class="anchor" href="#creating-the-openshift-project-for-qa"></a>Creating the OpenShift Project for QA</h4>
-<div class="paragraph">
-<p>Use the commands below to create the OpenShift project using the content from Quay as the source:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc new-project master-slave-userXX-qa
-
-oc new-app --docker-image=&lt;master image URL &amp; tag that was pushed above&gt; --name=node-app-master
-oc new-app --docker-image=&lt;master image URL &amp; tag that was pushed above&gt; --name=node-app-slave
-oc expose service node-app-master --name="master-app-route"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>where XX is your user ID</em></p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc new-app --docker-image=quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-master:1 --name=node-app-master
-oc new-app --docker-image=quay-b2b3.apps.shared-rhpds.rhpds.openshift.opentlc.com/master-slave-user23/node-app-slave:1 --name=node-app-slave
-oc expose service node-app-master --name="master-app-route"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To test the application get the route with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc get route -o jsonpath='{.items[0].spec.host}{"/ip\n"}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then issue the following curl command :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>curl -k &lt;url from the above command&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The response should be the ip address of the master node and the slave node similar to that which is shown below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>"master ip address 10.131.0.174    ----&gt; slave ip address 10.128.2.157 v1.0"</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="cleaning-up-5"><a class="anchor" href="#cleaning-up-5"></a>Cleaning up</h3>
-<div class="paragraph">
-<p>Finally, lets clean up the project by typing</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>oc delete project master-slave-userXX
-oc delete project master-slave-userXX-qa</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>where XX is your user ID</em></p>
-</div>
-<div class="paragraph">
-<p>This will delete the projects</p>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2020-06-09 15:00:44 +0100
+Last updated 2020-06-15 12:56:19 +0100
 </div>
 </div>
 </body>
